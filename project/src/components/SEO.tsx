@@ -7,7 +7,7 @@ interface SEOProps {
   keywords?: string;
   ogImage?: string;
   canonicalUrl?: string;
-  structuredData?: object;
+  structuredData?: object | object[];
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -44,9 +44,17 @@ const SEO: React.FC<SEOProps> = ({
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
+        Array.isArray(structuredData) ? (
+          structuredData.map((schema, index) => (
+            <script key={index} type="application/ld+json">
+              {JSON.stringify(schema)}
+            </script>
+          ))
+        ) : (
+          <script type="application/ld+json">
+            {JSON.stringify(structuredData)}
+          </script>
+        )
       )}
     </Helmet>
   );

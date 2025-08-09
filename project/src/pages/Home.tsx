@@ -79,19 +79,419 @@ const Home: React.FC = () => {
           "itemOffered": {
             "@type": "Service",
             "name": "Ombre Powder Brows",
-            "description": "Expert semi-permanent makeup technique creating soft, shaded brows perfect for the DMV area's humid climate."
-          }
+            "description": "Expert semi-permanent makeup technique creating soft, shaded brows perfect for the DMV area's humid climate.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "@id": "https://www.inkmugi.com/#business"
+            },
+            "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC", "Northern Virginia", "Maryland"],
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://www.inkmugi.com/services"
+            }
+          },
+          "price": "550",
+          "priceCurrency": "USD"
         },
         {
           "@type": "Offer", 
           "itemOffered": {
             "@type": "Service",
             "name": "Microshading",
-            "description": "Professional microshading service creating soft, natural-looking brows, ideal for sensitive and oily skin types."
-          }
+            "description": "Professional microshading service creating soft, natural-looking brows, ideal for sensitive and oily skin types.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "@id": "https://www.inkmugi.com/#business"
+            },
+            "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC", "Northern Virginia", "Maryland"],
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://www.inkmugi.com/services"
+            }
+          },
+          "price": "500",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Fine Line Tattoo",
+            "description": "Fine line tattoos use thin, precise lines for delicate, intricate, and minimalist designs.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "@id": "https://www.inkmugi.com/#business"
+            },
+            "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC", "Northern Virginia", "Maryland"],
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://www.inkmugi.com/services"
+            }
+          },
+          "price": "150",
+          "priceCurrency": "USD"
         }
       ]
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Mariel H."
+        },
+        "datePublished": "2024-06-15",
+        "reviewBody": "Mugi did an amazing job!! I absolutely love my eyebrows she did an amazing job. she is very nice and sweet. I highly recommend her."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Tuyet Q."
+        },
+        "datePublished": "2024-05-22",
+        "reviewBody": "My ombré powder brows were done by Mugi! She is so sweet, very detailed, and patient. She took the time to consult with me to see what my brow goals are and the best fit for my face. After my brows healed they looked perfect I never thought having my brows done would save so much time everyday getting ready I love them!!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Chantee C."
+        },
+        "datePublished": "2024-04-10",
+        "reviewBody": "Mugi is so wonderful. She was very professional and truly cares about her clients comfort and her craft. I appreciate how detailed she was and she communicated every step to me so well and eloquently."
+      }
+    ],
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long do ombre powder brows last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ombre powder brows typically last 1-3 years depending on your skin type, lifestyle, and aftercare. Oily skin may require touch-ups sooner, while dry skin tends to retain the pigment longer."
+        }
+      },
+      {
+        "@type": "Question", 
+        "name": "What's the difference between ombre powder brows and microblading?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ombre powder brows create a soft, shaded look using a shading technique, while microblading creates hair-like strokes. Powder brows are better for oily skin and provide a more makeup-like finish."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the ombre powder brow procedure hurt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most clients experience minimal discomfort. We use topical numbing cream to ensure your comfort throughout the 2-3 hour procedure. Pain levels are typically rated 2-4 out of 10."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do ombre powder brows cost in the DMV area?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our ombre powder brows start at $550, which includes the initial procedure and one complimentary touch-up session within 6-8 weeks. This is competitive pricing for the DMV area's premium PMU services."
+        }
+      }
+    ]
+  };
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.inkmugi.com"
+    }]
+  };
+
+  // Organization Schema for brand authority
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ink Mugi",
+    "alternateName": "InkMugi PMU Studio",
+    "url": "https://www.inkmugi.com",
+    "logo": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
+    "image": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
+    "description": "Premier permanent makeup studio specializing in ombre powder brows and microshading in the DMV area.",
+    "telephone": "+1-571-283-8228",
+    "email": "inkmugi@gmail.com",
+    "foundingDate": "2014",
+    "founder": {
+      "@type": "Person",
+      "name": "Mugi",
+      "jobTitle": "Licensed Permanent Makeup Artist"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7857 Heritage Dr #330",
+      "addressLocality": "Annandale",
+      "addressRegion": "VA",
+      "postalCode": "22003",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      {
+        "@type": "State",
+        "name": "Virginia"
+      },
+      {
+        "@type": "City",
+        "name": "Washington DC"
+      },
+      {
+        "@type": "State", 
+        "name": "Maryland"
+      }
+    ],
+    "knowsAbout": [
+      "Ombre Powder Brows",
+      "Microshading",
+      "Permanent Makeup",
+      "Eyebrow Tattooing",
+      "Semi-Permanent Makeup",
+      "Fine Line Tattoos"
+    ],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "38.8304",
+        "longitude": "-77.1964"
+      },
+      "geoRadius": "50 miles"
+    },
+    "sameAs": [
+      "https://www.instagram.com/inkmugi",
+      "https://www.facebook.com/inkmugi"
+    ]
+  };
+
+  // Individual Service Schemas for competitive advantage
+  const ombrePowderBrowsService = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Ombre Powder Brows",
+    "description": "Expert semi-permanent makeup technique creating soft, shaded brows that last 1-3 years. Perfect for the DMV area's humid climate with superior longevity compared to microblading.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Ink Mugi",
+      "@id": "https://www.inkmugi.com/#business"
+    },
+    "serviceType": "Permanent Makeup",
+    "category": "Beauty Service",
+    "offers": {
+      "@type": "Offer",
+      "price": "550",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2024-01-01",
+      "priceValidUntil": "2024-12-31",
+      "description": "Includes initial procedure and complimentary 6-week touch-up session"
+    },
+    "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC", "Northern Virginia", "Maryland"],
+    "hoursAvailable": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "image": "https://live.staticflickr.com/65535/54364396583_48d38e3d93_o_d.jpg",
+    "brand": {
+      "@type": "Brand",
+      "name": "Ink Mugi PMU"
     }
+  };
+
+  const microshadingService = {
+    "@context": "https://schema.org",
+    "@type": "Service", 
+    "name": "Microshading",
+    "description": "Advanced microshading technique combining hair strokes and shading for natural brow definition. Ideal for all skin types, especially oily skin common in the DMV area.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Ink Mugi",
+      "@id": "https://www.inkmugi.com/#business"
+    },
+    "serviceType": "Permanent Makeup",
+    "category": "Beauty Service",
+    "offers": {
+      "@type": "Offer",
+      "price": "500",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2024-01-01",
+      "priceValidUntil": "2024-12-31",
+      "description": "Professional microshading with premium pigments and aftercare included"
+    },
+    "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC", "Northern Virginia", "Maryland"],
+    "hoursAvailable": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "image": "https://live.staticflickr.com/65535/54364170391_5f7424c0b6_o_d.jpg",
+    "brand": {
+      "@type": "Brand",
+      "name": "Ink Mugi PMU"
+    }
+  };
+
+  // Enhanced Review Schema with individual reviews
+  const reviewSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "LocalBusiness",
+        "name": "Ink Mugi",
+        "@id": "https://www.inkmugi.com/#business"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Mariel H."
+      },
+      "datePublished": "2024-06-15",
+      "reviewBody": "Mugi did an amazing job!! I absolutely love my eyebrows she did an amazing job. she is very nice and sweet. I highly recommend her.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google Reviews"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "LocalBusiness", 
+        "name": "Ink Mugi",
+        "@id": "https://www.inkmugi.com/#business"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5", 
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Tuyet Q."
+      },
+      "datePublished": "2024-05-22",
+      "reviewBody": "My ombré powder brows were done by Mugi! She is so sweet, very detailed, and patient. She took the time to consult with me to see what my brow goals are and the best fit for my face. After my brows healed they looked perfect I never thought having my brows done would save so much time everyday getting ready I love them!!",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google Reviews"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "LocalBusiness",
+        "name": "Ink Mugi", 
+        "@id": "https://www.inkmugi.com/#business"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5", 
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Chantee C."
+      },
+      "datePublished": "2024-04-10",
+      "reviewBody": "Mugi is so wonderful. She was very professional and truly cares about her clients comfort and her craft. I appreciate how detailed she was and she communicated every step to me so well and eloquently.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google Reviews"
+      }
+    }
+  ];
+
+  // FAQ Schema as separate entity for voice search optimization
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long do ombre powder brows last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ombre powder brows typically last 1-3 years depending on your skin type, lifestyle, and aftercare. Oily skin may require touch-ups sooner, while dry skin tends to retain the pigment longer. At Ink Mugi, we use premium pigments that ensure long-lasting, beautiful results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between ombre powder brows and microblading?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ombre powder brows create a soft, shaded look using a shading technique that resembles makeup, while microblading creates individual hair-like strokes. Powder brows are better for oily skin types and provide more coverage, lasting longer than microblading. They also heal with less touch-ups required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the ombre powder brow procedure hurt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most clients experience minimal discomfort during the ombre powder brow procedure. We use topical numbing cream to ensure your comfort throughout the 2-3 hour session. Pain levels are typically rated 2-4 out of 10, with most clients finding it very tolerable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do ombre powder brows cost in the DMV area?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our ombre powder brows start at $550, which includes the initial procedure and one complimentary touch-up session within 6-8 weeks. This is competitive pricing for the DMV area's premium PMU services, offering exceptional value for long-lasting results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the aftercare process for ombre powder brows?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aftercare is crucial for optimal healing. Keep the area dry for 7-10 days, avoid picking or scratching, apply provided aftercare ointment as directed, and avoid sun exposure, swimming, and excessive sweating. Full healing takes 4-6 weeks with the final color appearing after this period."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is a good candidate for ombre powder brows?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ombre powder brows are ideal for people with oily skin, those who want a fuller makeup look, clients with sparse or over-plucked brows, and anyone seeking low-maintenance beauty routine. They work well on all skin types and ages, particularly for busy professionals in the DMV area."
+        }
+      }
+    ]
   };
 
   const testimonials = [
@@ -119,7 +519,7 @@ const Home: React.FC = () => {
     {
       title: 'Ombre Powder Brows',
       description: 'A soft, airbrushed effect that creates the perfect brow shape with a subtle gradient appearance.',
-      price: 'From 400',
+      price: 'From $550',
       duration: '2-3 hours',
       image: 'https://live.staticflickr.com/65535/54364396583_48d38e3d93_o_d.jpg',
     },
@@ -152,7 +552,15 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <SEO structuredData={schemaData} />
+      <SEO structuredData={[
+        schemaData, 
+        breadcrumbSchema, 
+        faqSchema,
+        organizationSchema,
+        ombrePowderBrowsService,
+        microshadingService,
+        ...reviewSchema
+      ]} />
 {/* Hero Section */}
 <section className="relative h-screen flex items-center">
   {/* Darker overlay with reduced opacity (by ~20%) */}
