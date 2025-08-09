@@ -2,7 +2,7 @@
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
     "name": "INK MUGI",
-    "description": "Expert PMU services including microblading, ombre powder brows, and microshading for the DMV area including Annandale, Arlington, Alexandria, and Washington DC.",
+    "description": "Premier PMU studio in Annandale, VA specializing in ombre powder brows, microshading, nano brows, and fine line tattoos. Serving clients throughout the DMV area including Arlington, Alexandria, Fairfax, Washington DC, and Maryland.",
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "7857 Heritage Dr #330",
@@ -84,16 +84,16 @@
     ],
     "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Services",
+        "name": "PMU Services",
         "itemListElement": [
             {
                 "@type": "Offer",
                 "itemOffered": {
                     "@type": "Service",
                     "name": "Ombre Powder Brows",
-                    "description": "Expert semi-permanent makeup technique for soft, shaded brows in the DMV area, ideal for clients from DC, Maryland, and Virginia seeking natural-looking results that withstand the region's humidity.",
+                    "description": "Expert semi-permanent makeup technique creating soft, shaded brows perfect for the DMV area's humid climate. Ideal for clients from DC, Maryland, and Virginia seeking natural-looking results that last 1-3 years.",
                     "url": "https://www.inkmugi.com/services.html#ombre-brows",
-                    "areaServed": ["Washington DC", "Northern Virginia", "Maryland"]
+                    "areaServed": ["Washington DC", "Northern Virginia", "Maryland", "Annandale", "Arlington", "Alexandria", "Fairfax"]
                 }
             },
             {
@@ -101,9 +101,19 @@
                 "itemOffered": {
                     "@type": "Service",
                     "name": "Microshading",
-                    "description": "Professional microshading service creating soft, natural-looking brows, ideal for sensitive and oily skin types in the DMV area's humid climate.",
+                    "description": "Professional microshading service creating soft, natural-looking brows using gentle stippling technique. Ideal for sensitive and oily skin types common in the DMV area's humid climate.",
                     "url": "https://www.inkmugi.com/services.html#microshading",
-                    "areaServed": ["Washington DC", "Northern Virginia", "Maryland"]
+                    "areaServed": ["Washington DC", "Northern Virginia", "Maryland", "Annandale", "Arlington", "Alexandria", "Fairfax"]
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Nano Brows",
+                    "description": "Precision machine-created hair strokes for the most natural-looking eyebrow enhancement. Perfect for DMV professionals seeking low-maintenance, realistic brow results.",
+                    "url": "https://www.inkmugi.com/services.html#nano-brows",
+                    "areaServed": ["Washington DC", "Northern Virginia", "Maryland", "Annandale", "Arlington", "Alexandria", "Fairfax"]
                 }
             },
             {
@@ -111,9 +121,9 @@
                 "itemOffered": {
                     "@type": "Service",
                     "name": "Fine Line Tattoos",
-                    "description": "Delicate, precise fine line tattoo designs perfect for DMV professionals seeking subtle, elegant artwork.",
+                    "description": "Delicate, precise fine line tattoo designs perfect for DMV professionals seeking subtle, elegant artwork. Custom designs created by our skilled artist in Annandale.",
                     "url": "https://www.inkmugi.com/services.html#fine-line-tattoos",
-                    "areaServed": ["Washington DC", "Northern Virginia", "Maryland"]
+                    "areaServed": ["Washington DC", "Northern Virginia", "Maryland", "Annandale", "Arlington", "Alexandria", "Fairfax"]
                 }
             }
         ]
