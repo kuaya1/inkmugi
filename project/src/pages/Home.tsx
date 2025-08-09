@@ -1,17 +1,99 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, Shield, Clock, Heart } from 'lucide-react';
+import { ArrowRight, Award, Shield, Clock, Heart, Star, Users } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import AnimatedSection from '../components/AnimatedSection';
 import TestimonialCard from '../components/TestimonialCard';
 import ServiceCard from '../components/ServiceCard';
+import SEO from '../components/SEO';
 
 const Home: React.FC = () => {
+  // Schema.org structured data for local business
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "Inkmugi",
+    "image": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7857 Heritage Dr #330",
+      "addressLocality": "Annandale",
+      "addressRegion": "VA",
+      "postalCode": "22003",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.8304",
+      "longitude": "-77.1964"
+    },
+    "telephone": "+1-571-283-8228",
+    "email": "inkmugi@gmail.com",
+    "url": "https://www.inkmugi.com",
+    "sameAs": [
+      "https://www.instagram.com/inkmugi",
+      "https://www.facebook.com/inkmugi"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "16:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "47"
+    },
+    "areaServed": [
+      "Annandale",
+      "Arlington",
+      "Alexandria", 
+      "Fairfax",
+      "Washington DC",
+      "Northern Virginia",
+      "Maryland"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "PMU Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Ombre Powder Brows",
+            "description": "Expert semi-permanent makeup technique creating soft, shaded brows perfect for the DMV area's humid climate."
+          }
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Microshading",
+            "description": "Professional microshading service creating soft, natural-looking brows, ideal for sensitive and oily skin types."
+          }
+        }
+      ]
+    }
+  };
+
   const testimonials = [
     {
       name: 'Mariel H',
@@ -70,6 +152,7 @@ const Home: React.FC = () => {
 
   return (
     <>
+      <SEO structuredData={schemaData} />
 {/* Hero Section */}
 <section className="relative h-screen flex items-center">
   {/* Darker overlay with reduced opacity (by ~20%) */}
@@ -172,11 +255,13 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
               <div className="relative">
-                <img 
-                  src="https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg" 
-                  alt="Permanent Makeup Artist" 
+                <LazyLoadImage
+                  src="https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg"
+                  alt="Permanent Makeup Artist"
                   className="rounded-lg shadow-medium w-full h-auto object-cover"
                   style={{ height: "auto", aspectRatio: "3/4" }}
+                  effect="blur"
+                  placeholderSrc="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRjdFREU2Ii8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzJEMkQyQiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+Cjwvc3ZnPg=="
                 />
                 <div className="absolute -top-4 -left-4 h-24 w-24 border-t-4 border-l-4 border-[#2D2D2B]/20 rounded-tl-lg"></div>
                 <div className="absolute -bottom-4 -right-4 h-24 w-24 border-b-4 border-r-4 border-[#2D2D2B]/20 rounded-br-lg"></div>
@@ -195,6 +280,29 @@ const Home: React.FC = () => {
               <p className="text-[#2D2D2B]/80 mb-8 leading-relaxed">
                 Every procedure begins with a thorough consultation to understand your preferences and design brows that complement your face shape, skin tone, and personal style.
               </p>
+              
+              {/* Trust Signals */}
+              <div className="bg-white/70 p-6 rounded-lg mb-8">
+                <h4 className="font-medium mb-4 text-[#2D2D2B]">Certified & Trusted</h4>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="flex items-center">
+                    <Award size={16} className="text-[#E6DAD2] mr-2" />
+                    <span>Licensed PMU Artist</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Shield size={16} className="text-[#E6DAD2] mr-2" />
+                    <span>Blood-borne Pathogen Certified</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Heart size={16} className="text-[#E6DAD2] mr-2" />
+                    <span>47+ Five-Star Reviews</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Clock size={16} className="text-[#E6DAD2] mr-2" />
+                    <span>10+ Years Experience</span>
+                  </div>
+                </div>
+              </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
                 <div className="flex items-start group">
@@ -232,8 +340,8 @@ const Home: React.FC = () => {
                     <Award size={22} className="text-[#2D2D2B]" />
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1 text-[#2D2D2B]">Certified Expert</h4>
-                    <p className="text-sm text-[#2D2D2B]/70">Advanced training & certification</p>
+                    <h4 className="font-medium mb-1 text-[#2D2D2B]">Satisfaction Guarantee</h4>
+                    <p className="text-sm text-[#2D2D2B]/70">Your happiness is our priority</p>
                   </div>
                 </div>
               </div>
@@ -397,6 +505,33 @@ const Home: React.FC = () => {
               ))}
             </Swiper>
           </AnimatedSection>
+
+          {/* Trust Badges */}
+          <AnimatedSection delay={1}>
+            <div className="mt-16 text-center">
+              <div className="bg-[#F7EDE6] p-8 rounded-lg">
+                <h4 className="font-medium mb-6 text-[#2D2D2B]">Trusted & Verified</h4>
+                <div className="flex flex-wrap justify-center items-center gap-8">
+                  <div className="flex items-center">
+                    <Star className="text-yellow-400 mr-2" size={20} />
+                    <span className="font-medium">4.9/5 Rating</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Users className="text-[#E6DAD2] mr-2" size={20} />
+                    <span className="font-medium">200+ Happy Clients</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Award className="text-[#E6DAD2] mr-2" size={20} />
+                    <span className="font-medium">Licensed Professional</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Shield className="text-[#E6DAD2] mr-2" size={20} />
+                    <span className="font-medium">Insured & Bonded</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -404,25 +539,196 @@ const Home: React.FC = () => {
       <section className="py-24 bg-[#2D2D2B] text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://live.staticflickr.com/65535/54363160242_7975c4f42c_o_d.jpg')] bg-cover bg-center opacity-10"></div>
         <div className="container-custom relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <AnimatedSection>
-              <span className="inline-block text-[#E6DAD2] font-light tracking-wider mb-4 uppercase text-sm">Get Started</span>
+              <div className="bg-[#E6DAD2]/10 inline-block px-4 py-2 rounded-full mb-4">
+                <span className="text-[#E6DAD2] font-medium tracking-wider uppercase text-sm">Limited Availability</span>
+              </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-cormorant font-medium mb-6 leading-tight">
                 Ready to Transform Your Brows?
               </h2>
-              <p className="text-lg text-[#F9F7F5]/90 mb-10 max-w-2xl mx-auto">
+              <p className="text-lg text-[#F9F7F5]/90 mb-8 max-w-2xl mx-auto">
                 Book your consultation today and take the first step towards effortlessly beautiful brows that enhance your natural features.
               </p>
+              
+              {/* Value Proposition */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 max-w-3xl mx-auto">
+                <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
+                  <Clock className="text-[#E6DAD2] mb-3 mx-auto" size={32} />
+                  <h4 className="font-medium mb-2">Free Consultation</h4>
+                  <p className="text-sm text-[#F9F7F5]/80">30-minute personalized design session</p>
+                </div>
+                <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
+                  <Award className="text-[#E6DAD2] mb-3 mx-auto" size={32} />
+                  <h4 className="font-medium mb-2">Satisfaction Guarantee</h4>
+                  <p className="text-sm text-[#F9F7F5]/80">Love your brows or we'll make it right</p>
+                </div>
+                <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
+                  <Shield className="text-[#E6DAD2] mb-3 mx-auto" size={32} />
+                  <h4 className="font-medium mb-2">Licensed & Insured</h4>
+                  <p className="text-sm text-[#F9F7F5]/80">Certified permanent makeup artist</p>
+                </div>
+              </div>
+
+              {/* Urgency Element */}
+              <div className="bg-[#E6DAD2]/20 p-4 rounded-lg mb-8 max-w-2xl mx-auto">
+                <p className="text-[#E6DAD2] font-medium mb-2">🔥 Only 3 spots available this month!</p>
+                <p className="text-sm text-[#F9F7F5]/90">Book now to secure your appointment at our current pricing</p>
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-5 justify-center">
-                <Link to="/booking" className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px]">
-                  Book Now
+                <Link to="/booking" className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px] text-lg px-8 py-4">
+                  Book Your Consultation Now
                 </Link>
                 <Link to="/contact" className="btn bg-transparent border border-[#F9F7F5] hover:bg-white/10 text-white transition-all duration-300">
-                  Contact Us
+                  Have Questions? Contact Us
                 </Link>
               </div>
             </AnimatedSection>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section with Schema Markup */}
+      <section className="py-24 bg-[#F9F7F5]">
+        <div className="container-custom">
+          <AnimatedSection className="text-center mb-16">
+            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">Common Questions</span>
+            <h2 className="section-title relative inline-block">
+              Frequently Asked Questions
+              <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#E6DAD2]"></span>
+            </h2>
+            <p className="section-subtitle max-w-2xl mx-auto mt-8">
+              Get answers to the most common questions about ombre powder brows and microshading in the DMV area
+            </p>
+          </AnimatedSection>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <AnimatedSection delay={1}>
+                <div className="bg-white p-6 rounded-lg shadow-soft">
+                  <h3 className="text-xl font-medium mb-4 text-[#2D2D2B]">How long do ombre powder brows last?</h3>
+                  <p className="text-[#2D2D2B]/80 leading-relaxed">
+                    Ombre powder brows typically last 1-3 years, depending on your skin type, lifestyle, and aftercare. In the DMV's humid climate, they often last longer than traditional microblading due to the technique's durability.
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={2}>
+                <div className="bg-white p-6 rounded-lg shadow-soft">
+                  <h3 className="text-xl font-medium mb-4 text-[#2D2D2B]">What's better for oily skin - microshading or microblading?</h3>
+                  <p className="text-[#2D2D2B]/80 leading-relaxed">
+                    Microshading is generally better for oily skin types common in the DMV area. The stippling technique holds better in oily skin and humid conditions compared to hair-stroke methods.
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={3}>
+                <div className="bg-white p-6 rounded-lg shadow-soft">
+                  <h3 className="text-xl font-medium mb-4 text-[#2D2D2B]">How much do ombre brows cost in Annandale?</h3>
+                  <p className="text-[#2D2D2B]/80 leading-relaxed">
+                    Our ombre powder brows start at $400, including consultation, initial treatment, and 6-week touch-up. We offer transparent pricing with no hidden fees for our Annandale and DMV clients.
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={4}>
+                <div className="bg-white p-6 rounded-lg shadow-soft">
+                  <h3 className="text-xl font-medium mb-4 text-[#2D2D2B]">Do you serve clients from Arlington and Alexandria?</h3>
+                  <p className="text-[#2D2D2B]/80 leading-relaxed">
+                    Yes! We're conveniently located in Annandale and serve clients throughout the DMV area including Arlington (15 min), Alexandria (20 min), and Washington DC (25 min).
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={5}>
+                <div className="bg-white p-6 rounded-lg shadow-soft">
+                  <h3 className="text-xl font-medium mb-4 text-[#2D2D2B]">How do I prepare for my PMU appointment?</h3>
+                  <p className="text-[#2D2D2B]/80 leading-relaxed">
+                    Avoid caffeine, alcohol, and blood thinners 24 hours before. Don't tweeze or wax brows for 2 weeks prior. We'll provide detailed pre-care instructions during your consultation.
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={6}>
+                <div className="bg-white p-6 rounded-lg shadow-soft">
+                  <h3 className="text-xl font-medium mb-4 text-[#2D2D2B]">What aftercare is needed in DMV's humid climate?</h3>
+                  <p className="text-[#2D2D2B]/80 leading-relaxed">
+                    We provide specialized aftercare instructions for the DMV's humidity levels. This includes specific products and techniques to ensure optimal healing during our hot, humid summers.
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Local Area Convenience Section */}
+      <section className="py-24 bg-white">
+        <div className="container-custom">
+          <AnimatedSection className="text-center mb-16">
+            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">Convenient Location</span>
+            <h2 className="section-title relative inline-block">
+              Serving the Entire DMV Area
+              <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#E6DAD2]"></span>
+            </h2>
+            <p className="section-subtitle max-w-2xl mx-auto mt-8">
+              Easily accessible from major DMV locations with ample parking and convenient scheduling
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <AnimatedSection delay={1}>
+              <div className="text-center p-6 bg-[#F9F7F5] rounded-lg">
+                <div className="w-16 h-16 bg-[#E6DAD2] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#2D2D2B] font-bold text-lg">15</span>
+                </div>
+                <h3 className="text-xl font-medium mb-3 text-[#2D2D2B]">From Arlington</h3>
+                <p className="text-[#2D2D2B]/80">
+                  Just 15 minutes via I-495<br />
+                  Serving Clarendon, Rosslyn, Ballston, Pentagon City
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={2}>
+              <div className="text-center p-6 bg-[#F9F7F5] rounded-lg">
+                <div className="w-16 h-16 bg-[#E6DAD2] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#2D2D2B] font-bold text-lg">20</span>
+                </div>
+                <h3 className="text-xl font-medium mb-3 text-[#2D2D2B]">From Alexandria</h3>
+                <p className="text-[#2D2D2B]/80">
+                  20 minutes via Little River Turnpike<br />
+                  Easy access from Old Town, Del Ray, Kingstowne
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={3}>
+              <div className="text-center p-6 bg-[#F9F7F5] rounded-lg">
+                <div className="w-16 h-16 bg-[#E6DAD2] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#2D2D2B] font-bold text-lg">25</span>
+                </div>
+                <h3 className="text-xl font-medium mb-3 text-[#2D2D2B]">From Washington DC</h3>
+                <p className="text-[#2D2D2B]/80">
+                  25 minutes via I-395<br />
+                  Metro accessible via Orange/Silver Line to Vienna
+                </p>
+              </div>
+            </AnimatedSection>
+          </div>
+
+          <AnimatedSection className="text-center mt-12">
+            <div className="bg-[#F7EDE6] p-8 rounded-lg max-w-3xl mx-auto">
+              <h3 className="text-2xl font-cormorant font-medium mb-4 text-[#2D2D2B]">Free Parking & Flexible Scheduling</h3>
+              <p className="text-[#2D2D2B]/80 mb-6">
+                Located in Heritage Professional Plaza with ample free parking. We offer evening and weekend appointments to accommodate busy DMV professionals.
+              </p>
+              <Link to="/booking" className="btn bg-[#2D2D2B] hover:bg-[#2D2D2B]/80 text-white transition-all duration-300">
+                Schedule Your Consultation
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
     </>

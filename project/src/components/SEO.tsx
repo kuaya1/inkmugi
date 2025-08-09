@@ -11,11 +11,11 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "Ombre Powder Brows & Microshading Annandale VA | Top-Rated DMV PMU Studio | Inkmugi",
-  description = "Premier PMU studio in Annandale, VA specializing in ombre powder brows & microshading. Serving Arlington, Alexandria, Fairfax, Washington DC & Maryland. Book your consultation today.",
+  title = "Ombre Powder Brows & Microshading Annandale VA | Top DMV PMU Artist | Inkmugi",
+  description = "Expert ombre powder brows & microshading in Annandale, VA. Serving Arlington, Alexandria, Fairfax & DC. Natural-looking PMU lasting 1-3 years. Book consultation today!",
   keywords = "ombre powder brows, microshading, permanent makeup, PMU artist, Annandale VA, DMV, Arlington, Alexandria, Washington DC, eyebrow tattoo, nano brows",
-  ogImage = "https://inkmugi.com/images/ink-mugi-pmu-artist.jpg",
-  canonicalUrl = "https://inkmugi.com/",
+  ogImage = "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
+  canonicalUrl = "https://www.inkmugi.com/",
   structuredData
 }) => {
   return (
