@@ -87,9 +87,14 @@ const Services = () => {
                   <p className="text-[#2D2D2B]/80 mb-6">
                     {service.description}
                   </p>
-                  <Link to="/booking" className="text-[#2D2D2B] font-medium hover:text-[#2D2D2B]/70 transition-colors">
-                    Learn More
-                  </Link>
+                  <a 
+                    href="https://www.vagaro.com/bortemicroblading/book-now" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-[#2D2D2B] font-medium hover:text-[#2D2D2B]/70 transition-colors"
+                  >
+                    Book This Service
+                  </a>
                 </div>
               </AnimatedSection>
             ))}
@@ -176,9 +181,14 @@ const Services = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/booking" className="btn bg-[#2D2D2B] hover:bg-[#1a1a19] text-white">
+                <a 
+                  href="https://www.vagaro.com/bortemicroblading/book-now" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn bg-[#2D2D2B] hover:bg-[#1a1a19] text-white"
+                >
                   Book a Consultation
-                </Link>
+                </a>
                 <Link to="/gallery" className="btn btn-outline text-[#2D2D2B] border-[#2D2D2B] hover:bg-[#2D2D2B]/5">
                   View Our Work
                 </Link>

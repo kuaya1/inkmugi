@@ -197,9 +197,14 @@ const Home: React.FC = () => {
       </p>
       
       <div className="flex flex-col sm:flex-row gap-4">
-        <Link to="/booking" className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px] px-8 py-3">
+        <a 
+          href="https://www.vagaro.com/bortemicroblading/book-now" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px] px-8 py-3"
+        >
           Schedule Consultation
-        </Link>
+        </a>
         <Link to="/gallery" className="btn backdrop-blur-sm border border-white/40 hover:bg-white/10 text-white transition-all duration-300 px-8 py-3">
           Explore Our Work
         </Link>
@@ -577,9 +582,14 @@ const Home: React.FC = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-5 justify-center">
-                <Link to="/booking" className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px] text-lg px-8 py-4">
+                <a 
+                  href="https://www.vagaro.com/bortemicroblading/book-now" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px] text-lg px-8 py-4"
+                >
                   Book Your Consultation Now
-                </Link>
+                </a>
                 <Link to="/contact" className="btn bg-transparent border border-[#F9F7F5] hover:bg-white/10 text-white transition-all duration-300">
                   Have Questions? Contact Us
                 </Link>
@@ -724,9 +734,14 @@ const Home: React.FC = () => {
               <p className="text-[#2D2D2B]/80 mb-6">
                 Located in Heritage Professional Plaza with ample free parking. We offer evening and weekend appointments to accommodate busy DMV professionals.
               </p>
-              <Link to="/booking" className="btn bg-[#2D2D2B] hover:bg-[#2D2D2B]/80 text-white transition-all duration-300">
+              <a 
+                href="https://www.vagaro.com/bortemicroblading/book-now" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn bg-[#2D2D2B] hover:bg-[#2D2D2B]/80 text-white transition-all duration-300"
+              >
                 Schedule Your Consultation
-              </Link>
+              </a>
             </div>
           </AnimatedSection>
         </div>

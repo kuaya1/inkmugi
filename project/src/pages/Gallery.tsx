@@ -570,9 +570,14 @@ const Gallery: React.FC = () => {
                   </div>
                   
                   <div className="p-6 border-t border-[#E6DAD2] text-center">
-                    <Link to="/booking" className="btn bg-[#2D2D2B] hover:bg-[#2D2D2B]/80 text-white">
+                    <a 
+                      href="https://www.vagaro.com/bortemicroblading/book-now" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="btn bg-[#2D2D2B] hover:bg-[#2D2D2B]/80 text-white"
+                    >
                       Book This Service
-                    </Link>
+                    </a>
                   </div>
                 </motion.div>
               </motion.div>
@@ -662,9 +667,14 @@ const Gallery: React.FC = () => {
                 Book your consultation today and take the first step towards effortlessly beautiful brows that enhance your natural features.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center">
-                <Link to="/booking" className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px]">
+                <a 
+                  href="https://www.vagaro.com/bortemicroblading/book-now" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px]"
+                >
                   Book Now
-                </Link>
+                </a>
                 <Link to="/contact" className="btn bg-transparent border border-[#F9F7F5] hover:bg-white/10 text-white transition-all duration-300">
                   Contact Us
                 </Link>
