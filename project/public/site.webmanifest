@@ -1,0 +1,40 @@
+{
+  "name": "Ink Mugi - Premium PMU Studio",
+  "short_name": "Ink Mugi",
+  "description": "Premier permanent makeup studio in Annandale, VA specializing in ombre powder brows and microshading",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9F7F5",
+  "theme_color": "#E6DAD2",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["beauty", "health", "lifestyle"],
+  "lang": "en-US",
+  "scope": "/"
+}
