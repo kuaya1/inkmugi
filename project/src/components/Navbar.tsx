@@ -101,12 +101,14 @@ const Navbar: React.FC = () => {
             </a>
           </div>
           
-          <Link
-            to="/booking"
+          <a
+            href="https://www.vagaro.com/bortemicroblading/book-now"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-primary text-sm py-2 px-4"
           >
             Book Now
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -139,12 +141,14 @@ const Navbar: React.FC = () => {
               {link.name}
             </Link>
           ))}
-          <Link
-            to="/booking"
+          <a
+            href="https://www.vagaro.com/bortemicroblading/book-now"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-primary text-sm py-2 w-full"
           >
             Book Now
-          </Link>
+          </a>
 
           {/* Social Icons - Mobile */}
           <div className="flex items-center space-x-4 pt-2">
