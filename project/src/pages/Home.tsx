@@ -98,11 +98,11 @@ const Home: React.FC = () => {
       {/* Main headline */}
       <h1 className="mb-6">
         <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-cormorant font-light leading-tight">
-          DMV's Premier <span className="text-[#E6DAD2]">Destination</span>,
+          Effortless <span className="text-[#E6DAD2]">Beauty</span>,
         </div>
         <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-cormorant font-medium leading-tight flex items-center mt-2">
-          for Ombre Brows <span className="text-[#E6DAD2] ml-2 relative">
-            & Microshading
+          Timeless <span className="text-[#E6DAD2] ml-2 relative">
+            Elegance
             {/* Decorative underline element */}
             <span className="absolute -bottom-2 left-0 w-full h-[1.5px] bg-[#E6DAD2] opacity-90"></span>
           </span>
