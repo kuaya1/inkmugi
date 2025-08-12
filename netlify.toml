@@ -6,6 +6,26 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Force HTTPS and www
+[[redirects]]
+  from = "http://inkmugi.com/*"
+  to = "https://www.inkmugi.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.inkmugi.com/*"
+  to = "https://www.inkmugi.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://inkmugi.com/*"
+  to = "https://www.inkmugi.com/:splat"
+  status = 301
+  force = true
+
+# SPA fallback (must be last)
 [[redirects]]
   from = "/*"
   to = "/index.html"
