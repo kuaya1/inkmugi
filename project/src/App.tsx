@@ -11,6 +11,7 @@ import Faq from './pages/Faq';
 import BookingRedirect from './pages/BookingRedirect';
 import Blog from './pages/Blog';
 import BlogPost from './components/blogpost';
+import Authority from './pages/Authority';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/booking" element={<BookingRedirect />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/authority" element={<Authority />} />
         </Routes>
       </main>
       <Footer />
