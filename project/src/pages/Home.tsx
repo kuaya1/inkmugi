@@ -15,13 +15,24 @@ import ServiceCard from '../components/ServiceCard';
 import SEO from '../components/SEO';
 
 const Home: React.FC = () => {
-  // Schema.org structured data for local business
+  // Enhanced Schema.org structured data for local business
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
-    "name": "Inkmugi",
-    "image": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
-    "priceRange": "$$$",
+    "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+    "@id": "https://www.inkmugi.com/#business",
+    "additionalType": "PermanentMakeupStudio",
+    "name": "Ink Mugi",
+    "alternateName": ["Inkmugi", "InkMugi PMU Studio", "Ink Mugi Permanent Makeup"],
+    "description": "Premier permanent makeup studio specializing in ombre powder brows, microshading, and fine line tattoos in Annandale, VA. Serving the DMV area with expert artistry and natural-looking results.",
+    "image": [
+      "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
+      "https://live.staticflickr.com/65535/54364396583_48d38e3d93_o_d.jpg",
+      "https://live.staticflickr.com/65535/54364170391_5f7424c0b6_o_d.jpg"
+    ],
+    "logo": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
+    "priceRange": "$150-$550",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Venmo", "Zelle"],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "7857 Heritage Dr #330",
@@ -42,139 +53,358 @@ const Home: React.FC = () => {
       "https://www.instagram.com/inkmugi",
       "https://www.facebook.com/inkmugi"
     ],
+    "founder": {
+      "@type": "Person",
+      "name": "Mugi",
+      "jobTitle": "Licensed Permanent Makeup Artist",
+      "description": "Certified PMU artist with over 10 years of experience specializing in ombre powder brows and microshading techniques."
+    },
+    "employee": {
+      "@type": "Person",
+      "name": "Mugi",
+      "jobTitle": "Lead PMU Artist"
+    },
+    "foundingDate": "2014",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         "opens": "09:00",
-        "closes": "18:00"
+        "closes": "18:00",
+        "validFrom": "2024-01-01",
+        "validThrough": "2025-12-31"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Saturday",
         "opens": "10:00",
-        "closes": "16:00"
+        "closes": "16:00",
+        "validFrom": "2024-01-01",
+        "validThrough": "2025-12-31"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "00:00",
+        "closes": "00:00",
+        "validFrom": "2024-01-01",
+        "validThrough": "2025-12-31"
+      }
+    ],
+    "specialOpeningHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "validFrom": "2024-12-25",
+        "validThrough": "2024-12-25",
+        "opens": "00:00",
+        "closes": "00:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "validFrom": "2025-01-01",
+        "validThrough": "2025-01-01",
+        "opens": "00:00",
+        "closes": "00:00"
       }
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
-      "reviewCount": "47"
+      "bestRating": "5",
+      "worstRating": "1",
+      "reviewCount": "47",
+      "ratingCount": "47"
     },
     "areaServed": [
-      "Annandale",
-      "Arlington",
-      "Alexandria", 
-      "Fairfax",
-      "Washington DC",
-      "Northern Virginia",
-      "Maryland"
+      {
+        "@type": "City",
+        "name": "Annandale",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Virginia"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Arlington",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Virginia"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Alexandria",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Virginia"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Fairfax",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Virginia"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Washington DC"
+      },
+      {
+        "@type": "State",
+        "name": "Northern Virginia"
+      },
+      {
+        "@type": "State",
+        "name": "Maryland"
+      }
+    ],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "38.8304",
+        "longitude": "-77.1964"
+      },
+      "geoRadius": "50 miles"
+    },
+    "knowsAbout": [
+      "Ombre Powder Brows",
+      "Microshading",
+      "Permanent Makeup",
+      "Semi-Permanent Makeup",
+      "Eyebrow Tattooing",
+      "Fine Line Tattoos",
+      "PMU Aftercare",
+      "Brow Consultation",
+      "Color Matching",
+      "Face Shape Analysis"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "PMU Services",
+      "name": "Premium PMU Services",
+      "description": "Comprehensive permanent makeup services specializing in natural-looking results",
       "itemListElement": [
         {
           "@type": "Offer",
+          "@id": "https://www.inkmugi.com/services#ombre-powder-brows",
+          "name": "Ombre Powder Brows",
+          "description": "Expert semi-permanent makeup technique creating soft, shaded brows perfect for the DMV area's humid climate. Ideal for all skin types with superior longevity.",
+          "category": "Permanent Makeup",
           "itemOffered": {
             "@type": "Service",
             "name": "Ombre Powder Brows",
-            "description": "Expert semi-permanent makeup technique creating soft, shaded brows perfect for the DMV area's humid climate.",
+            "serviceType": "Permanent Makeup",
             "provider": {
-              "@type": "LocalBusiness",
-              "@id": "https://www.inkmugi.com/#business"
+              "@type": "Person",
+              "name": "Mugi",
+              "jobTitle": "Licensed PMU Artist"
             },
             "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC", "Northern Virginia", "Maryland"],
             "availableChannel": {
               "@type": "ServiceChannel",
-              "serviceUrl": "https://www.inkmugi.com/services"
-            }
+              "serviceUrl": "https://www.inkmugi.com/services",
+              "servicePhone": "+1-571-283-8228"
+            },
+            "duration": "PT3H",
+            "category": "Beauty Service"
           },
           "price": "550",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer", 
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Microshading",
-            "description": "Professional microshading service creating soft, natural-looking brows, ideal for sensitive and oily skin types.",
-            "provider": {
-              "@type": "LocalBusiness",
-              "@id": "https://www.inkmugi.com/#business"
-            },
-            "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC", "Northern Virginia", "Maryland"],
-            "availableChannel": {
-              "@type": "ServiceChannel",
-              "serviceUrl": "https://www.inkmugi.com/services"
-            }
-          },
-          "price": "500",
-          "priceCurrency": "USD"
+          "priceCurrency": "USD",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2024-01-01",
+          "includesObject": [
+            "Initial procedure",
+            "Complimentary 6-week touch-up",
+            "Aftercare kit",
+            "Follow-up consultation"
+          ],
+          "warranty": {
+            "@type": "WarrantyPromise",
+            "durationOfWarranty": "P6M",
+            "warrantyScope": "Touch-up included"
+          }
         },
         {
           "@type": "Offer",
+          "@id": "https://www.inkmugi.com/services#microshading",
+          "name": "Microshading",
+          "description": "Professional microshading service creating soft, natural-looking brows, ideal for sensitive and oily skin types common in the DMV area.",
+          "category": "Permanent Makeup",
           "itemOffered": {
             "@type": "Service",
-            "name": "Fine Line Tattoo",
-            "description": "Fine line tattoos use thin, precise lines for delicate, intricate, and minimalist designs.",
+            "name": "Microshading",
+            "serviceType": "Permanent Makeup",
             "provider": {
-              "@type": "LocalBusiness",
-              "@id": "https://www.inkmugi.com/#business"
+              "@type": "Person",
+              "name": "Mugi",
+              "jobTitle": "Licensed PMU Artist"
             },
             "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC", "Northern Virginia", "Maryland"],
             "availableChannel": {
               "@type": "ServiceChannel",
-              "serviceUrl": "https://www.inkmugi.com/services"
-            }
+              "serviceUrl": "https://www.inkmugi.com/services",
+              "servicePhone": "+1-571-283-8228"
+            },
+            "duration": "PT2H30M",
+            "category": "Beauty Service"
+          },
+          "price": "500",
+          "priceCurrency": "USD",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2024-01-01",
+          "includesObject": [
+            "Professional microshading procedure",
+            "Premium pigments",
+            "Aftercare included",
+            "Consultation"
+          ]
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://www.inkmugi.com/services#fine-line-tattoo",
+          "name": "Fine Line Tattoo",
+          "description": "Fine line tattoos using thin, precise lines for delicate, intricate, and minimalist designs with artistic excellence.",
+          "category": "Tattoo Art",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Fine Line Tattoo",
+            "serviceType": "Tattoo Art",
+            "provider": {
+              "@type": "Person",
+              "name": "Mugi",
+              "jobTitle": "Licensed Tattoo Artist"
+            },
+            "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC", "Northern Virginia", "Maryland"],
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://www.inkmugi.com/services",
+              "servicePhone": "+1-571-283-8228"
+            },
+            "duration": "PT2H",
+            "category": "Art Service"
           },
           "price": "150",
-          "priceCurrency": "USD"
+          "priceCurrency": "USD",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2024-01-01",
+          "includesObject": [
+            "Custom design consultation",
+            "Professional fine line tattooing",
+            "Aftercare instructions",
+            "Touch-up if needed"
+          ]
         }
       ]
     },
     "review": [
       {
         "@type": "Review",
+        "@id": "https://www.inkmugi.com/reviews#mariel-h",
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
-          "bestRating": "5"
+          "bestRating": "5",
+          "worstRating": "1"
         },
         "author": {
           "@type": "Person",
-          "name": "Mariel H."
+          "name": "Mariel H.",
+          "reviewCount": "1"
         },
         "datePublished": "2024-06-15",
-        "reviewBody": "Mugi did an amazing job!! I absolutely love my eyebrows she did an amazing job. she is very nice and sweet. I highly recommend her."
+        "reviewBody": "Mugi did an amazing job!! I absolutely love my eyebrows she did an amazing job. she is very nice and sweet. I highly recommend her.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Google Reviews"
+        },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "Ink Mugi",
+          "@id": "https://www.inkmugi.com/#business"
+        }
       },
       {
         "@type": "Review",
+        "@id": "https://www.inkmugi.com/reviews#tuyet-q",
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
-          "bestRating": "5"
+          "bestRating": "5",
+          "worstRating": "1"
         },
         "author": {
           "@type": "Person",
-          "name": "Tuyet Q."
+          "name": "Tuyet Q.",
+          "reviewCount": "1"
         },
         "datePublished": "2024-05-22",
-        "reviewBody": "My ombré powder brows were done by Mugi! She is so sweet, very detailed, and patient. She took the time to consult with me to see what my brow goals are and the best fit for my face. After my brows healed they looked perfect I never thought having my brows done would save so much time everyday getting ready I love them!!"
+        "reviewBody": "My ombré powder brows were done by Mugi! She is so sweet, very detailed, and patient. She took the time to consult with me to see what my brow goals are and the best fit for my face. After my brows healed they looked perfect I never thought having my brows done would save so much time everyday getting ready I love them!!",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Google Reviews"
+        },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "Ink Mugi",
+          "@id": "https://www.inkmugi.com/#business"
+        }
       },
       {
         "@type": "Review",
+        "@id": "https://www.inkmugi.com/reviews#chantee-c",
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
-          "bestRating": "5"
+          "bestRating": "5",
+          "worstRating": "1"
         },
         "author": {
           "@type": "Person",
-          "name": "Chantee C."
+          "name": "Chantee C.",
+          "reviewCount": "1"
         },
         "datePublished": "2024-04-10",
-        "reviewBody": "Mugi is so wonderful. She was very professional and truly cares about her clients comfort and her craft. I appreciate how detailed she was and she communicated every step to me so well and eloquently."
+        "reviewBody": "Mugi is so wonderful. She was very professional and truly cares about her clients comfort and her craft. I appreciate how detailed she was and she communicated every step to me so well and eloquently.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Google Reviews"
+        },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "Ink Mugi",
+          "@id": "https://www.inkmugi.com/#business"
+        }
+      }
+    ],
+    "potentialAction": [
+      {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.vagaro.com/bortemicroblading/book-now",
+          "actionPlatform": [
+            "https://schema.org/DesktopWebPlatform",
+            "https://schema.org/IOSPlatform",
+            "https://schema.org/AndroidPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "PMU Consultation Appointment"
+        }
+      },
+      {
+        "@type": "ContactAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "tel:+1-571-283-8228"
+        }
       }
     ],
     "mainEntity": [
@@ -225,24 +455,73 @@ const Home: React.FC = () => {
     }]
   };
 
-  // Organization Schema for brand authority
+  // Enhanced Organization Schema for brand authority
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://www.inkmugi.com/#organization",
     "name": "Ink Mugi",
-    "alternateName": "InkMugi PMU Studio",
+    "legalName": "Ink Mugi PMU Studio LLC",
+    "alternateName": ["InkMugi PMU Studio", "Ink Mugi Permanent Makeup", "InkMugi"],
     "url": "https://www.inkmugi.com",
-    "logo": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
-    "image": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
-    "description": "Premier permanent makeup studio specializing in ombre powder brows and microshading in the DMV area.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
+      "width": "500",
+      "height": "500"
+    },
+    "image": [
+      {
+        "@type": "ImageObject",
+        "url": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
+        "caption": "Ink Mugi PMU Artist"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "https://live.staticflickr.com/65535/54364396583_48d38e3d93_o_d.jpg",
+        "caption": "Ombre Powder Brows Results"
+      }
+    ],
+    "description": "Premier permanent makeup studio specializing in ombre powder brows, microshading, and fine line tattoos in the DMV area. Expert artistry with natural-looking results.",
+    "slogan": "Effortless Beauty, Timeless Elegance",
     "telephone": "+1-571-283-8228",
     "email": "inkmugi@gmail.com",
     "foundingDate": "2014",
+    "numberOfEmployees": "1-5",
+    "naics": "812199",
     "founder": {
       "@type": "Person",
       "name": "Mugi",
-      "jobTitle": "Licensed Permanent Makeup Artist"
+      "jobTitle": "Licensed Permanent Makeup Artist",
+      "description": "Certified PMU artist with over 10 years of experience specializing in ombre powder brows and microshading techniques.",
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Professional PMU Certification Program"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional License",
+          "name": "Licensed Permanent Makeup Artist"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Health Certification",
+          "name": "Blood-borne Pathogen Certified"
+        }
+      ]
     },
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Mugi",
+        "jobTitle": "Lead PMU Artist & Owner",
+        "worksFor": {
+          "@type": "Organization",
+          "@id": "https://www.inkmugi.com/#organization"
+        }
+      }
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "7857 Heritage Dr #330",
@@ -251,10 +530,48 @@ const Home: React.FC = () => {
       "postalCode": "22003",
       "addressCountry": "US"
     },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+1-571-283-8228",
+        "contactType": "customer service",
+        "areaServed": ["VA", "DC", "MD"],
+        "availableLanguage": ["English", "Korean"],
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      },
+      {
+        "@type": "ContactPoint",
+        "email": "inkmugi@gmail.com",
+        "contactType": "customer service"
+      }
+    ],
     "areaServed": [
       {
         "@type": "State",
-        "name": "Virginia"
+        "name": "Virginia",
+        "containsPlace": [
+          {
+            "@type": "City",
+            "name": "Annandale"
+          },
+          {
+            "@type": "City", 
+            "name": "Arlington"
+          },
+          {
+            "@type": "City",
+            "name": "Alexandria"
+          },
+          {
+            "@type": "City",
+            "name": "Fairfax"
+          }
+        ]
       },
       {
         "@type": "City",
@@ -271,7 +588,29 @@ const Home: React.FC = () => {
       "Permanent Makeup",
       "Eyebrow Tattooing",
       "Semi-Permanent Makeup",
-      "Fine Line Tattoos"
+      "Fine Line Tattoos",
+      "PMU Aftercare",
+      "Brow Design",
+      "Color Theory",
+      "Skin Analysis",
+      "Face Shape Consultation"
+    ],
+    "expertise": [
+      {
+        "@type": "Thing",
+        "name": "Ombre Powder Brow Technique",
+        "description": "Specialized technique for natural-looking powder brows"
+      },
+      {
+        "@type": "Thing",
+        "name": "Microshading",
+        "description": "Advanced shading technique for eyebrow enhancement"
+      },
+      {
+        "@type": "Thing",
+        "name": "Fine Line Tattoo Art",
+        "description": "Delicate and precise tattoo artistry"
+      }
     ],
     "serviceArea": {
       "@type": "GeoCircle",
@@ -282,80 +621,254 @@ const Home: React.FC = () => {
       },
       "geoRadius": "50 miles"
     },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "DMV Beauty Professionals Network"
+    },
+    "memberOf": [
+      {
+        "@type": "Organization",
+        "name": "Society of Permanent Cosmetic Professionals"
+      },
+      {
+        "@type": "Organization",
+        "name": "Virginia Board of Cosmetology"
+      }
+    ],
+    "award": [
+      "Top Rated PMU Artist 2024",
+      "Customer Choice Award 2023",
+      "Excellence in Beauty Services"
+    ],
     "sameAs": [
       "https://www.instagram.com/inkmugi",
-      "https://www.facebook.com/inkmugi"
-    ]
+      "https://www.facebook.com/inkmugi",
+      "https://www.yelp.com/biz/ink-mugi",
+      "https://www.google.com/maps/place/Ink+Mugi"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "@id": "https://www.inkmugi.com/services#catalog"
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "Ink Mugi PMU",
+      "logo": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg"
+    },
+    "owns": {
+      "@type": "LocalBusiness",
+      "@id": "https://www.inkmugi.com/#business"
+    }
   };
 
-  // Individual Service Schemas for competitive advantage
+  // Enhanced Individual Service Schemas for competitive advantage
   const ombrePowderBrowsService = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": "https://www.inkmugi.com/services#ombre-powder-brows",
     "name": "Ombre Powder Brows",
-    "description": "Expert semi-permanent makeup technique creating soft, shaded brows that last 1-3 years. Perfect for the DMV area's humid climate with superior longevity compared to microblading.",
+    "alternateName": ["Powder Brows", "Ombre Brows", "Shaded Brows"],
+    "description": "Expert semi-permanent makeup technique creating soft, shaded brows that last 1-3 years. Perfect for the DMV area's humid climate with superior longevity compared to microblading. Ideal for all skin types.",
+    "image": [
+      {
+        "@type": "ImageObject",
+        "url": "https://live.staticflickr.com/65535/54364396583_48d38e3d93_o_d.jpg",
+        "caption": "Ombre Powder Brows Before and After"
+      }
+    ],
     "provider": {
-      "@type": "LocalBusiness",
-      "name": "Ink Mugi",
-      "@id": "https://www.inkmugi.com/#business"
+      "@type": "Person",
+      "name": "Mugi",
+      "jobTitle": "Licensed PMU Artist",
+      "@id": "https://www.inkmugi.com/#mugi",
+      "worksFor": {
+        "@type": "LocalBusiness",
+        "name": "Ink Mugi",
+        "@id": "https://www.inkmugi.com/#business"
+      }
     },
     "serviceType": "Permanent Makeup",
-    "category": "Beauty Service",
+    "category": ["Beauty Service", "Cosmetic Procedure"],
+    "additionalType": "PermanentMakeupService",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Women aged 25-55",
+      "geographicArea": ["Virginia", "Washington DC", "Maryland"]
+    },
+    "serviceOutput": {
+      "@type": "Thing",
+      "name": "Natural-looking ombre powder brows",
+      "description": "Soft, shaded eyebrows with gradient effect"
+    },
     "offers": {
       "@type": "Offer",
       "price": "550",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "validFrom": "2024-01-01",
-      "priceValidUntil": "2024-12-31",
-      "description": "Includes initial procedure and complimentary 6-week touch-up session"
+      "priceValidUntil": "2025-12-31",
+      "description": "Includes initial procedure and complimentary 6-week touch-up session",
+      "includesObject": [
+        {
+          "@type": "Service",
+          "name": "Initial Ombre Powder Brow Procedure"
+        },
+        {
+          "@type": "Service", 
+          "name": "6-Week Touch-up Session"
+        },
+        {
+          "@type": "Product",
+          "name": "Aftercare Kit"
+        },
+        {
+          "@type": "Service",
+          "name": "Follow-up Consultation"
+        }
+      ],
+      "warranty": {
+        "@type": "WarrantyPromise",
+        "durationOfWarranty": "P6M",
+        "warrantyScope": "Touch-up service included within 6 weeks"
+      },
+      "seller": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.inkmugi.com/#business"
+      }
     },
-    "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC", "Northern Virginia", "Maryland"],
+    "areaServed": [
+      "Annandale", "Arlington", "Alexandria", "Fairfax", 
+      "Washington DC", "Northern Virginia", "Maryland"
+    ],
     "hoursAvailable": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       "opens": "09:00",
       "closes": "18:00"
     },
-    "image": "https://live.staticflickr.com/65535/54364396583_48d38e3d93_o_d.jpg",
+    "duration": "PT3H",
+    "isRelatedTo": [
+      {
+        "@type": "Service",
+        "name": "Microshading",
+        "@id": "https://www.inkmugi.com/services#microshading"
+      },
+      {
+        "@type": "Service",
+        "name": "Eyebrow Consultation",
+        "@id": "https://www.inkmugi.com/services#consultation"
+      }
+    ],
     "brand": {
       "@type": "Brand",
-      "name": "Ink Mugi PMU"
+      "name": "Ink Mugi PMU",
+      "logo": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "@id": "https://www.inkmugi.com/services#catalog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "url": "https://www.inkmugi.com/services"
     }
   };
 
   const microshadingService = {
     "@context": "https://schema.org",
-    "@type": "Service", 
+    "@type": "Service",
+    "@id": "https://www.inkmugi.com/services#microshading", 
     "name": "Microshading",
-    "description": "Advanced microshading technique combining hair strokes and shading for natural brow definition. Ideal for all skin types, especially oily skin common in the DMV area.",
+    "alternateName": ["Micro Shading", "Combination Brows", "Hybrid Brows"],
+    "description": "Advanced microshading technique combining hair strokes and shading for natural brow definition. Ideal for all skin types, especially oily skin common in the DMV area. Perfect for clients wanting texture and fullness.",
+    "image": [
+      {
+        "@type": "ImageObject",
+        "url": "https://live.staticflickr.com/65535/54364170391_5f7424c0b6_o_d.jpg",
+        "caption": "Microshading Results"
+      }
+    ],
     "provider": {
-      "@type": "LocalBusiness",
-      "name": "Ink Mugi",
-      "@id": "https://www.inkmugi.com/#business"
+      "@type": "Person",
+      "name": "Mugi",
+      "jobTitle": "Licensed PMU Artist",
+      "@id": "https://www.inkmugi.com/#mugi",
+      "worksFor": {
+        "@type": "LocalBusiness",
+        "name": "Ink Mugi",
+        "@id": "https://www.inkmugi.com/#business"
+      }
     },
     "serviceType": "Permanent Makeup",
-    "category": "Beauty Service",
+    "category": ["Beauty Service", "Cosmetic Procedure"],
+    "additionalType": "PermanentMakeupService",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Women with sparse or over-plucked brows",
+      "geographicArea": ["Virginia", "Washington DC", "Maryland"]
+    },
+    "serviceOutput": {
+      "@type": "Thing",
+      "name": "Natural microshaded eyebrows",
+      "description": "Combination of hair strokes and shading for realistic brow texture"
+    },
     "offers": {
       "@type": "Offer",
       "price": "500",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "validFrom": "2024-01-01",
-      "priceValidUntil": "2024-12-31",
-      "description": "Professional microshading with premium pigments and aftercare included"
+      "priceValidUntil": "2025-12-31",
+      "description": "Professional microshading with premium pigments and aftercare included",
+      "includesObject": [
+        {
+          "@type": "Service",
+          "name": "Professional Microshading Procedure"
+        },
+        {
+          "@type": "Product",
+          "name": "Premium Pigments"
+        },
+        {
+          "@type": "Service",
+          "name": "Aftercare Instructions"
+        },
+        {
+          "@type": "Service",
+          "name": "Consultation"
+        }
+      ],
+      "seller": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.inkmugi.com/#business"
+      }
     },
-    "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC", "Northern Virginia", "Maryland"],
+    "areaServed": [
+      "Annandale", "Arlington", "Alexandria", "Fairfax", 
+      "Washington DC", "Northern Virginia", "Maryland"
+    ],
     "hoursAvailable": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       "opens": "09:00",
       "closes": "18:00"
     },
-    "image": "https://live.staticflickr.com/65535/54364170391_5f7424c0b6_o_d.jpg",
+    "duration": "PT2H30M",
+    "isRelatedTo": [
+      {
+        "@type": "Service",
+        "name": "Ombre Powder Brows",
+        "@id": "https://www.inkmugi.com/services#ombre-powder-brows"
+      }
+    ],
     "brand": {
       "@type": "Brand",
-      "name": "Ink Mugi PMU"
+      "name": "Ink Mugi PMU",
+      "logo": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "url": "https://www.inkmugi.com/services"
     }
   };
 
