@@ -1031,22 +1031,22 @@ const Home: React.FC = () => {
   const services = [
     {
       title: 'Ombre Powder Brows',
-      description: 'A soft, airbrushed effect that creates the perfect brow shape with a subtle gradient appearance.',
-      price: 'From $550',
+      description: 'Using a revolutionary stippling technique, we create a soft-to-bold gradient that mimics your natural brow pattern—only more refined. Suitable for all skin types with results that evolve beautifully over 18-24 months.',
+      price: 'Investment begins at $650',
       duration: '2-3 hours',
       image: 'https://live.staticflickr.com/65535/54364396583_48d38e3d93_o_d.jpg',
     },
     {
       title: 'Microshading',
-      description: 'combines brow hair strokes and shading for natural definition; suits all skin, lasts 1-3 years, touch-up required.',
-      price: 'From $500',
-      duration: '1-2 hours',
+      description: 'For those seeking the subtlest enhancement, our microshading technique deposits pigment in delicate dots, creating a cloud-like effect. This is permanent makeup for the minimalist—understated yet transformative.',
+      price: 'Investment begins at $550',
+      duration: '2-3 hours',
       image: 'https://live.staticflickr.com/65535/54364170391_5f7424c0b6_o_d.jpg',
     },
     {
-      title: 'Fine line tattoo ',
-      description: 'Fine line tattoos use thin, precise lines for delicate, intricate, and minimalist designs.',
-      price: 'From $150',
+      title: 'Fine Line Artistry',
+      description: 'Delicate, precision-crafted tattoos using whisper-thin lines for intricate, minimalist designs that speak to your personal aesthetic with timeless elegance.',
+      price: 'Investment begins at $200',
       duration: '2-3 hours',
       image: 'https://live.staticflickr.com/65535/54408439944_63e225ac5f_c_d.jpg',
     },
@@ -1096,25 +1096,27 @@ const Home: React.FC = () => {
       
       {/* Refined mini-tagline */}
       <span className="inline-block text-[#E6DAD2] font-light tracking-widest mb-4 uppercase text-xs md:text-sm">
-        Premium Permanent Makeup Artistry
+        Where Artistry Meets Precision
       </span>
       
       {/* Main headline */}
       <h1 className="mb-6">
         <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-cormorant font-light leading-tight">
-          Effortless <span className="text-[#E6DAD2]">Beauty</span>,
+          The Art of <span className="text-[#E6DAD2]">Effortless</span>
         </div>
         <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-cormorant font-medium leading-tight flex items-center mt-2">
-          Timeless <span className="text-[#E6DAD2] ml-2 relative">
-            Elegance
-            {/* Decorative underline element */}
+          Beauty <span className="text-[#E6DAD2] ml-2 relative">
             <span className="absolute -bottom-2 left-0 w-full h-[1.5px] bg-[#E6DAD2] opacity-90"></span>
           </span>
         </div>
       </h1>
       
-      <p className="text-xl sm:text-2xl mb-10 text-white/95 leading-relaxed font-light max-w-2xl">
-        Discover expertly crafted ombré powder brows that enhance your features with subtle elegance and lasting perfection.
+      <div className="text-lg sm:text-xl mb-4 text-[#E6DAD2] font-medium italic">
+        Meticulously Crafted, Naturally Yours
+      </div>
+      
+      <p className="text-lg sm:text-xl mb-10 text-white/95 leading-relaxed font-light max-w-2xl">
+        Each stroke tells your story. Every shade complements your essence. Welcome to permanent makeup as it should be—personalized, precise, and perfectly you.
       </p>
       
       <div className="flex flex-col sm:flex-row gap-4">
@@ -1124,10 +1126,10 @@ const Home: React.FC = () => {
           rel="noopener noreferrer"
           className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px] px-8 py-3"
         >
-          Schedule Consultation
+          Begin Your Consultation
         </a>
         <Link to="/gallery" className="btn backdrop-blur-sm border border-white/40 hover:bg-white/10 text-white transition-all duration-300 px-8 py-3">
-          Explore Our Work
+          View Our Artistry
         </Link>
       </div>
     </AnimatedSection>
@@ -1146,13 +1148,13 @@ const Home: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#2D2D2B]/5 to-transparent"></div>
         <div className="container-custom">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">Exceptional Artistry</span>
+            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">Bespoke Artistry</span>
             <h2 className="section-title relative inline-block">
-              Our Signature Services
+              Our Signature Offerings
               <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#E6DAD2]"></span>
             </h2>
             <p className="section-subtitle max-w-2xl mx-auto mt-8">
-              Discover our range of specialized permanent makeup services, each designed to enhance your natural beauty
+              Each technique represents years of mastery, refined to enhance your unique features with artful precision
             </p>
           </AnimatedSection>
 
@@ -1166,7 +1168,7 @@ const Home: React.FC = () => {
 
           <AnimatedSection className="text-center mt-14">
             <Link to="/services" className="btn btn-outline inline-flex items-center text-[#2D2D2B] border-[#2D2D2B] hover:bg-[#2D2D2B]/5 transition-all duration-300 group">
-              View All Services <ArrowRight size={16} className="ml-2 transition-all duration-300 group-hover:translate-x-1" />
+              Explore Your Options <ArrowRight size={16} className="ml-2 transition-all duration-300 group-hover:translate-x-1" />
             </Link>
           </AnimatedSection>
         </div>
@@ -1195,37 +1197,51 @@ const Home: React.FC = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={2}>
-              <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">About Us</span>
+              <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">Meet Your Artist</span>
               <h2 className="section-title text-[#2D2D2B] relative inline-block mb-6">
-                Artistry Meets Precision
+                Precision Meets Passion
                 <span className="absolute -bottom-3 left-0 w-24 h-1 bg-[#E6DAD2]"></span>
               </h2>
-              <p className="text-[#2D2D2B]/80 mb-6 leading-relaxed">
-                With over a decade of experience in permanent makeup, I specialize in creating natural-looking, perfectly tailored ombre powder brows that enhance your unique features.
-              </p>
-              <p className="text-[#2D2D2B]/80 mb-8 leading-relaxed">
-                Every procedure begins with a thorough consultation to understand your preferences and design brows that complement your face shape, skin tone, and personal style.
-              </p>
+              <div className="space-y-6">
+                <p className="text-[#2D2D2B]/80 leading-relaxed">
+                  My journey into permanent makeup artistry began as a quest to solve a deeply personal challenge. 
+                  Like many of my clients, I struggled with sparse, uneven brows that never seemed to look quite right.
+                </p>
+                <p className="text-[#2D2D2B]/80 leading-relaxed">
+                  After investing over seven years mastering the most advanced techniques in permanent makeup, 
+                  I discovered my calling: transforming the daily struggles of women who deserve to feel 
+                  effortlessly beautiful every morning.
+                </p>
+                <p className="text-[#2D2D2B]/80 leading-relaxed">
+                  Today, my Arlington studio serves as a sanctuary where precision meets artistry. 
+                  Each set of brows is individually designed to complement your unique bone structure, 
+                  lifestyle, and personal aesthetic. This isn't just about saving time—it's about 
+                  reclaiming your confidence.
+                </p>
+                <p className="text-[#2D2D2B]/80 italic leading-relaxed">
+                  "I believe permanent makeup should enhance what nature gave you, not replace it. My approach combines architectural precision with artistic intuition, ensuring results that age gracefully and complement your evolving style."
+                </p>
+              </div>
               
               {/* Trust Signals */}
               <div className="bg-white/70 p-6 rounded-lg mb-8">
-                <h4 className="font-medium mb-4 text-[#2D2D2B]">Certified & Trusted</h4>
+                <h4 className="font-medium mb-4 text-[#2D2D2B]">Credentials & Certifications</h4>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div className="flex items-center">
                     <Award size={16} className="text-[#E6DAD2] mr-2" />
-                    <span>Licensed PMU Artist</span>
+                    <span>Licensed PMU Professional</span>
                   </div>
                   <div className="flex items-center">
                     <Shield size={16} className="text-[#E6DAD2] mr-2" />
-                    <span>Blood-borne Pathogen Certified</span>
+                    <span>Bloodborne Pathogens Certified</span>
                   </div>
                   <div className="flex items-center">
                     <Heart size={16} className="text-[#E6DAD2] mr-2" />
-                    <span>47+ Five-Star Reviews</span>
+                    <span>500+ Transformations</span>
                   </div>
                   <div className="flex items-center">
                     <Clock size={16} className="text-[#E6DAD2] mr-2" />
-                    <span>10+ Years Experience</span>
+                    <span>7+ Years Specialized Experience</span>
                   </div>
                 </div>
               </div>
@@ -1273,7 +1289,7 @@ const Home: React.FC = () => {
               </div>
               
               <Link to="/about" className="btn bg-[#2D2D2B] hover:bg-[#2D2D2B]/80 text-white transition-all duration-300 transform hover:translate-y-[-2px]">
-                Learn More About Us
+                Discover My Story
               </Link>
             </AnimatedSection>
           </div>
@@ -1471,27 +1487,27 @@ const Home: React.FC = () => {
                 <span className="text-[#E6DAD2] font-medium tracking-wider uppercase text-sm">Limited Availability</span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-cormorant font-medium mb-6 leading-tight">
-                Ready to Transform Your Brows?
+                Begin Your Transformation Journey
               </h2>
               <p className="text-lg text-[#F9F7F5]/90 mb-8 max-w-2xl mx-auto">
-                Book your consultation today and take the first step towards effortlessly beautiful brows that enhance your natural features.
+                Reserve your private consultation and discover how precision artistry can transform not just your brows, but your entire daily confidence ritual.
               </p>
               
               {/* Value Proposition */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 max-w-3xl mx-auto">
                 <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
                   <Clock className="text-[#E6DAD2] mb-3 mx-auto" size={32} />
-                  <h4 className="font-medium mb-2">Free Consultation</h4>
-                  <p className="text-sm text-[#F9F7F5]/80">30-minute personalized design session</p>
+                  <h4 className="font-medium mb-2">Complimentary Design Session</h4>
+                  <p className="text-sm text-[#F9F7F5]/80">Personalized 30-minute artistry consultation</p>
                 </div>
                 <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
                   <Award className="text-[#E6DAD2] mb-3 mx-auto" size={32} />
-                  <h4 className="font-medium mb-2">Satisfaction Guarantee</h4>
-                  <p className="text-sm text-[#F9F7F5]/80">Love your brows or we'll make it right</p>
+                  <h4 className="font-medium mb-2">Transformation Promise</h4>
+                  <p className="text-sm text-[#F9F7F5]/80">Your absolute satisfaction is our commitment</p>
                 </div>
                 <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
                   <Shield className="text-[#E6DAD2] mb-3 mx-auto" size={32} />
-                  <h4 className="font-medium mb-2">Licensed & Insured</h4>
+                  <h4 className="font-medium mb-2">Certified Artistry Excellence</h4>
                   <p className="text-sm text-[#F9F7F5]/80">Certified permanent makeup artist</p>
                 </div>
               </div>
@@ -1509,10 +1525,10 @@ const Home: React.FC = () => {
                   rel="noopener noreferrer"
                   className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px] text-lg px-8 py-4"
                 >
-                  Book Your Consultation Now
+                  Reserve Your Private Consultation
                 </a>
                 <Link to="/contact" className="btn bg-transparent border border-[#F9F7F5] hover:bg-white/10 text-white transition-all duration-300">
-                  Have Questions? Contact Us
+                  Explore Your Options
                 </Link>
               </div>
             </AnimatedSection>
@@ -1524,13 +1540,13 @@ const Home: React.FC = () => {
       <section className="py-24 bg-[#F9F7F5]">
         <div className="container-custom">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">Common Questions</span>
+            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">Your Questions Answered</span>
             <h2 className="section-title relative inline-block">
-              Frequently Asked Questions
+              Everything You Need to Know
               <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#E6DAD2]"></span>
             </h2>
             <p className="section-subtitle max-w-2xl mx-auto mt-8">
-              Get answers to the most common questions about ombre powder brows and microshading in the DMV area
+              We understand that choosing permanent makeup is a significant decision. Here are thoughtful answers to help you feel confident and informed about your transformation journey.
             </p>
           </AnimatedSection>
 
@@ -1547,18 +1563,18 @@ const Home: React.FC = () => {
 
               <AnimatedSection delay={2}>
                 <div className="bg-white p-6 rounded-lg shadow-soft">
-                  <h3 className="text-xl font-medium mb-4 text-[#2D2D2B]">What's better for oily skin - microshading or microblading?</h3>
+                  <h3 className="text-xl font-medium mb-4 text-[#2D2D2B]">Which technique is ideal for my skin type?</h3>
                   <p className="text-[#2D2D2B]/80 leading-relaxed">
-                    Microshading is generally better for oily skin types common in the DMV area. The stippling technique holds better in oily skin and humid conditions compared to hair-stroke methods.
+                    Our specialized ombre powder technique is expertly crafted for all skin types, with particular excellence for oily or combination skin. This advanced stippling method ensures longevity and beautiful results in any climate, making it the preferred choice for discerning clients throughout the DMV region.
                   </p>
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={3}>
                 <div className="bg-white p-6 rounded-lg shadow-soft">
-                  <h3 className="text-xl font-medium mb-4 text-[#2D2D2B]">How much do ombre brows cost in Annandale?</h3>
+                  <h3 className="text-xl font-medium mb-4 text-[#2D2D2B]">What investment should I expect for this transformation?</h3>
                   <p className="text-[#2D2D2B]/80 leading-relaxed">
-                    Our ombre powder brows start at $400, including consultation, initial treatment, and 6-week touch-up. We offer transparent pricing with no hidden fees for our Annandale and DMV clients.
+                    Your complete transformation investment begins at $550, which includes your personalized consultation, precision artistry session, premium aftercare kit, and essential 6-week perfection appointment. We believe in transparent pricing that reflects the artistry and long-term value of your new confidence.
                   </p>
                 </div>
               </AnimatedSection>

@@ -10,10 +10,10 @@ const Footer: React.FC = () => {
           {/* Brand Column */}
           <div className="space-y-4">
             <Link to="/" className="text-2xl font-cormorant font-semibold">
-              Brow Artistry
+              Ink Mugi
             </Link>
             <p className="text-neutral-300 text-sm mt-4 max-w-xs">
-              Elevating natural beauty through the art of permanent makeup. Specializing in ombre powder brows that enhance your features with elegance.
+              Where artistry meets precision in permanent beauty. Transforming lives through bespoke ombre powder brows that enhance your natural elegance and daily confidence.
             </p>
             <div className="flex space-x-4 pt-2">
               <a
@@ -81,31 +81,31 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-medium mb-4">Services</h3>
+            <h3 className="text-lg font-medium mb-4">Artistry Services</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/services" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
-                  Ombre Powder Brows
+                  Signature Ombre Powder Brows
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
-                  Brow Touch-Up
+                  Precision Touch-Up Sessions
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
-                  Brow Correction
+                  Transformation Corrections
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
-                  Brow Consultation
+                  Private Design Consultation
                 </Link>
               </li>
               <li>
                 <Link to="/booking" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
-                  Book Appointment
+                  Reserve Your Session
                 </Link>
               </li>
             </ul>
@@ -136,7 +136,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="pt-8 border-t border-neutral-700 text-center text-neutral-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Brow Artistry. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Ink Mugi. All rights reserved. Crafted with precision and passion.</p>
           <div className="mt-2 flex justify-center space-x-4">
             <Link to="/privacy-policy" className="hover:text-primary transition-colors duration-300">
               Privacy Policy
