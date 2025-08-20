@@ -1142,19 +1142,19 @@ const Home: React.FC = () => {
       {/* Main headline */}
       <h1 className="mb-6">
         <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-cormorant font-light leading-tight">
-          Natural-looking brows that 
+          Natural-looking <span className="text-[#E6DAD2]">brows</span> that
         </div>
         <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-cormorant font-medium leading-tight flex items-center mt-2">
-          <span className="text-[#E6DAD2]">simplify your morning</span>
+          simplify your <span className="text-[#E6DAD2] ml-2 relative">
+            morning
+            {/* Decorative underline element */}
+            <span className="absolute -bottom-2 left-0 w-full h-[1.5px] bg-[#E6DAD2] opacity-90"></span>
+          </span>
         </div>
       </h1>
       
-      <div className="text-lg sm:text-xl mb-4 text-[#E6DAD2] font-medium italic">
-        Specializing in diverse skin tones in the DMV
-      </div>
-      
-      <p className="text-lg sm:text-xl mb-10 text-white/95 leading-relaxed font-light max-w-2xl">
-        I create brows that look like yours, just better. Using techniques perfected over 6+ years, I help you wake up confident every day. Free consultation, no pressure, adjustments included.
+      <p className="text-xl sm:text-2xl mb-10 text-white/95 leading-relaxed font-light max-w-2xl">
+        I create brows that look like yours, just better. Using techniques perfected over 6+ years in the DMV, helping you wake up confident every day.
       </p>
       
       <div className="flex flex-col sm:flex-row gap-4">
@@ -1273,8 +1273,8 @@ const Home: React.FC = () => {
                   bloodborne pathogen safety, color theory, and advanced shaping techniques.
                 </p>
                 <p className="text-[#2D2D2B]/80 leading-relaxed">
-                  This work matters to me because I see how it changes my clients' lives. When Sarah told me 
-                  she finally felt confident going to the gym without makeup, or when Maria said her new brows 
+                  This work matters to me because I see how it changes my clients' lives. When Sarah from Arlington told me 
+                  she finally felt confident going to the gym without makeup, or when Maria from Alexandria said her new brows 
                   helped her feel like herself again after chemo—that's why I do this.
                 </p>
                 <p className="text-[#2D2D2B]/80 leading-relaxed">
@@ -1563,7 +1563,7 @@ const Home: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 max-w-3xl mx-auto">
                 <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
                   <Clock className="text-[#E6DAD2] mb-3 mx-auto" size={32} />
-                  <h4 className="font-medium mb-2">Free 30-Minute Consultation</h4>
+                  <h4 className="font-medium mb-2">Free 45-Minute Consultation</h4>
                   <p className="text-sm text-[#F9F7F5]/80">We'll map your brows and discuss your options</p>
                 </div>
                 <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
@@ -1594,7 +1594,7 @@ const Home: React.FC = () => {
                   Schedule Free Consultation
                 </a>
                 <Link to="/contact" className="btn bg-transparent border border-[#F9F7F5] hover:bg-white/10 text-white transition-all duration-300">
-                  Ask Me Anything
+                  Text Me Your Questions
                 </Link>
               </div>
             </AnimatedSection>
