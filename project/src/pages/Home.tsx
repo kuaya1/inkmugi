@@ -15,24 +15,25 @@ import ServiceCard from '../components/ServiceCard';
 import SEO from '../components/SEO';
 
 const Home: React.FC = () => {
-  // Enhanced Schema.org structured data for local business
+  // Enhanced Schema.org structured data for AI engines and local SEO
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+    "@type": ["LocalBusiness", "HealthAndBeautyBusiness", "BeautySalon"],
     "@id": "https://www.inkmugi.com/#business",
-    "additionalType": "PermanentMakeupStudio",
+    "additionalType": ["PermanentMakeupStudio", "TattooShop", "BeautyService"],
     "name": "Ink Mugi",
-    "alternateName": ["Inkmugi", "InkMugi PMU Studio", "Ink Mugi Permanent Makeup"],
-    "description": "Premier permanent makeup studio specializing in ombre powder brows, microshading, and fine line tattoos in Annandale, VA. Serving the DMV area with expert artistry and natural-looking results.",
+    "alternateName": ["Inkmugi", "InkMugi PMU Studio", "Ink Mugi Permanent Makeup", "Ink Mugi Annandale"],
+    "description": "Licensed permanent makeup studio specializing in ombre powder brows, microshading, and fine line tattoos. Serving Annandale, Arlington, Alexandria, and the greater DMV area with expert PMU artistry since 2018.",
+    "disambiguatingDescription": "Professional permanent makeup studio offering ombre powder brows ($550-650), microshading, and fine line tattoos with 500+ successful procedures completed.",
     "image": [
       "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
       "https://live.staticflickr.com/65535/54364396583_48d38e3d93_o_d.jpg",
       "https://live.staticflickr.com/65535/54364170391_5f7424c0b6_o_d.jpg"
     ],
     "logo": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
-    "priceRange": "$150-$550",
+    "priceRange": "$200-$650",
     "currenciesAccepted": "USD",
-    "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Venmo", "Zelle"],
+    "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Venmo", "Zelle", "CashApp"],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "7857 Heritage Dr #330",
@@ -1047,6 +1048,116 @@ const Home: React.FC = () => {
     ]
   };
 
+  // AI-Optimized Service Catalog for Voice Search & AI Agents
+  const aiOptimizedServices = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Permanent Makeup Services - Ink Mugi Annandale VA",
+    "description": "Complete permanent makeup services including ombre powder brows, microshading, and fine line tattoos for DMV area clients",
+    "numberOfItems": 3,
+    "itemListElement": [
+      {
+        "@type": "Service",
+        "position": 1,
+        "name": "Ombre Powder Brows Annandale VA",
+        "description": "Semi-permanent makeup technique creating natural-looking shaded brows. Best for oily skin. Lasts 1-3 years. $650 at Ink Mugi Annandale.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Ink Mugi",
+          "address": "7857 Heritage Dr #330, Annandale, VA 22003"
+        },
+        "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC"],
+        "offers": {
+          "@type": "Offer",
+          "price": "650",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Service", 
+        "position": 2,
+        "name": "Microshading DMV Area",
+        "description": "Subtle permanent makeup for natural brow enhancement. Gentle stippling technique. Perfect for sensitive skin. $550 at Ink Mugi.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Ink Mugi",
+          "address": "7857 Heritage Dr #330, Annandale, VA 22003"
+        },
+        "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC"],
+        "offers": {
+          "@type": "Offer",
+          "price": "550", 
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Service",
+        "position": 3,
+        "name": "Fine Line Tattoos Northern Virginia",
+        "description": "Delicate minimalist tattoos with precise thin lines. Small meaningful designs. Starting at $200 at Ink Mugi Annandale.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Ink Mugi",
+          "address": "7857 Heritage Dr #330, Annandale, VA 22003"
+        },
+        "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC"],
+        "offers": {
+          "@type": "Offer",
+          "price": "200",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
+  };
+
+  // Enhanced FAQ Schema optimized for AI answer engines
+  const enhancedFAQSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long do ombre powder brows last in Northern Virginia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ombre powder brows typically last 1-3 years in Northern Virginia's climate. The DMV area's humidity actually helps powder brows last longer than microblading. Oily skin may need refreshers sooner, while dry skin retains pigment longer. At Ink Mugi in Annandale, we use premium pigments designed for longevity."
+        }
+      },
+      {
+        "@type": "Question", 
+        "name": "What's the best permanent makeup for oily skin in the DMV area?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ombre powder brows are the best permanent makeup for oily skin in the DMV area. The stippling technique works better than microblading on oily skin, lasting longer and healing more evenly. This is especially important in Virginia's humid summers. Ink Mugi specializes in powder brows for all skin types."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do permanent makeup brows cost in Annandale VA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Permanent makeup brows in Annandale VA cost $550-$650 at Ink Mugi. Microshading starts at $550, ombre powder brows are $650. This includes consultation, procedure, and aftercare kit. Prices are competitive with Arlington ($700-850) and Alexandria ($650-800) while offering superior results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does permanent makeup hurt and what's the healing process?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "Permanent makeup discomfort is minimal, rated 2-4 out of 10 by most clients. We use topical numbing cream throughout the 2-3 hour procedure. Healing takes 7-10 days for initial scabbing, with full healing in 4-6 weeks. The DMV's humidity requires specific aftercare which we provide detailed instructions for."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is the best permanent makeup artist near Arlington VA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ink Mugi in Annandale VA is just 15 minutes from Arlington and specializes in permanent makeup for the DMV area. Located at 7857 Heritage Dr #330, we serve Arlington, Alexandria, Fairfax, and Washington DC with 500+ successful procedures and 5-star reviews."
+        }
+      }
+    ]
+  };
+
   const testimonials = [
     {
       name: 'Mariel H',
@@ -1112,6 +1223,8 @@ const Home: React.FC = () => {
         organizationSchema,
         ombrePowderBrowsService,
         microshadingService,
+        aiOptimizedServices,
+        enhancedFAQSchema,
         ...reviewSchema
       ]} />
 {/* Hero Section */}
