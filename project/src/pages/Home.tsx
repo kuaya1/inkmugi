@@ -1072,14 +1072,14 @@ const Home: React.FC = () => {
     {
       title: 'Ombre Powder Brows',
       description: 'What it is: Soft powder effect that looks like makeup. Best for: Oily skin, anyone wanting fuller coverage. Process: I create tiny dots that build up to your perfect shade. Healing: 7-10 days initial scabbing, 6 weeks full healing. Lasts: 18-24 months. Discomfort: 2-3 out of 10, like threading.',
-      price: '$650 (includes 6-week touch-up)',
+      price: '$650',
       duration: '2.5 hours including numbing',
       image: 'https://live.staticflickr.com/65535/54364396583_48d38e3d93_o_d.jpg',
     },
     {
       title: 'Microshading',
       description: 'What it is: The no-makeup makeup look. Best for: Sensitive skin, subtle enhancement. Process: Gentle stippling creates soft, natural depth. Healing: 7-10 days initial, 6 weeks full. Lasts: 18-24 months. Discomfort: 2 out of 10, very tolerable.',
-      price: '$550 (includes touch-up)',
+      price: '$550',
       duration: '2 hours including numbing',
       image: 'https://live.staticflickr.com/65535/54364170391_5f7424c0b6_o_d.jpg',
     },
@@ -1164,11 +1164,11 @@ const Home: React.FC = () => {
           href="https://www.vagaro.com/bortemicroblading/book-now" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px] px-8 py-3"
+          className="btn bg-[#2D2D2B] hover:bg-[#1A1A18] text-white font-medium transition-all duration-500 transform hover:translate-y-[-2px] hover:shadow-xl px-10 py-4 rounded-lg"
         >
           Begin Your Consultation
         </a>
-        <Link to="/gallery" className="btn backdrop-blur-sm border border-white/40 hover:bg-white/10 text-white transition-all duration-300 px-8 py-3">
+        <Link to="/gallery" className="btn backdrop-blur-sm border-2 border-white/60 hover:bg-white/20 hover:border-white/80 text-white transition-all duration-500 px-10 py-4 rounded-lg">
           View Our Artistry
         </Link>
       </div>
@@ -1206,21 +1206,21 @@ const Home: React.FC = () => {
       </section>
 
       {/* Featured Services */}
-      <section className="py-24 bg-gradient-to-b from-[#F9F7F5] to-white relative">
+      <section className="py-32 bg-gradient-to-b from-[#F9F7F5] to-white relative">
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#2D2D2B]/5 to-transparent"></div>
         <div className="container-custom">
-          <AnimatedSection className="text-center mb-16">
-            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">Bespoke Artistry</span>
-            <h2 className="section-title relative inline-block">
+          <AnimatedSection className="text-center mb-20">
+            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-4 block">Bespoke Artistry</span>
+            <h2 className="section-title relative inline-block mb-6">
               Our Signature Offerings
               <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#E6DAD2]"></span>
             </h2>
-            <p className="section-subtitle max-w-2xl mx-auto mt-8">
+            <p className="section-subtitle max-w-3xl mx-auto mt-8 text-lg leading-relaxed">
               Each technique represents years of mastery, refined to enhance your unique features with artful precision
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             {services.map((service, index) => (
               <AnimatedSection key={index} delay={index * 2}>
                 <ServiceCard {...service} />
@@ -1228,9 +1228,9 @@ const Home: React.FC = () => {
             ))}
           </div>
 
-          <AnimatedSection className="text-center mt-14">
-            <Link to="/services" className="btn btn-outline inline-flex items-center text-[#2D2D2B] border-[#2D2D2B] hover:bg-[#2D2D2B]/5 transition-all duration-300 group">
-              Explore Your Options <ArrowRight size={16} className="ml-2 transition-all duration-300 group-hover:translate-x-1" />
+          <AnimatedSection className="text-center mt-20">
+            <Link to="/services" className="btn bg-[#2D2D2B] hover:bg-[#1A1A18] text-white transition-all duration-500 transform hover:translate-y-[-1px] hover:shadow-lg px-10 py-4 rounded-lg inline-flex items-center group">
+              Explore Your Options <ArrowRight size={16} className="ml-3 transition-all duration-300 group-hover:translate-x-1" />
             </Link>
           </AnimatedSection>
         </div>
@@ -1576,16 +1576,16 @@ const Home: React.FC = () => {
                 <p className="text-sm text-[#F9F7F5]/90">No hidden fees, no upselling. Touch-up included in your price.</p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-5 justify-center">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12">
                 <a 
                   href="https://www.vagaro.com/bortemicroblading/book-now" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px] text-lg px-8 py-4"
+                  className="btn bg-white hover:bg-gray-50 text-[#2D2D2B] font-semibold transition-all duration-500 transform hover:translate-y-[-2px] hover:shadow-2xl text-lg px-12 py-5 rounded-lg border border-white/20"
                 >
                   Schedule Free Consultation
                 </a>
-                <Link to="/contact" className="btn bg-transparent border border-[#F9F7F5] hover:bg-white/10 text-white transition-all duration-300">
+                <Link to="/contact" className="btn bg-transparent border-2 border-white/60 hover:bg-white/20 hover:border-white/80 text-white transition-all duration-500 px-10 py-5 rounded-lg">
                   Text Me Your Questions
                 </Link>
               </div>
@@ -1595,34 +1595,34 @@ const Home: React.FC = () => {
       </section>
 
       {/* FAQ Section with Schema Markup */}
-      <section className="py-24 bg-[#F9F7F5]">
+      <section className="py-32 bg-[#F9F7F5]">
         <div className="container-custom">
-          <AnimatedSection className="text-center mb-16">
-            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">Your Questions Answered</span>
-            <h2 className="section-title relative inline-block">
+          <AnimatedSection className="text-center mb-20">
+            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-4 block">Your Questions Answered</span>
+            <h2 className="section-title relative inline-block mb-6">
               Everything You Need to Know
               <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#E6DAD2]"></span>
             </h2>
-            <p className="section-subtitle max-w-2xl mx-auto mt-8">
+            <p className="section-subtitle max-w-3xl mx-auto mt-8 text-lg leading-relaxed">
               We understand that choosing permanent makeup is a significant decision. Here are thoughtful answers to help you feel confident and informed about your transformation journey.
             </p>
           </AnimatedSection>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <AnimatedSection delay={1}>
-                <div className="bg-white p-6 rounded-lg shadow-soft">
-                  <h3 className="text-xl font-medium mb-4 text-[#2D2D2B]">How long do ombre powder brows last?</h3>
-                  <p className="text-[#2D2D2B]/80 leading-relaxed">
+                <div className="bg-white p-8 rounded-xl shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300">
+                  <h3 className="text-xl font-semibold mb-5 text-[#2D2D2B]">How long do ombre powder brows last?</h3>
+                  <p className="text-[#2D2D2B]/80 leading-relaxed text-lg">
                     Ombre powder brows typically last 1-3 years, depending on your skin type, lifestyle, and aftercare. In the DMV's humid climate, they often last longer than traditional microblading due to the technique's durability.
                   </p>
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={2}>
-                <div className="bg-white p-6 rounded-lg shadow-soft">
-                  <h3 className="text-xl font-medium mb-4 text-[#2D2D2B]">Which technique is ideal for my skin type?</h3>
-                  <p className="text-[#2D2D2B]/80 leading-relaxed">
+                <div className="bg-white p-8 rounded-xl shadow-soft border border-gray-100 hover:shadow-lg transition-all duration-300">
+                  <h3 className="text-xl font-semibold mb-5 text-[#2D2D2B]">Which technique is ideal for my skin type?</h3>
+                  <p className="text-[#2D2D2B]/80 leading-relaxed text-lg">
                     Our specialized ombre powder technique is expertly crafted for all skin types, with particular excellence for oily or combination skin. This advanced stippling method ensures longevity and beautiful results in any climate, making it the preferred choice for discerning clients throughout the DMV region.
                   </p>
                 </div>
