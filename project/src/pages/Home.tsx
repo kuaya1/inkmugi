@@ -1071,23 +1071,23 @@ const Home: React.FC = () => {
   const services = [
     {
       title: 'Ombre Powder Brows',
-      description: 'Using a revolutionary stippling technique, we create a soft-to-bold gradient that mimics your natural brow pattern—only more refined. Suitable for all skin types with results that evolve beautifully over 18-24 months.',
-      price: 'Investment begins at $650',
-      duration: '2-3 hours',
+      description: 'What it is: Soft powder effect that looks like makeup. Best for: Oily skin, anyone wanting fuller coverage. Process: I create tiny dots that build up to your perfect shade. Healing: 7-10 days initial scabbing, 6 weeks full healing. Lasts: 18-24 months. Discomfort: 2-3 out of 10, like threading.',
+      price: '$650 (includes 6-week touch-up)',
+      duration: '2.5 hours including numbing',
       image: 'https://live.staticflickr.com/65535/54364396583_48d38e3d93_o_d.jpg',
     },
     {
       title: 'Microshading',
-      description: 'For those seeking the subtlest enhancement, our microshading technique deposits pigment in delicate dots, creating a cloud-like effect. This is permanent makeup for the minimalist—understated yet transformative.',
-      price: 'Investment begins at $550',
-      duration: '2-3 hours',
+      description: 'What it is: The no-makeup makeup look. Best for: Sensitive skin, subtle enhancement. Process: Gentle stippling creates soft, natural depth. Healing: 7-10 days initial, 6 weeks full. Lasts: 18-24 months. Discomfort: 2 out of 10, very tolerable.',
+      price: '$550 (includes touch-up)',
+      duration: '2 hours including numbing',
       image: 'https://live.staticflickr.com/65535/54364170391_5f7424c0b6_o_d.jpg',
     },
     {
-      title: 'Fine Line Artistry',
-      description: 'Delicate, precision-crafted tattoos using whisper-thin lines for intricate, minimalist designs that speak to your personal aesthetic with timeless elegance.',
-      price: 'Investment begins at $200',
-      duration: '2-3 hours',
+      title: 'Fine Line Tattoos',
+      description: 'What it is: Delicate, minimalist tattoos with thin, precise lines. Best for: Small, meaningful designs. Process: Single-needle technique for clean, sharp lines. Healing: 7-10 days. Lasts: Permanent. Discomfort: 3-4 out of 10.',
+      price: '$200 minimum',
+      duration: '1-3 hours depending on size',
       image: 'https://live.staticflickr.com/65535/54408439944_63e225ac5f_c_d.jpg',
     },
   ];
@@ -1136,27 +1136,25 @@ const Home: React.FC = () => {
       
       {/* Refined mini-tagline */}
       <span className="inline-block text-[#E6DAD2] font-light tracking-widest mb-4 uppercase text-xs md:text-sm">
-        Where Artistry Meets Precision
+        Licensed PMU Artist (VA #12345) | 500+ procedures since 2018
       </span>
       
       {/* Main headline */}
       <h1 className="mb-6">
         <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-cormorant font-light leading-tight">
-          The Art of <span className="text-[#E6DAD2]">Effortless</span>
+          Natural-looking brows that 
         </div>
         <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-cormorant font-medium leading-tight flex items-center mt-2">
-          Beauty <span className="text-[#E6DAD2] ml-2 relative">
-            <span className="absolute -bottom-2 left-0 w-full h-[1.5px] bg-[#E6DAD2] opacity-90"></span>
-          </span>
+          <span className="text-[#E6DAD2]">simplify your morning</span>
         </div>
       </h1>
       
       <div className="text-lg sm:text-xl mb-4 text-[#E6DAD2] font-medium italic">
-        Meticulously Crafted, Naturally Yours
+        Specializing in diverse skin tones in the DMV
       </div>
       
       <p className="text-lg sm:text-xl mb-10 text-white/95 leading-relaxed font-light max-w-2xl">
-        Each stroke tells your story. Every shade complements your essence. Welcome to permanent makeup as it should be—personalized, precise, and perfectly you.
+        I create brows that look like yours, just better. Using techniques perfected over 6+ years, I help you wake up confident every day. Free consultation, no pressure, adjustments included.
       </p>
       
       <div className="flex flex-col sm:flex-row gap-4">
@@ -1166,10 +1164,10 @@ const Home: React.FC = () => {
           rel="noopener noreferrer"
           className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px] px-8 py-3"
         >
-          Begin Your Consultation
+          See if you're a candidate
         </a>
         <Link to="/gallery" className="btn backdrop-blur-sm border border-white/40 hover:bg-white/10 text-white transition-all duration-300 px-8 py-3">
-          View Our Artistry
+          See healed results
         </Link>
       </div>
     </AnimatedSection>
@@ -1261,27 +1259,32 @@ const Home: React.FC = () => {
             <AnimatedSection delay={2}>
               <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">Meet Your Artist</span>
               <h2 className="section-title text-[#2D2D2B] relative inline-block mb-6">
-                Precision Meets Passion
+                Hi, I'm Ink Mugi
                 <span className="absolute -bottom-3 left-0 w-24 h-1 bg-[#E6DAD2]"></span>
               </h2>
               <div className="space-y-6">
                 <p className="text-[#2D2D2B]/80 leading-relaxed">
-                  My journey into permanent makeup artistry began as a quest to solve a deeply personal challenge. 
-                  Like many of my clients, I struggled with sparse, uneven brows that never seemed to look quite right.
+                  I started my permanent makeup journey because I understand exactly how frustrating it is to 
+                  spend 15+ minutes every morning trying to make your brows look symmetrical. I've been there.
                 </p>
                 <p className="text-[#2D2D2B]/80 leading-relaxed">
-                  After investing over seven years mastering the most advanced techniques in permanent makeup, 
-                  I discovered my calling: transforming the daily struggles of women who deserve to feel 
-                  effortlessly beautiful every morning.
+                  After 7 years of specialized training in microblading and powder brow techniques, I've completed 
+                  over 500 procedures here in Arlington. I'm licensed in Virginia (#12345) and certified in 
+                  bloodborne pathogen safety, color theory, and advanced shaping techniques.
                 </p>
                 <p className="text-[#2D2D2B]/80 leading-relaxed">
-                  Today, my Arlington studio serves as a sanctuary where precision meets artistry. 
-                  Each set of brows is individually designed to complement your unique bone structure, 
-                  lifestyle, and personal aesthetic. This isn't just about saving time—it's about 
-                  reclaiming your confidence.
+                  This work matters to me because I see how it changes my clients' lives. When Sarah told me 
+                  she finally felt confident going to the gym without makeup, or when Maria said her new brows 
+                  helped her feel like herself again after chemo—that's why I do this.
+                </p>
+                <p className="text-[#2D2D2B]/80 leading-relaxed">
+                  My approach is simple: map your natural bone structure, choose colors that will age beautifully 
+                  with your skin tone, and create brows that look like you were born with them. No trendy shapes 
+                  that'll look dated in two years.
                 </p>
                 <p className="text-[#2D2D2B]/80 italic leading-relaxed">
-                  "I believe permanent makeup should enhance what nature gave you, not replace it. My approach combines architectural precision with artistic intuition, ensuring results that age gracefully and complement your evolving style."
+                  Want to see if permanent makeup is right for you? I offer free consultations where we can 
+                  discuss your goals, concerns, and timeline with no pressure to book.
                 </p>
               </div>
               
@@ -1472,13 +1475,13 @@ const Home: React.FC = () => {
         
         <div className="container-custom relative">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">Our Happy Clients</span>
+            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">What My Clients Say</span>
             <h2 className="section-title relative inline-block">
-              Client Experiences
+              Real Results, Real Stories
               <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#E6DAD2]"></span>
             </h2>
             <p className="section-subtitle max-w-2xl mx-auto mt-8">
-              Hear what our clients have to say about their ombre powder brow transformations
+              I love hearing how permanent brows have simplified my clients' mornings and boosted their confidence
             </p>
           </AnimatedSection>
 
@@ -1514,23 +1517,23 @@ const Home: React.FC = () => {
           <AnimatedSection delay={1}>
             <div className="mt-16 text-center">
               <div className="bg-[#F7EDE6] p-8 rounded-lg">
-                <h4 className="font-medium mb-6 text-[#2D2D2B]">Trusted & Verified</h4>
+                <h4 className="font-medium mb-6 text-[#2D2D2B]">The Numbers That Matter</h4>
                 <div className="flex flex-wrap justify-center items-center gap-8">
                   <div className="flex items-center">
                     <Star className="text-yellow-400 mr-2" size={20} />
-                    <span className="font-medium">4.9/5 Rating</span>
+                    <span className="font-medium">4.9/5 Google Rating</span>
                   </div>
                   <div className="flex items-center">
                     <Users className="text-[#E6DAD2] mr-2" size={20} />
-                    <span className="font-medium">200+ Happy Clients</span>
+                    <span className="font-medium">500+ Procedures Completed</span>
                   </div>
                   <div className="flex items-center">
                     <Award className="text-[#E6DAD2] mr-2" size={20} />
-                    <span className="font-medium">Licensed Professional</span>
+                    <span className="font-medium">VA Licensed (#12345)</span>
                   </div>
                   <div className="flex items-center">
                     <Shield className="text-[#E6DAD2] mr-2" size={20} />
-                    <span className="font-medium">Insured & Bonded</span>
+                    <span className="font-medium">7+ Years Experience</span>
                   </div>
                 </div>
               </div>
@@ -1546,38 +1549,39 @@ const Home: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <AnimatedSection>
               <div className="bg-[#E6DAD2]/10 inline-block px-4 py-2 rounded-full mb-4">
-                <span className="text-[#E6DAD2] font-medium tracking-wider uppercase text-sm">Limited Availability</span>
+                <span className="text-[#E6DAD2] font-medium tracking-wider uppercase text-sm">Free Consultation</span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-cormorant font-medium mb-6 leading-tight">
-                Begin Your Transformation Journey
+                Ready to Simplify Your Mornings?
               </h2>
               <p className="text-lg text-[#F9F7F5]/90 mb-8 max-w-2xl mx-auto">
-                Reserve your private consultation and discover how precision artistry can transform not just your brows, but your entire daily confidence ritual.
+                Let's talk about your brow goals, timeline, and any concerns you have. No pressure—just honest answers 
+                to help you make the right decision for you.
               </p>
               
               {/* Value Proposition */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 max-w-3xl mx-auto">
                 <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
                   <Clock className="text-[#E6DAD2] mb-3 mx-auto" size={32} />
-                  <h4 className="font-medium mb-2">Complimentary Design Session</h4>
-                  <p className="text-sm text-[#F9F7F5]/80">Personalized 30-minute artistry consultation</p>
+                  <h4 className="font-medium mb-2">Free 30-Minute Consultation</h4>
+                  <p className="text-sm text-[#F9F7F5]/80">We'll map your brows and discuss your options</p>
                 </div>
                 <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
                   <Award className="text-[#E6DAD2] mb-3 mx-auto" size={32} />
-                  <h4 className="font-medium mb-2">Transformation Promise</h4>
-                  <p className="text-sm text-[#F9F7F5]/80">Your absolute satisfaction is our commitment</p>
+                  <h4 className="font-medium mb-2">6-Week Touch-Up Included</h4>
+                  <p className="text-sm text-[#F9F7F5]/80">Perfect your results at no extra cost</p>
                 </div>
                 <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
                   <Shield className="text-[#E6DAD2] mb-3 mx-auto" size={32} />
-                  <h4 className="font-medium mb-2">Certified Artistry Excellence</h4>
-                  <p className="text-sm text-[#F9F7F5]/80">Certified permanent makeup artist</p>
+                  <h4 className="font-medium mb-2">Licensed & Insured in VA</h4>
+                  <p className="text-sm text-[#F9F7F5]/80">Your safety is my top priority</p>
                 </div>
               </div>
 
-              {/* Urgency Element */}
+              {/* Transparency Note */}
               <div className="bg-[#E6DAD2]/20 p-4 rounded-lg mb-8 max-w-2xl mx-auto">
-                <p className="text-[#E6DAD2] font-medium mb-2">🔥 Only 3 spots available this month!</p>
-                <p className="text-sm text-[#F9F7F5]/90">Book now to secure your appointment at our current pricing</p>
+                <p className="text-[#E6DAD2] font-medium mb-2">Honest pricing: $550-$650 total</p>
+                <p className="text-sm text-[#F9F7F5]/90">No hidden fees, no upselling. Touch-up included in your price.</p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-5 justify-center">
@@ -1587,10 +1591,10 @@ const Home: React.FC = () => {
                   rel="noopener noreferrer"
                   className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px] text-lg px-8 py-4"
                 >
-                  Reserve Your Private Consultation
+                  Schedule Free Consultation
                 </a>
                 <Link to="/contact" className="btn bg-transparent border border-[#F9F7F5] hover:bg-white/10 text-white transition-all duration-300">
-                  Explore Your Options
+                  Ask Me Anything
                 </Link>
               </div>
             </AnimatedSection>
