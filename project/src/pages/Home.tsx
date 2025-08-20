@@ -1210,7 +1210,6 @@ const Home: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#2D2D2B]/5 to-transparent"></div>
         <div className="container-custom">
           <AnimatedSection className="text-center mb-20">
-            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-4 block">Bespoke Artistry</span>
             <h2 className="section-title relative inline-block mb-6">
               Our Signature Offerings
               <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#E6DAD2]"></span>
