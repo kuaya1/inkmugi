@@ -1136,25 +1136,27 @@ const Home: React.FC = () => {
       
       {/* Refined mini-tagline */}
       <span className="inline-block text-[#E6DAD2] font-light tracking-widest mb-4 uppercase text-xs md:text-sm">
-        Licensed PMU Artist (VA #12345) | 500+ procedures since 2018
+        Where Artistry Meets Precision
       </span>
       
       {/* Main headline */}
       <h1 className="mb-6">
         <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-cormorant font-light leading-tight">
-          Natural-looking <span className="text-[#E6DAD2]">brows</span> that
+          The Art of <span className="text-[#E6DAD2]">Effortless</span>
         </div>
         <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-cormorant font-medium leading-tight flex items-center mt-2">
-          simplify your <span className="text-[#E6DAD2] ml-2 relative">
-            morning
-            {/* Decorative underline element */}
+          Beauty <span className="text-[#E6DAD2] ml-2 relative">
             <span className="absolute -bottom-2 left-0 w-full h-[1.5px] bg-[#E6DAD2] opacity-90"></span>
           </span>
         </div>
       </h1>
       
-      <p className="text-xl sm:text-2xl mb-10 text-white/95 leading-relaxed font-light max-w-2xl">
-        I create brows that look like yours, just better. Using techniques perfected over 6+ years in the DMV, helping you wake up confident every day.
+      <div className="text-lg sm:text-xl mb-4 text-[#E6DAD2] font-medium italic">
+        Meticulously Crafted, Naturally Yours
+      </div>
+      
+      <p className="text-lg sm:text-xl mb-10 text-white/95 leading-relaxed font-light max-w-2xl">
+        Each stroke tells your story. Every shade complements your essence. Welcome to permanent makeup as it should be—personalized, precise, and perfectly you.
       </p>
       
       <div className="flex flex-col sm:flex-row gap-4">
@@ -1164,10 +1166,10 @@ const Home: React.FC = () => {
           rel="noopener noreferrer"
           className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px] px-8 py-3"
         >
-          See if you're a candidate
+          Begin Your Consultation
         </a>
         <Link to="/gallery" className="btn backdrop-blur-sm border border-white/40 hover:bg-white/10 text-white transition-all duration-300 px-8 py-3">
-          See healed results
+          View Our Artistry
         </Link>
       </div>
     </AnimatedSection>
@@ -1259,32 +1261,22 @@ const Home: React.FC = () => {
             <AnimatedSection delay={2}>
               <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">Meet Your Artist</span>
               <h2 className="section-title text-[#2D2D2B] relative inline-block mb-6">
-                Hi, I'm Ink Mugi
+                Behind InkMugi
                 <span className="absolute -bottom-3 left-0 w-24 h-1 bg-[#E6DAD2]"></span>
               </h2>
               <div className="space-y-6">
                 <p className="text-[#2D2D2B]/80 leading-relaxed">
-                  I started my permanent makeup journey because I understand exactly how frustrating it is to 
-                  spend 15+ minutes every morning trying to make your brows look symmetrical. I've been there.
+                  Behind InkMugi is a simple philosophy: permanent makeup should feel effortless, natural, and deeply personal.
                 </p>
                 <p className="text-[#2D2D2B]/80 leading-relaxed">
-                  After 7 years of specialized training in microblading and powder brow techniques, I've completed 
-                  over 500 procedures here in Arlington. I'm licensed in Virginia (#12345) and certified in 
-                  bloodborne pathogen safety, color theory, and advanced shaping techniques.
+                  Led by Mugi, an artist with advanced training in PMU techniques and a background rooted in fine detail, 
+                  the studio is built on a balance of precision and empathy. Every appointment begins with listening—understanding 
+                  your features, your lifestyle, and your comfort. From there, artistry meets modern technique, creating results 
+                  that are meticulously crafted and uniquely yours.
                 </p>
                 <p className="text-[#2D2D2B]/80 leading-relaxed">
-                  This work matters to me because I see how it changes my clients' lives. When Sarah from Arlington told me 
-                  she finally felt confident going to the gym without makeup, or when Maria from Alexandria said her new brows 
-                  helped her feel like herself again after chemo—that's why I do this.
-                </p>
-                <p className="text-[#2D2D2B]/80 leading-relaxed">
-                  My approach is simple: map your natural bone structure, choose colors that will age beautifully 
-                  with your skin tone, and create brows that look like you were born with them. No trendy shapes 
-                  that'll look dated in two years.
-                </p>
-                <p className="text-[#2D2D2B]/80 italic leading-relaxed">
-                  Want to see if permanent makeup is right for you? I offer free consultations where we can 
-                  discuss your goals, concerns, and timeline with no pressure to book.
+                  Clients return not just for the results, but for the assurance of being cared for in a space where 
+                  expertise and trust come first.
                 </p>
               </div>
               
