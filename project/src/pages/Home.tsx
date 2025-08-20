@@ -437,7 +437,7 @@ const Home: React.FC = () => {
         "name": "How much do ombre powder brows cost in Annandale, VA?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "At Ink Mugi in Annandale, ombre powder brows cost $650, which includes the initial procedure, aftercare kit, and a 6-week touch-up session. This is competitive with Arlington ($700-850) and Alexandria ($650-800) pricing while offering superior results and convenience."
+          "text": "At Ink Mugi in Annandale, ombre powder brows cost $650, which includes the initial procedure and aftercare kit. This is competitive with Arlington ($700-850) and Alexandria ($650-800) pricing while offering superior results and convenience."
         }
       },
       {
@@ -1025,7 +1025,7 @@ const Home: React.FC = () => {
         "name": "How much do ombre powder brows cost in the DMV area?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our ombre powder brows start at $550, which includes the initial procedure and one complimentary touch-up session within 6-8 weeks. This is competitive pricing for the DMV area's premium PMU services, offering exceptional value for long-lasting results."
+          "text": "Our ombre powder brows start at $550 for the initial procedure. This is competitive pricing for the DMV area's premium PMU services, offering exceptional value for long-lasting results."
         }
       },
       {
@@ -1164,11 +1164,11 @@ const Home: React.FC = () => {
           href="https://www.vagaro.com/bortemicroblading/book-now" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="btn bg-[#2D2D2B] hover:bg-[#1A1A18] text-white font-medium transition-all duration-500 transform hover:translate-y-[-2px] hover:shadow-xl px-10 py-4 rounded-lg"
+          className="btn bg-[#E6DAD2] hover:bg-[#F0E4D8] text-[#2D2D2B] font-medium transition-all duration-300 transform hover:translate-y-[-2px] px-8 py-3"
         >
           Begin Your Consultation
         </a>
-        <Link to="/gallery" className="btn backdrop-blur-sm border-2 border-white/60 hover:bg-white/20 hover:border-white/80 text-white transition-all duration-500 px-10 py-4 rounded-lg">
+        <Link to="/gallery" className="btn backdrop-blur-sm border border-white/40 hover:bg-white/10 text-white transition-all duration-300 px-8 py-3">
           View Our Artistry
         </Link>
       </div>
@@ -1559,8 +1559,8 @@ const Home: React.FC = () => {
                 </div>
                 <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
                   <Award className="text-[#E6DAD2] mb-3 mx-auto" size={32} />
-                  <h4 className="font-medium mb-2">6-Week Touch-Up Included</h4>
-                  <p className="text-sm text-[#F9F7F5]/80">Perfect your results at no extra cost</p>
+                  <h4 className="font-medium mb-2">Satisfaction Guarantee</h4>
+                  <p className="text-sm text-[#F9F7F5]/80">Your happiness is our priority</p>
                 </div>
                 <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
                   <Shield className="text-[#E6DAD2] mb-3 mx-auto" size={32} />
@@ -1572,7 +1572,7 @@ const Home: React.FC = () => {
               {/* Transparency Note */}
               <div className="bg-[#E6DAD2]/20 p-4 rounded-lg mb-8 max-w-2xl mx-auto">
                 <p className="text-[#E6DAD2] font-medium mb-2">Honest pricing: $550-$650 total</p>
-                <p className="text-sm text-[#F9F7F5]/90">No hidden fees, no upselling. Touch-up included in your price.</p>
+                <p className="text-sm text-[#F9F7F5]/90">No hidden fees, no upselling.</p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12">
