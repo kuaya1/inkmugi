@@ -116,6 +116,118 @@
       }
     }
     </script>
+
+    <!-- Breadcrumb Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://inkmugi.com"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Service Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Permanent Makeup",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Ink Mugi Permanent Makeup Studio"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Ombre Powder Brows",
+          "description": "Soft-to-bold gradient technique for natural-looking brows",
+          "price": "650",
+          "priceCurrency": "USD",
+          "category": "Permanent Makeup",
+          "duration": "PT3H"
+        },
+        {
+          "@type": "Offer",
+          "name": "Microshading",
+          "description": "Delicate dot-work for whisper-soft definition",
+          "price": "550",
+          "priceCurrency": "USD",
+          "category": "Permanent Makeup",
+          "duration": "PT2H30M"
+        },
+        {
+          "@type": "Offer",
+          "name": "PMU Correction",
+          "description": "Expert correction of previous permanent makeup",
+          "price": "700",
+          "priceCurrency": "USD",
+          "category": "Permanent Makeup",
+          "duration": "PT3H"
+        },
+        {
+          "@type": "Offer",
+          "name": "Consultation",
+          "description": "Complimentary design consultation and skin assessment",
+          "price": "0",
+          "priceCurrency": "USD",
+          "category": "Consultation",
+          "duration": "PT45M"
+        }
+      ],
+      "areaServed": [
+        "Annandale",
+        "Arlington",
+        "Alexandria", 
+        "Washington DC",
+        "Fairfax County",
+        "Northern Virginia"
+      ]
+    }
+    </script>
+
+    <!-- Voice Search Optimization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".voice-answer",
+          ".quick-answer", 
+          ".featured-info"
+        ]
+      },
+      "mainEntity": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where can I get permanent makeup in Annandale Virginia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ink Mugi Permanent Makeup Studio is located at 7857 Heritage Dr #330 in Annandale, VA. They specialize in ombre powder brows and microshading with over 7 years experience. Call 571-766-8857 for a free consultation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does permanent makeup cost in Northern Virginia?", 
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At Ink Mugi in Annandale, ombre powder brows cost $650 and microshading costs $550. This includes consultation, procedure, aftercare kit, and touch-up session. Serving Arlington, Alexandria, and all of Northern Virginia."
+            }
+          }
+        ]
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

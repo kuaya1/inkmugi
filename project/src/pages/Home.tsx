@@ -434,10 +434,50 @@ const Home: React.FC = () => {
       },
       {
         "@type": "Question",
-        "name": "How much do ombre powder brows cost in the DMV area?",
+        "name": "How much do ombre powder brows cost in Annandale, VA?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our ombre powder brows start at $550, which includes the initial procedure and one complimentary touch-up session within 6-8 weeks. This is competitive pricing for the DMV area's premium PMU services."
+          "text": "At Ink Mugi in Annandale, ombre powder brows cost $650, which includes the initial procedure, aftercare kit, and a 6-week touch-up session. This is competitive with Arlington ($700-850) and Alexandria ($650-800) pricing while offering superior results and convenience."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the best permanent makeup technique for oily skin in Northern Virginia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For oily skin, ombre powder brows are the ideal choice. The stippling technique used at Ink Mugi holds better in oily skin and humid DMV climate conditions compared to microblading. This technique is perfect for Northern Virginia's variable weather."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I get microshading in Annandale, Virginia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ink Mugi at 7857 Heritage Dr #330 in Annandale, VA offers professional microshading services for $550. With 7+ years experience and 500+ satisfied clients, Ink Mugi specializes in creating natural-looking results for all skin tones."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does permanent makeup last in the DMV area?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Permanent makeup typically lasts 18-24 months in the DMV region. The humid climate and individual skin factors affect longevity. At Ink Mugi, we recommend annual color refreshes to maintain optimal results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I expect during PMU healing in Northern Virginia's climate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Northern Virginia's humid climate, PMU healing takes 4-6 weeks. Initial scabbing occurs days 4-10, followed by color lightening and gradual return. Ink Mugi provides comprehensive aftercare support throughout the healing process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get PMU correction in Annandale for previous bad work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Ink Mugi specializes in PMU corrections starting at $700. We can address color corrections, shape asymmetry, and poor previous work. Our 7+ years experience includes extensive corrective work for Northern Virginia clients."
         }
       }
     ]
@@ -1142,6 +1182,28 @@ const Home: React.FC = () => {
     </div>
   </div>
 </section>
+
+      {/* Voice Search Optimized Quick Answers */}
+      <section className="py-12 bg-[#2D2D2B]" style={{display: 'none'}}>
+        <div className="container-custom">
+          <div className="voice-answer quick-answer featured-info">
+            <h2>Quick Answer: PMU Services at Ink Mugi</h2>
+            <p>Ink Mugi offers permanent makeup services in Annandale, Virginia. 
+               Services include ombre powder brows for $650, microshading for $550, 
+               and corrective work starting at $700. 
+               Call 571-766-8857 for a free consultation.</p>
+            
+            <p>Located at 7857 Heritage Dr #330, Annandale, VA 22003. 
+               Serving Arlington 15 minutes away, Alexandria 20 minutes away, 
+               and all of Northern Virginia. 
+               Over 7 years experience with 500+ transformations.</p>
+               
+            <p>Best permanent makeup technique for oily skin: ombre powder brows. 
+               Perfect for Northern Virginia's humid climate. 
+               Licensed Virginia PMU artist with specialty in diverse skin tones.</p>
+          </div>
+        </div>
+      </section>
 
       {/* Featured Services */}
       <section className="py-24 bg-gradient-to-b from-[#F9F7F5] to-white relative">
