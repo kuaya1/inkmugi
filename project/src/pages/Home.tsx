@@ -759,8 +759,8 @@ const Home: React.FC = () => {
           "name": "6-Week Touch-up Session"
         },
         {
-          "@type": "Product",
-          "name": "Aftercare Kit"
+          "@type": "Service",
+          "name": "Professional Aftercare Support"
         },
         {
           "@type": "Service",
@@ -867,8 +867,8 @@ const Home: React.FC = () => {
           "name": "Professional Microshading Procedure"
         },
         {
-          "@type": "Product",
-          "name": "Premium Pigments"
+          "@type": "Service",
+          "name": "Premium Pigment Application"
         },
         {
           "@type": "Service",
@@ -992,17 +992,17 @@ const Home: React.FC = () => {
     }
   ];
 
-  // FAQ Schema as separate entity for voice search optimization
+  // Comprehensive FAQ Schema for voice search optimization
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How long do ombre powder brows last?",
+        "name": "How long do ombre powder brows last in Northern Virginia?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ombre powder brows typically last 1-3 years depending on your skin type, lifestyle, and aftercare. Oily skin may require touch-ups sooner, while dry skin tends to retain the pigment longer. At Ink Mugi, we use premium pigments that ensure long-lasting, beautiful results."
+          "text": "Ombre powder brows typically last 1-3 years in Northern Virginia's climate. The DMV area's humidity actually helps powder brows last longer than microblading. Oily skin may need refreshers sooner, while dry skin retains pigment longer. At Ink Mugi in Annandale, we use premium pigments designed for longevity."
         }
       },
       {
@@ -1015,18 +1015,34 @@ const Home: React.FC = () => {
       },
       {
         "@type": "Question",
-        "name": "Does the ombre powder brow procedure hurt?",
+        "name": "What's the best permanent makeup for oily skin in the DMV area?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most clients experience minimal discomfort during the ombre powder brow procedure. We use topical numbing cream to ensure your comfort throughout the 2-3 hour session. Pain levels are typically rated 2-4 out of 10, with most clients finding it very tolerable."
+          "text": "Ombre powder brows are the best permanent makeup for oily skin in the DMV area. The stippling technique works better than microblading on oily skin, lasting longer and healing more evenly. This is especially important in Virginia's humid summers. Ink Mugi specializes in powder brows for all skin types."
         }
       },
       {
         "@type": "Question",
-        "name": "How much do ombre powder brows cost in the DMV area?",
+        "name": "How much do permanent makeup brows cost in Annandale VA?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our ombre powder brows start at $550 for the initial procedure. This is competitive pricing for the DMV area's premium PMU services, offering exceptional value for long-lasting results."
+          "text": "Permanent makeup brows in Annandale VA cost $550-$650 at Ink Mugi. Microshading starts at $550, ombre powder brows are $650. This includes consultation, procedure, and aftercare kit. Prices are competitive with Arlington ($700-850) and Alexandria ($650-800) while offering superior results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does permanent makeup hurt and what's the healing process?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "Permanent makeup discomfort is minimal, rated 2-4 out of 10 by most clients. We use topical numbing cream throughout the 2-3 hour procedure. Healing takes 7-10 days for initial scabbing, with full healing in 4-6 weeks. The DMV's humidity requires specific aftercare which we provide detailed instructions for."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is the best permanent makeup artist near Arlington VA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ink Mugi in Annandale VA is just 15 minutes from Arlington and specializes in permanent makeup for the DMV area. Located at 7857 Heritage Dr #330, we serve Arlington, Alexandria, Fairfax, and Washington DC with 500+ successful procedures and 5-star reviews."
         }
       },
       {
@@ -1110,54 +1126,6 @@ const Home: React.FC = () => {
     ]
   };
 
-  // Enhanced FAQ Schema optimized for AI answer engines
-  const enhancedFAQSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How long do ombre powder brows last in Northern Virginia?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ombre powder brows typically last 1-3 years in Northern Virginia's climate. The DMV area's humidity actually helps powder brows last longer than microblading. Oily skin may need refreshers sooner, while dry skin retains pigment longer. At Ink Mugi in Annandale, we use premium pigments designed for longevity."
-        }
-      },
-      {
-        "@type": "Question", 
-        "name": "What's the best permanent makeup for oily skin in the DMV area?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ombre powder brows are the best permanent makeup for oily skin in the DMV area. The stippling technique works better than microblading on oily skin, lasting longer and healing more evenly. This is especially important in Virginia's humid summers. Ink Mugi specializes in powder brows for all skin types."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much do permanent makeup brows cost in Annandale VA?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Permanent makeup brows in Annandale VA cost $550-$650 at Ink Mugi. Microshading starts at $550, ombre powder brows are $650. This includes consultation, procedure, and aftercare kit. Prices are competitive with Arlington ($700-850) and Alexandria ($650-800) while offering superior results."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does permanent makeup hurt and what's the healing process?",
-        "acceptedAnswer": {
-          "@type": "Answer", 
-          "text": "Permanent makeup discomfort is minimal, rated 2-4 out of 10 by most clients. We use topical numbing cream throughout the 2-3 hour procedure. Healing takes 7-10 days for initial scabbing, with full healing in 4-6 weeks. The DMV's humidity requires specific aftercare which we provide detailed instructions for."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where is the best permanent makeup artist near Arlington VA?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ink Mugi in Annandale VA is just 15 minutes from Arlington and specializes in permanent makeup for the DMV area. Located at 7857 Heritage Dr #330, we serve Arlington, Alexandria, Fairfax, and Washington DC with 500+ successful procedures and 5-star reviews."
-        }
-      }
-    ]
-  };
-
   const testimonials = [
     {
       name: 'Mariel H',
@@ -1224,7 +1192,6 @@ const Home: React.FC = () => {
         ombrePowderBrowsService,
         microshadingService,
         aiOptimizedServices,
-        enhancedFAQSchema,
         ...reviewSchema
       ]} />
 {/* Hero Section */}
