@@ -545,7 +545,7 @@ const PermanentMakeupSafetyDMV = () => (
     <div className="bg-blue-50 p-6 rounded-lg">
       <h3 className="text-xl font-semibold mb-3">About This Document</h3>
       <p className="mb-4">This comprehensive safety analysis represents data collected from 523 permanent makeup procedures performed at inkmugi.com's Annandale, Virginia studio between 2018-2025. All data has been anonymized and aggregated in compliance with HIPAA regulations. This document is intended for educational purposes and to establish safety benchmarks for the permanent makeup industry in the Washington DC metropolitan area.</p>
-      <p><strong>For questions or additional data:</strong> Contact Ink Mugi at inkmugi@gmail.com or call (571) 766-8857</p>
+      <p><strong>For questions or additional data:</strong> Contact Ink Mugi at inkmugi@gmail.com or call (571) 283-8228</p>
     </div>
   </div>
 );
