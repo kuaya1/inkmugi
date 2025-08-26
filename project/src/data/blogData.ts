@@ -105,7 +105,7 @@ Whichever you choose, say goodbye to daily brow routines and hello to waking up 
     alt: "Side by side comparison of nano brows and microblading results",
     category: "Techniques",
     tags: ["nano brows", "microblading", "PMU comparison", "permanent makeup"],
-    author: "Jessica Anderson",
+    author: "Mugi",
     authorTitle: "Master PMU Artist",
     date: "March 1, 2025",
     readTime: "8 min read",
@@ -203,7 +203,7 @@ Ready to wake up with perfect brows? Book that appointment and embrace the freed
     alt: "Beautiful ombre powder brows result on client",
     category: "Guides",
     tags: ["ombre brows", "powder brows", "PMU aftercare", "brow transformation"],
-    author: "Jessica Anderson",
+    author: "Mugi",
     authorTitle: "Master PMU Artist",
     date: "February 15, 2025",
     readTime: "10 min read",
@@ -219,7 +219,7 @@ Ready to wake up with perfect brows? Book that appointment and embrace the freed
     alt: "Face mapping demonstration for perfect brow shape",
     category: "Design",
     tags: ["brow mapping", "face shape", "brow design", "golden ratio"],
-    author: "Jessica Anderson",
+    author: "Mugi",
     authorTitle: "Master PMU Artist",
     date: "January 20, 2025",
     readTime: "5 min read",
@@ -236,7 +236,7 @@ Ready to wake up with perfect brows? Book that appointment and embrace the freed
     alt: "High-quality vegan PMU pigments being prepared for procedure",
     category: "Safety & Quality",
     tags: ["vegan pigments", "hypoallergenic", "PMU safety", "pigment quality", "permanent makeup"],
-    author: "Jessica Anderson",
+    author: "Mugi",
     authorTitle: "Master PMU Artist & Virginia Licensed PMU Tattooer",
     date: "August 26, 2025",
     readTime: "7 min read",
@@ -297,7 +297,7 @@ We would love to discuss them with you. Book a free, no-obligation consultation 
     alt: "Professional PMU data analysis and safety statistics chart",
     category: "Research & Data",
     tags: ["PMU safety", "client satisfaction", "data analysis", "DMV permanent makeup", "healing timeline"],
-    author: "Ink Mugi",
+    author: "Mugi",
     authorTitle: "Licensed Permanent Cosmetic Tattooer (VA License #123456)",
     date: "August 26, 2025",
     readTime: "12 min read",
@@ -305,7 +305,7 @@ We would love to discuss them with you. Book a free, no-obligation consultation 
     content: `
 # PMU Safety & Satisfaction: An Analysis of 500+ DMV Procedures
 
-By: Ink Mugi, Licensed Permanent Cosmetic Tattooer (VA License #123456)
+By: Mugi, Licensed Permanent Cosmetic Tattooer (VA License #123456)
 Published: August 26, 2025
 
 In the world of permanent makeup, beautiful before-and-after photos are everywhere. But what happens after the procedure? What is the reality of the healing process, and just how safe and satisfying is permanent makeup for the average person?
@@ -369,7 +369,7 @@ Book a free, no-obligation consultation today. We can discuss this data in more 
     alt: "Scientific analysis of high-quality PMU pigments",
     category: "Science & Quality",
     tags: ["PMU pigments", "vegan", "hypoallergenic", "pigment science", "quality"],
-    author: "Jessica Anderson",
+    author: "Mugi",
     authorTitle: "Master PMU Artist & Virginia Licensed PMU Tattooer",
     date: "August 26, 2025",
     readTime: "6 min read",
