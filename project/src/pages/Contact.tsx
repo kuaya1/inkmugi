@@ -1,11 +1,28 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 import AnimatedSection from '../components/AnimatedSection';
 import ContactForm from '../components/ContactForm';
 
 const Contact: React.FC = () => {
+  // Medical Business Schema for enhanced healthcare credentials
+  const medicalBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "medicalSpecialty": "Cosmetic Dermatology",
+    "hasCredential": [{
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "license",
+      "name": "Virginia Permanent Cosmetic Tattoo License",
+      "issuedBy": "Virginia Board of Health"
+    }]
+  };
+
   return (
     <>
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
+      </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-[#F0E4D8]">
         <div className="container-custom">

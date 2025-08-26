@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, ChevronUp, AlertCircle, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 import AnimatedSection from '../components/AnimatedSection';
 
 interface FaqItem {
@@ -10,6 +11,19 @@ interface FaqItem {
 }
 
 const Faq: React.FC = () => {
+  // Medical Business Schema for enhanced healthcare credentials
+  const medicalBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "medicalSpecialty": "Cosmetic Dermatology",
+    "hasCredential": [{
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "license",
+      "name": "Virginia Permanent Cosmetic Tattoo License",
+      "issuedBy": "Virginia Board of Health"
+    }]
+  };
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [openItems, setOpenItems] = useState<number[]>([]);
 
@@ -123,6 +137,9 @@ const Faq: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
+      </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-[#F0E4D8]">
         <div className="container-custom">

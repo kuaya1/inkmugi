@@ -1182,6 +1182,19 @@ const Home: React.FC = () => {
     },
   ];
 
+  // Medical Business Schema for enhanced healthcare credentials
+  const medicalBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "medicalSpecialty": "Cosmetic Dermatology",
+    "hasCredential": [{
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "license",
+      "name": "Virginia Permanent Cosmetic Tattoo License",
+      "issuedBy": "Virginia Board of Health"
+    }]
+  };
+
   return (
     <>
       <SEO structuredData={[
@@ -1192,6 +1205,7 @@ const Home: React.FC = () => {
         ombrePowderBrowsService,
         microshadingService,
         aiOptimizedServices,
+        medicalBusinessSchema,
         ...reviewSchema
       ]} />
 {/* Hero Section */}

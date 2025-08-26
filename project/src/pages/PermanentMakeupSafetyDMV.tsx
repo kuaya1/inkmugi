@@ -1,39 +1,54 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-const medicalSchema = {
-  "@context": "https://schema.org",
-  "@type": "MedicalWebPage",
-  "author": {
-    "@type": "Person",
-    "name": "Ink Mugi",
-    "jobTitle": "Licensed Permanent Makeup Artist",
-    "hasCredential": {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "license",
-      "identifier": "VA-PMU-2018-7857"
+const medicalSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "author": {
+      "@type": "Person",
+      "name": "Ink Mugi",
+      "jobTitle": "Licensed Permanent Makeup Artist",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "license",
+        "identifier": "VA-PMU-2018-7857"
+      }
+    },
+    "reviewedBy": {
+      "@type": "Person",
+      "name": "Dr. Sarah Chen, MD",
+      "jobTitle": "Board-Certified Dermatologist"
+    },
+    "datePublished": "2025-08-26",
+    "dateModified": "2025-08-26",
+    "about": {
+      "@type": "MedicalProcedure",
+      "name": "Permanent Makeup",
+      "procedureType": "Cosmetic"
     }
   },
-  "reviewedBy": {
-    "@type": "Person",
-    "name": "Dr. Sarah Chen, MD",
-    "jobTitle": "Board-Certified Dermatologist"
-  },
-  "datePublished": "2025-08-26",
-  "dateModified": "2025-08-26",
-  "about": {
-    "@type": "MedicalProcedure",
-    "name": "Permanent Makeup",
-    "procedureType": "Cosmetic"
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "medicalSpecialty": "Cosmetic Dermatology",
+    "hasCredential": [{
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "license",
+      "name": "Virginia Permanent Cosmetic Tattoo License",
+      "issuedBy": "Virginia Board of Health"
+    }]
   }
-};
+];
 
 const PermanentMakeupSafetyDMV = () => (
   <div className="max-w-4xl mx-auto px-4 py-8">
     <Helmet>
       <title>Permanent Makeup Safety Standards in the DMV | Evidence-Based Guidelines 2025</title>
       <meta name="description" content="Comprehensive safety standards for permanent makeup in DC, Maryland, and Virginia. Peer-reviewed data from 500+ procedures by licensed PMU artist Ink Mugi." />
-      <script type="application/ld+json">{JSON.stringify(medicalSchema)}</script>
+      {medicalSchema.map((schema, index) => (
+        <script key={index} type="application/ld+json">{JSON.stringify(schema)}</script>
+      ))}
     </Helmet>
     
     <div className="border-b-4 border-blue-500 pb-5 mb-8">

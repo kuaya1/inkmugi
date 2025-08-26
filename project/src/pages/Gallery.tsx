@@ -127,6 +127,19 @@ const EnhancedGalleryItem: React.FC<{
 };
 
 const Gallery: React.FC = () => {
+  // Medical Business Schema for enhanced healthcare credentials
+  const medicalBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "medicalSpecialty": "Cosmetic Dermatology",
+    "hasCredential": [{
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "license",
+      "name": "Virginia Permanent Cosmetic Tattoo License",
+      "issuedBy": "Virginia Board of Health"
+    }]
+  };
+
   const [activeFilter, setActiveFilter] = useState('all');
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -361,6 +374,7 @@ const Gallery: React.FC = () => {
         <meta property="og:title" content="Brow Transformation Gallery | Permanent Makeup Results" />
         <meta property="og:description" content="See the dramatic difference our permanent makeup services can make. Browse our gallery of real client transformations." />
         <meta property="og:type" content="website" />
+        <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
       </Helmet>
 
       {/* Hero Section with Enhanced Design */}

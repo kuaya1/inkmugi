@@ -10,7 +10,21 @@ import LocationInfo from '../components/authority/LocationInfo';
 import CTASection from '../components/authority/CTASection';
 
 const AuthorityPage: React.FC = () => {
+  // Enhanced Medical Business Schema for healthcare credentials
+  const enhancedMedicalBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "medicalSpecialty": "Cosmetic Dermatology",
+    "hasCredential": [{
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "license",
+      "name": "Virginia Permanent Cosmetic Tattoo License",
+      "issuedBy": "Virginia Board of Health"
+    }]
+  };
+
   const authoritySchemas = [
+    enhancedMedicalBusinessSchema,
     {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",

@@ -1,10 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Award, CheckCircle, Calendar, Users } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 import AnimatedSection from '../components/AnimatedSection';
 import CTASection from '../components/CTASection';
 
 const About: React.FC = () => {
+  // Medical Business Schema for enhanced healthcare credentials
+  const medicalBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "medicalSpecialty": "Cosmetic Dermatology",
+    "hasCredential": [{
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "license",
+      "name": "Virginia Permanent Cosmetic Tattoo License",
+      "issuedBy": "Virginia Board of Health"
+    }]
+  };
   const certifications = [
     "PhiBrows Certified Artist",
     "Ombre Powder Brows Specialist",
@@ -18,6 +31,9 @@ const About: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
+      </Helmet>
       {/* Hero Section */}
       <section className="pt-36 pb-24 bg-gradient-to-b from-[#F0E4D8] to-[#F9F7F5] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-5">
