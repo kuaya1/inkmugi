@@ -113,6 +113,9 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div>
+                        <Link to="/permanent-makeup-safety-dmv" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
+                          PMU Safety Guide
+                        </Link>
             <h3 className="text-lg font-medium mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
