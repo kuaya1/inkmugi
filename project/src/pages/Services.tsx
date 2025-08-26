@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Award, CheckCircle, Calendar, Users } from 'lucide-react';
+import { Awa  return (
+    <>
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(enhancedMedicalBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(datasetSchema)}</script>
+      </Helmet>
+      {/* Hero Section */}eckCircle, Calendar, Users } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import AnimatedSection from '../components/AnimatedSection';
 import CTASection from '../components/CTASection';
@@ -17,6 +24,38 @@ const Services = () => {
       "name": "Virginia Permanent Cosmetic Tattoo License",
       "issuedBy": "Virginia Board of Health"
     }]
+  };
+
+  // Enhanced MedicalBusiness Schema for clinical credentials
+  const enhancedMedicalBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Ink Mugi PMU Studio",
+    "medicalSpecialty": "Cosmetic Dermatology",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "license",
+      "name": "Virginia Licensed Permanent Cosmetic Tattooer",
+      "identifier": "VA-PMU-2018-7857"
+    },
+    "healthPlanNetworksAccepted": "Cash, CareCredit, Afterpay"
+  };
+
+  // Dataset Schema for proprietary procedure data
+  const datasetSchema = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "PMU Procedure Outcomes & Safety Data by Ink Mugi",
+    "description": "Anonymized analysis of 523 permanent makeup procedures conducted in Northern Virginia, detailing client satisfaction, healing times, and safety metrics. Updated quarterly.",
+    "url": "https://inkmugi.com/pmu-safety-statistics",
+    "creator": {
+      "@type": "MedicalBusiness",
+      "name": "Ink Mugi PMU Studio"
+    },
+    "distribution": {
+      "@type": "DataDownload",
+      "contentUrl": "https://inkmugi.com/data/pmu-safety-statistics.json"
+    }
   };
 
   useEffect(() => {

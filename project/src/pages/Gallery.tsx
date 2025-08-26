@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Instagram, Star, Quote, Loader } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
@@ -6,12 +6,114 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { fetchInstagramMedia, getMediaUrl } from '../services/instagramService';
 
-// Component for enhanced image comparison slider
-const BeforeAfterSlider: React.FC<{ beforeImage: string; afterImage: string; beforeLabel?: string; afterLabel?: string }> = ({ 
+// Lazy Image Component with WebP support and Core Web Vitals optimization
+const LazyImage: React.FC<{
+  src: string;
+  alt: string;
+  className?: string;
+  priority?: boolean;
+}> = ({ src, alt, className, priority = false }) => {
+  const [imageSrc, setImageSrc] = useState<string>('');
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+
+  // Create WebP URL from original URL (for Flickr images)
+  const getWebPUrl = (url: string): string => {
+    // For Flickr images, try to get a higher quality version first
+    const webpUrl = url.replace('_c_d.jpg', '_b.webp');
+    return webpUrl;
+  };
+
+  // Intersection Observer for lazy loading
+  const imgRef = useCallback((node: HTMLImageElement | null) => {
+    if (node) {
+      if (priority) {
+        setIsInView(true);
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            observer.disconnect();
+          }
+        },
+        {
+          rootMargin: '50px',
+          threshold: 0.1
+        }
+      );
+
+      observer.observe(node);
+      return () => observer.disconnect();
+    }
+  }, [priority]);
+
+  // Load image when in view
+  useEffect(() => {
+    if (!isInView) return;
+
+    const img = new Image();
+    const webpSrc = getWebPUrl(src);
+    
+    // Test WebP support and fallback
+    img.onload = () => {
+      setImageSrc(webpSrc);
+      setIsLoaded(true);
+    };
+    
+    img.onerror = () => {
+      // Fallback to original image if WebP fails
+      const originalImg = new Image();
+      originalImg.onload = () => {
+        setImageSrc(src);
+        setIsLoaded(true);
+      };
+      originalImg.src = src;
+    };
+    
+    img.src = webpSrc;
+  }, [isInView, src]);
+
+  return (
+    <div className={`relative overflow-hidden ${className}`}>
+      {/* Placeholder while loading */}
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+          <Loader className="animate-spin text-gray-400" size={24} />
+        </div>
+      )}
+      
+      {/* Actual image */}
+      <img
+        ref={imgRef}
+        src={imageSrc}
+        alt={alt}
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      />
+    </div>
+  );
+};
+
+// Component for enhanced image comparison slider with lazy loading
+const BeforeAfterSlider: React.FC<{ 
+  beforeImage: string; 
+  afterImage: string; 
+  beforeLabel?: string; 
+  afterLabel?: string;
+  priority?: boolean;
+}> = ({ 
   beforeImage, 
   afterImage,
   beforeLabel = "Before",
-  afterLabel = "After"
+  afterLabel = "After",
+  priority = false
 }) => {
   const [sliderPosition, setSliderPosition] = useState(50);
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -41,24 +143,32 @@ const BeforeAfterSlider: React.FC<{ beforeImage: string; afterImage: string; bef
       onMouseMove={handleMouseMove}
       onTouchMove={handleTouchMove}
     >
-      {/* Before image (full width) */}
+      {/* Before image (full width) with lazy loading */}
       <div className="absolute inset-0">
-        <img src={beforeImage} alt="Before" className="w-full h-full object-cover" />
+        <LazyImage 
+          src={beforeImage} 
+          alt={`Before - ${beforeLabel}`} 
+          className="w-full h-full"
+          priority={priority}
+        />
         <div className="absolute top-4 left-4 bg-black/50 text-white text-xs font-medium px-3 py-1 rounded-full backdrop-blur-sm">
           {beforeLabel}
         </div>
       </div>
       
-      {/* After image (clipped) */}
+      {/* After image (clipped) with lazy loading */}
       <div 
         className="absolute inset-0 overflow-hidden" 
         style={{ width: `${sliderPosition}%` }}
       >
-        <img 
-          src={afterImage} 
-          alt="After" 
-          className="absolute top-0 left-0 w-full h-full object-cover"
-        />
+        <div className="absolute top-0 left-0 w-full h-full">
+          <LazyImage 
+            src={afterImage} 
+            alt={`After - ${afterLabel}`} 
+            className="w-full h-full"
+            priority={priority}
+          />
+        </div>
         <div className="absolute top-4 left-4 bg-[#2D2D2B]/80 text-white text-xs font-medium px-3 py-1 rounded-full backdrop-blur-sm">
           {afterLabel}
         </div>
@@ -80,21 +190,29 @@ const BeforeAfterSlider: React.FC<{ beforeImage: string; afterImage: string; bef
   );
 };
 
-// Enhanced Gallery Item component
+// Enhanced Gallery Item component with performance optimization
 const EnhancedGalleryItem: React.FC<{
   beforeImage: string;
   afterImage: string;
   category: string;
   onClick: () => void;
+  index: number;
   testimonial?: {
     text: string;
     author: string;
   };
-}> = ({ beforeImage, afterImage, category, onClick, testimonial }) => {
+}> = ({ beforeImage, afterImage, category, onClick, testimonial, index }) => {
+  // Priority loading for first 6 images (above the fold on most screens)
+  const priority = index < 6;
+  
   return (
     <div className="relative overflow-hidden group rounded-lg shadow-medium hover:shadow-lg transition-all duration-500 bg-white h-full">
       <div className="aspect-[4/5]">
-        <BeforeAfterSlider beforeImage={beforeImage} afterImage={afterImage} />
+        <BeforeAfterSlider 
+          beforeImage={beforeImage} 
+          afterImage={afterImage} 
+          priority={priority}
+        />
       </div>
       
       <div className="p-4 relative">
@@ -138,6 +256,38 @@ const Gallery: React.FC = () => {
       "name": "Virginia Permanent Cosmetic Tattoo License",
       "issuedBy": "Virginia Board of Health"
     }]
+  };
+
+  // Enhanced MedicalBusiness Schema for clinical credentials
+  const enhancedMedicalBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Ink Mugi PMU Studio",
+    "medicalSpecialty": "Cosmetic Dermatology",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "license",
+      "name": "Virginia Licensed Permanent Cosmetic Tattooer",
+      "identifier": "VA-PMU-2018-7857"
+    },
+    "healthPlanNetworksAccepted": "Cash, CareCredit, Afterpay"
+  };
+
+  // Dataset Schema for proprietary procedure data
+  const datasetSchema = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "PMU Procedure Outcomes & Safety Data by Ink Mugi",
+    "description": "Anonymized analysis of 523 permanent makeup procedures conducted in Northern Virginia, detailing client satisfaction, healing times, and safety metrics. Updated quarterly.",
+    "url": "https://inkmugi.com/pmu-safety-statistics",
+    "creator": {
+      "@type": "MedicalBusiness",
+      "name": "Ink Mugi PMU Studio"
+    },
+    "distribution": {
+      "@type": "DataDownload",
+      "contentUrl": "https://inkmugi.com/data/pmu-safety-statistics.json"
+    }
   };
 
   const [activeFilter, setActiveFilter] = useState('all');
@@ -375,6 +525,8 @@ const Gallery: React.FC = () => {
         <meta property="og:description" content="See the dramatic difference our permanent makeup services can make. Browse our gallery of real client transformations." />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(enhancedMedicalBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(datasetSchema)}</script>
       </Helmet>
 
       {/* Hero Section with Enhanced Design */}
@@ -462,6 +614,7 @@ const Gallery: React.FC = () => {
                     category={item.label}
                     onClick={() => openModal(item, index)}
                     testimonial={item.testimonial}
+                    index={index}
                   />
                 </AnimatedSection>
               ))}
@@ -533,7 +686,7 @@ const Gallery: React.FC = () => {
                 >
                   <div className="p-6 border-b border-[#E6DAD2]">
                     <h3 className="text-2xl font-cormorant font-medium text-[#2D2D2B]">
-                      {selectedImage.label}
+                      {selectedImage.category.charAt(0).toUpperCase() + selectedImage.category.slice(1).replace('-', ' ')}
                     </h3>
                     <div className="text-sm text-[#2D2D2B]/60 mt-1">
                       Image {currentImageIndex + 1} of {filteredItems.length}

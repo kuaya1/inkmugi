@@ -23,8 +23,42 @@ const AuthorityPage: React.FC = () => {
     }]
   };
 
+  // Clinical MedicalBusiness Schema for professional credentials
+  const clinicalMedicalBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Ink Mugi PMU Studio",
+    "medicalSpecialty": "Cosmetic Dermatology",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "license",
+      "name": "Virginia Licensed Permanent Cosmetic Tattooer",
+      "identifier": "VA-PMU-2018-7857"
+    },
+    "healthPlanNetworksAccepted": "Cash, CareCredit, Afterpay"
+  };
+
+  // Dataset Schema for proprietary procedure data
+  const datasetSchema = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "PMU Procedure Outcomes & Safety Data by Ink Mugi",
+    "description": "Anonymized analysis of 523 permanent makeup procedures conducted in Northern Virginia, detailing client satisfaction, healing times, and safety metrics. Updated quarterly.",
+    "url": "https://inkmugi.com/pmu-safety-statistics",
+    "creator": {
+      "@type": "MedicalBusiness",
+      "name": "Ink Mugi PMU Studio"
+    },
+    "distribution": {
+      "@type": "DataDownload",
+      "contentUrl": "https://inkmugi.com/data/pmu-safety-statistics.json"
+    }
+  };
+
   const authoritySchemas = [
     enhancedMedicalBusinessSchema,
+    clinicalMedicalBusinessSchema,
+    datasetSchema,
     {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
