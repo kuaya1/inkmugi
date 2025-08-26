@@ -1,13 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Awa  return (
-    <>
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(enhancedMedicalBusinessSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(datasetSchema)}</script>
-      </Helmet>
-      {/* Hero Section */}eckCircle, Calendar, Users } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import AnimatedSection from '../components/AnimatedSection';
 import CTASection from '../components/CTASection';
@@ -106,6 +99,8 @@ const Services = () => {
     <>
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(enhancedMedicalBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(datasetSchema)}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-[#F0E4D8]">
