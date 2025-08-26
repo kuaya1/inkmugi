@@ -108,4 +108,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.inkmugi.com/blog/pmu-pigment-science-quality-importance</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

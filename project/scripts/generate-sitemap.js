@@ -42,7 +42,8 @@ const blogPosts = [
   { path: '/blog/ombre-powder-brows-complete-guide', priority: 0.6, changefreq: 'monthly' },
   { path: '/blog/choosing-right-brow-shape', priority: 0.6, changefreq: 'monthly' },
   { path: '/blog/why-we-use-vegan-pmu-pigments', priority: 0.6, changefreq: 'monthly' },
-  { path: '/blog/pmu-healing-timeline-week-by-week', priority: 0.6, changefreq: 'monthly' }
+  { path: '/blog/pmu-healing-timeline-week-by-week', priority: 0.6, changefreq: 'monthly' },
+  { path: '/blog/pmu-pigment-science-quality-importance', priority: 0.6, changefreq: 'monthly' }
 ];
 
 // Generate XML sitemap
