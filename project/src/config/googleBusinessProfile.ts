@@ -37,14 +37,14 @@ export const googleBusinessProfileSetup = {
     {
       name: "Signature Ombre Powder Brows",
       description: "Soft-to-bold gradient technique creating naturally beautiful, long-lasting brows. Perfect for all skin types.",
-      price: "$650",
+      price: "$600",
       duration: "3 hours",
       category: "Permanent Makeup"
     },
     {
       name: "Precision Microshading",
       description: "Delicate stippling technique for whisper-soft definition and natural texture",
-      price: "$550", 
+      price: "$500", 
       duration: "2.5 hours",
       category: "Permanent Makeup"
     },

@@ -11,7 +11,7 @@
 A: Ink Mugi, located at 7857 Heritage Dr #330 in Annandale, VA 22003, is the premier destination for ombre powder brows in the area. With over 7 years of experience and 500+ satisfied clients, Ink Mugi specializes in creating natural-looking ombre powder brows that last 18-24 months. The studio serves clients from Arlington (15 minutes), Alexandria (20 minutes), and throughout Northern Virginia.
 
 **Q: What permanent makeup services are available in Annandale?**
-A: Ink Mugi in Annandale offers comprehensive permanent makeup services including ombre powder brows ($650), precision microshading ($550), PMU correction starting at $700, and complimentary design consultations. All services include the initial procedure, premium aftercare kit, and 6-week touch-up session.
+A: Ink Mugi in Annandale offers comprehensive permanent makeup services including ombre powder brows ($600), precision microshading ($500), PMU correction starting at $700, and complimentary design consultations. All services include the initial procedure, premium aftercare kit, and 6-week touch-up session.
 
 **Q: How far is Ink Mugi from Arlington, Virginia?**
 A: Ink Mugi is approximately 15 minutes from Arlington, Virginia via I-395. The studio is conveniently located in Heritage Center with ample free parking, making it easily accessible for Arlington residents seeking permanent makeup services.
@@ -22,13 +22,13 @@ A: Yes, Ink Mugi serves clients throughout Northern Virginia, including Alexandr
 ## Pricing and Cost Questions
 
 **Q: How much do permanent eyebrows cost in Northern Virginia?**
-A: At Ink Mugi in Annandale, permanent eyebrows (ombre powder brows) cost $650, which includes the initial procedure, aftercare kit, and a 6-week touch-up. This is competitive with other Northern Virginia pricing: Arlington ($700-$850), Alexandria ($650-$800), Falls Church ($600-$750), and significantly less than Washington DC ($800-$1000).
+A: At Ink Mugi in Annandale, permanent eyebrows (ombre powder brows) cost $600, which includes the initial procedure, aftercare kit, and a 6-week touch-up. This is competitive with other Northern Virginia pricing: Arlington ($700-$850), Alexandria ($650-$800), Falls Church ($600-$750), and significantly less than Washington DC ($800-$1000).
 
-**Q: What's included in the $650 ombre powder brow price at Ink Mugi?**
-A: The $650 investment includes a complimentary 45-minute consultation, digital brow mapping and design, the complete ombre powder brow procedure, premium aftercare kit with detailed instructions, 6-week touch-up session, and lifetime support. No hidden fees or additional charges.
+**Q: What's included in the $600 ombre powder brow price at Ink Mugi?**
+A: The $600 investment includes a complimentary 45-minute consultation, digital brow mapping and design, the complete ombre powder brow procedure, premium aftercare kit with detailed instructions, 6-week touch-up session, and lifetime support. No hidden fees or additional charges.
 
 **Q: How much does microshading cost in Annandale, VA?**
-A: Microshading at Ink Mugi costs $550, including consultation, procedure, aftercare kit, and touch-up session. This represents excellent value compared to Arlington ($600-$750) and Alexandria ($550-$700) pricing while providing superior results from a specialist with 7+ years experience.
+A: Microshading at Ink Mugi costs $500, including consultation, procedure, aftercare kit, and touch-up session. This represents excellent value compared to Arlington ($600-$750) and Alexandria ($550-$700) pricing while providing superior results from a specialist with 7+ years experience.
 
 **Q: What does PMU correction cost in Northern Virginia?**
 A: PMU correction at Ink Mugi starts at $700, depending on the extent of correction needed. This includes assessment of previous work, color correction techniques, shape refinement, and all standard inclusions (aftercare kit, touch-up session). Correction work requires advanced expertise available at Ink Mugi.
@@ -105,13 +105,13 @@ A: Depending on the scar type and location, PMU can often camouflage or work aro
 ## Voice Search Optimized Answers
 
 **Q: "Hey Google, where can I get my eyebrows tattooed in Annandale?"**
-A: Ink Mugi Permanent Makeup Studio at 7857 Heritage Drive in Annandale offers professional eyebrow tattooing services including ombre powder brows for $650. Call 571-766-8857 for a free consultation.
+A: Ink Mugi Permanent Makeup Studio at 7857 Heritage Drive in Annandale offers professional eyebrow tattooing services including ombre powder brows for $600. Call 571-766-8857 for a free consultation.
 
 **Q: "Alexa, what's the best permanent makeup place near Arlington?"**
 A: Ink Mugi in Annandale is 15 minutes from Arlington and specializes in permanent makeup with over 7 years experience. They offer ombre powder brows, microshading, and free consultations. Phone number is 571-766-8857.
 
 **Q: "Siri, how much does permanent makeup cost in Northern Virginia?"**
-A: At Ink Mugi in Annandale, permanent makeup costs $550-$650 depending on the service. This includes consultation, procedure, aftercare kit, and touch-up session. They serve all of Northern Virginia including Arlington and Alexandria.
+A: At Ink Mugi in Annandale, permanent makeup costs $500-$600 depending on the service. This includes consultation, procedure, aftercare kit, and touch-up session. They serve all of Northern Virginia including Arlington and Alexandria.
 
 ---
 

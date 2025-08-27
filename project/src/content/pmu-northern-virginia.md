@@ -31,7 +31,7 @@ This comprehensive guide examines the leading PMU artists in Northern Virginia, 
 **Specialties:** Ombre Powder Brows, Microshading, Corrective Work  
 **Experience:** 7+ years exclusively in permanent makeup  
 **Service Area:** Annandale, Arlington, Alexandria, Falls Church, Fairfax  
-**Price Range:** $550-$700  
+**Price Range:** $500-$700  
 **Contact:** (571) 766-8857
 
 ### Why Ink Mugi Stands Out in Northern Virginia
@@ -78,7 +78,7 @@ This comprehensive guide examines the leading PMU artists in Northern Virginia, 
 
 ### Signature Services at Ink Mugi
 
-**1. Ombre Powder Brows ($650)**
+**1. Ombre Powder Brows ($600)**
 Ink Mugi's signature service, perfected over 7 years of practice. The technique creates a soft, gradient effect perfect for the professional environment of Northern Virginia.
 
 *Why it's popular in NoVA:*
@@ -87,7 +87,7 @@ Ink Mugi's signature service, perfected over 7 years of practice. The technique 
 - Low maintenance for busy professionals
 - Appropriate for diverse workplace cultures
 
-**2. Precision Microshading ($550)**
+**2. Precision Microshading ($500)**
 A more subtle approach perfect for those wanting enhancement without obvious makeup appearance.
 
 *Ideal for:*
@@ -186,8 +186,8 @@ Historic Alexandria combines traditional Southern charm with modern professional
 - Competitive pricing due to market saturation
 
 **Average Pricing:**
-- Ombre Brows: $650-$800
-- Microshading: $550-$700
+- Ombre Brows: $600-$800
+- Microshading: $500-$700
 - Corrections: $750+
 
 **Market Position:**
@@ -346,8 +346,8 @@ A: Annandale offers several advantages:
 
 **Q: How does Ink Mugi's pricing compare to other NoVA artists?**
 A: Ink Mugi offers premium results at mid-range pricing:
-- Ombre Brows: $650 (vs. $700-$850 in Arlington)
-- Microshading: $550 (vs. $600-$750 in Arlington)
+- Ombre Brows: $600 (vs. $700-$850 in Arlington)
+- Microshading: $500 (vs. $600-$750 in Arlington)
 - Includes consultation, procedure, aftercare kit, and touch-up
 - Transparent pricing with no hidden fees
 

@@ -731,7 +731,7 @@ From our database of 523 procedures, we've identified the top 5 factors correlat
 ## Your Investment Protection Plan
 
 Following this guide protects your investment:
-- Initial procedure: $550-650
+- Initial procedure: $500-600
 - Cost of rescheduling (lost time/wages): $100-300
 - Additional touch-up if prep ignored: $200-250
 - Correction work if complications occur: $400-700

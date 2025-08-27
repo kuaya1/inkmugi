@@ -17,8 +17,8 @@ export const priorityDirectories = [
       description: "Master permanent makeup artist specializing in ombre powder brows and microshading in Annandale, VA. Serving discerning clients throughout Northern Virginia with bespoke PMU artistry. 7+ years experience, 500+ transformations.",
       photos: 25,
       services: [
-        "Ombre Powder Brows ($650)",
-        "Precision Microshading ($550)", 
+        "Ombre Powder Brows ($600)",
+        "Precision Microshading ($500)", 
         "PMU Correction (Starting $700)",
         "Complimentary Consultation"
       ],

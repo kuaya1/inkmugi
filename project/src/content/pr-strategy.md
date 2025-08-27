@@ -120,7 +120,7 @@ While many focus on Northern Virginia's tech and government sectors, a quieter e
 
 **Data Points Available:**
 - 35% client base from outside Annandale (Arlington, Alexandria, DC)
-- Average client investment: $650 (supporting local economy)
+- Average client investment: $600 (supporting local economy)
 - 300% industry growth in Northern Virginia since 2020
 - Small business employment in beauty sector
 
@@ -263,7 +263,7 @@ The "Brows of Courage" program offers free permanent makeup consultations and se
 
 "Losing eyebrows can be one of the most visible reminders of cancer treatment," said Ink Mugi, licensed permanent makeup artist and program founder. "Our goal is to help survivors feel beautiful and confident as they move forward in their healing process."
 
-The program serves residents throughout Northern Virginia, including Arlington, Alexandria, Annandale, and surrounding communities. Services include consultation, brow design, permanent makeup application, and follow-up care, valued at over $650 per participant.
+The program serves residents throughout Northern Virginia, including Arlington, Alexandria, Annandale, and surrounding communities. Services include consultation, brow design, permanent makeup application, and follow-up care, valued at over $600 per participant.
 
 "This is about more than just eyebrows," Ink Mugi explained. "It's about helping women reclaim a sense of normalcy and beauty after going through something so challenging."
 

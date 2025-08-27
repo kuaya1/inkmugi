@@ -24,14 +24,14 @@ const Home: React.FC = () => {
     "name": "Ink Mugi",
     "alternateName": ["Inkmugi", "InkMugi PMU Studio", "Ink Mugi Permanent Makeup", "Ink Mugi Annandale"],
     "description": "Licensed permanent makeup studio specializing in ombre powder brows, microshading, and fine line tattoos. Serving Annandale, Arlington, Alexandria, and the greater DMV area with expert PMU artistry since 2018.",
-    "disambiguatingDescription": "Professional permanent makeup studio offering ombre powder brows ($550-650), microshading, and fine line tattoos with 500+ successful procedures completed.",
+    "disambiguatingDescription": "Professional permanent makeup studio offering ombre powder brows ($500-600), microshading, and fine line tattoos with 500+ successful procedures completed.",
     "image": [
       "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
       "https://live.staticflickr.com/65535/54364396583_48d38e3d93_o_d.jpg",
       "https://live.staticflickr.com/65535/54364170391_5f7424c0b6_o_d.jpg"
     ],
     "logo": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
-    "priceRange": "$200-$650",
+    "priceRange": "$200-$600",
     "currenciesAccepted": "USD",
     "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Venmo", "Zelle", "CashApp"],
     "address": {
@@ -212,7 +212,7 @@ const Home: React.FC = () => {
             "duration": "PT3H",
             "category": "Beauty Service"
           },
-          "price": "550",
+          "price": "600",
           "priceCurrency": "USD",
           "priceValidUntil": "2025-12-31",
           "availability": "https://schema.org/InStock",
@@ -438,7 +438,7 @@ const Home: React.FC = () => {
         "name": "How much do ombre powder brows cost in Annandale, VA?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "At Ink Mugi in Annandale, ombre powder brows cost $650, which includes the initial procedure and aftercare kit. This is competitive with Arlington ($700-850) and Alexandria ($650-800) pricing while offering superior results and convenience."
+          "text": "At Ink Mugi in Annandale, ombre powder brows cost $600, which includes the initial procedure and aftercare kit. This is competitive with Arlington ($700-850) and Alexandria ($650-800) pricing while offering superior results and convenience."
         }
       },
       {
@@ -454,7 +454,7 @@ const Home: React.FC = () => {
         "name": "Where can I get microshading in Annandale, Virginia?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ink Mugi at 7857 Heritage Dr #330 in Annandale, VA offers professional microshading services for $550. With 7+ years experience and 500+ satisfied clients, Ink Mugi specializes in creating natural-looking results for all skin tones."
+          "text": "Ink Mugi at 7857 Heritage Dr #330 in Annandale, VA offers professional microshading services for $500. With 7+ years experience and 500+ satisfied clients, Ink Mugi specializes in creating natural-looking results for all skin tones."
         }
       },
       {
@@ -743,7 +743,7 @@ const Home: React.FC = () => {
     },
     "offers": {
       "@type": "Offer",
-      "price": "550",
+      "price": "600",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "validFrom": "2024-01-01",
@@ -1026,7 +1026,7 @@ const Home: React.FC = () => {
         "name": "How much do permanent makeup brows cost in Annandale VA?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Permanent makeup brows in Annandale VA cost $550-$650 at Ink Mugi. Microshading starts at $550, ombre powder brows are $650. This includes consultation, procedure, and aftercare kit. Prices are competitive with Arlington ($700-850) and Alexandria ($650-800) while offering superior results."
+          "text": "Permanent makeup brows in Annandale VA cost $500-$600 at Ink Mugi. Microshading starts at $500, ombre powder brows are $600. This includes consultation, procedure, and aftercare kit. Prices are competitive with Arlington ($700-850) and Alexandria ($650-800) while offering superior results."
         }
       },
       {
@@ -1076,7 +1076,7 @@ const Home: React.FC = () => {
         "@type": "Service",
         "position": 1,
         "name": "Ombre Powder Brows Annandale VA",
-        "description": "Semi-permanent makeup technique creating natural-looking shaded brows. Best for oily skin. Lasts 1-3 years. $650 at Ink Mugi Annandale.",
+        "description": "Semi-permanent makeup technique creating natural-looking shaded brows. Best for oily skin. Lasts 1-3 years. $600 at Ink Mugi Annandale.",
         "provider": {
           "@type": "LocalBusiness",
           "name": "Ink Mugi",
@@ -1085,7 +1085,7 @@ const Home: React.FC = () => {
         "areaServed": ["Annandale", "Arlington", "Alexandria", "Fairfax", "Washington DC"],
         "offers": {
           "@type": "Offer",
-          "price": "650",
+          "price": "600",
           "priceCurrency": "USD"
         }
       },
@@ -1093,7 +1093,7 @@ const Home: React.FC = () => {
         "@type": "Service", 
         "position": 2,
         "name": "Microshading DMV Area",
-        "description": "Subtle permanent makeup for natural brow enhancement. Gentle stippling technique. Perfect for sensitive skin. $550 at Ink Mugi.",
+        "description": "Subtle permanent makeup for natural brow enhancement. Gentle stippling technique. Perfect for sensitive skin. $500 at Ink Mugi.",
         "provider": {
           "@type": "LocalBusiness",
           "name": "Ink Mugi",
@@ -1151,14 +1151,14 @@ const Home: React.FC = () => {
     {
       title: 'Ombre Powder Brows',
       description: 'What it is: Soft powder effect that looks like makeup. Best for: Oily skin, anyone wanting fuller coverage. Process: I create tiny dots that build up to your perfect shade. Healing: 7-10 days initial scabbing, 6 weeks full healing. Lasts: 18-24 months. Discomfort: 2-3 out of 10, like threading.',
-      price: '$650',
+      price: '$600',
       duration: '2.5 hours including numbing',
       image: 'https://live.staticflickr.com/65535/54364396583_48d38e3d93_o_d.jpg',
     },
     {
       title: 'Microshading',
       description: 'What it is: The no-makeup makeup look. Best for: Sensitive skin, subtle enhancement. Process: Gentle stippling creates soft, natural depth. Healing: 7-10 days initial, 6 weeks full. Lasts: 18-24 months. Discomfort: 2 out of 10, very tolerable.',
-      price: '$550',
+      price: '$500',
       duration: '2 hours including numbing',
       image: 'https://live.staticflickr.com/65535/54364170391_5f7424c0b6_o_d.jpg',
     },
@@ -1276,6 +1276,58 @@ const Home: React.FC = () => {
     </div>
   </div>
 </section>
+
+      {/* Voice Search Optimized Quick Answers */}
+      <section className="py-12 bg-[#2D2D2B]" style={{display: 'none'}}>
+        <div className="container-custom">
+          <div className="voice-answer quick-answer featured-info">
+            <h2>Quick Answer: PMU Services at Ink Mugi</h2>
+            <p>Ink Mugi offers permanent makeup services in Annandale, Virginia. 
+               Services include ombre powder brows for $600, microshading for $500, 
+               and corrective work starting at $700. 
+               Call 571-766-8857 for a free consultation.</p>
+            
+            <p>Located at 7857 Heritage Dr #330, Annandale, VA 22003. 
+               Serving Arlington 15 minutes away, Alexandria 20 minutes away, 
+               and all of Northern Virginia. 
+               Over 7 years experience with 500+ transformations.</p>
+               
+            <p>Best permanent makeup technique for oily skin: ombre powder brows. 
+               Perfect for Northern Virginia's humid climate. 
+               Licensed Virginia PMU artist with specialty in diverse skin tones.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Services */}
+      <section className="py-32 bg-gradient-to-b from-[#F9F7F5] to-white relative">
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#2D2D2B]/5 to-transparent"></div>
+        <div className="container-custom">
+          <AnimatedSection className="text-center mb-20">
+            <h2 className="section-title relative inline-block mb-6">
+              Our Signature Offerings
+              <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#E6DAD2]"></span>
+            </h2>
+            <p className="section-subtitle max-w-3xl mx-auto mt-8 text-lg leading-relaxed">
+              Each technique represents years of mastery, refined to enhance your unique features with artful precision
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+            {services.map((service, index) => (
+              <AnimatedSection key={index} delay={index * 2}>
+                <ServiceCard {...service} />
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection className="text-center mt-20">
+            <Link to="/services" className="btn bg-[#2D2D2B] hover:bg-[#1A1A18] text-white transition-all duration-500 transform hover:translate-y-[-1px] hover:shadow-lg px-10 py-4 rounded-lg inline-flex items-center group">
+              Explore Your Options <ArrowRight size={16} className="ml-3 transition-all duration-300 group-hover:translate-x-1" />
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
 
       {/* Latest Expert Insights Section */}
       <section className="expert-insights py-16 bg-[#F9F7F5]" itemScope itemType="https://schema.org/ItemList">
@@ -1403,58 +1455,6 @@ const Home: React.FC = () => {
                 0.19% Complication Rate
               </span>
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Voice Search Optimized Quick Answers */}
-      <section className="py-12 bg-[#2D2D2B]" style={{display: 'none'}}>
-        <div className="container-custom">
-          <div className="voice-answer quick-answer featured-info">
-            <h2>Quick Answer: PMU Services at Ink Mugi</h2>
-            <p>Ink Mugi offers permanent makeup services in Annandale, Virginia. 
-               Services include ombre powder brows for $650, microshading for $550, 
-               and corrective work starting at $700. 
-               Call 571-766-8857 for a free consultation.</p>
-            
-            <p>Located at 7857 Heritage Dr #330, Annandale, VA 22003. 
-               Serving Arlington 15 minutes away, Alexandria 20 minutes away, 
-               and all of Northern Virginia. 
-               Over 7 years experience with 500+ transformations.</p>
-               
-            <p>Best permanent makeup technique for oily skin: ombre powder brows. 
-               Perfect for Northern Virginia's humid climate. 
-               Licensed Virginia PMU artist with specialty in diverse skin tones.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Services */}
-      <section className="py-32 bg-gradient-to-b from-[#F9F7F5] to-white relative">
-        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#2D2D2B]/5 to-transparent"></div>
-        <div className="container-custom">
-          <AnimatedSection className="text-center mb-20">
-            <h2 className="section-title relative inline-block mb-6">
-              Our Signature Offerings
-              <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#E6DAD2]"></span>
-            </h2>
-            <p className="section-subtitle max-w-3xl mx-auto mt-8 text-lg leading-relaxed">
-              Each technique represents years of mastery, refined to enhance your unique features with artful precision
-            </p>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-            {services.map((service, index) => (
-              <AnimatedSection key={index} delay={index * 2}>
-                <ServiceCard {...service} />
-              </AnimatedSection>
-            ))}
-          </div>
-
-          <AnimatedSection className="text-center mt-20">
-            <Link to="/services" className="btn bg-[#2D2D2B] hover:bg-[#1A1A18] text-white transition-all duration-500 transform hover:translate-y-[-1px] hover:shadow-lg px-10 py-4 rounded-lg inline-flex items-center group">
-              Explore Your Options <ArrowRight size={16} className="ml-3 transition-all duration-300 group-hover:translate-x-1" />
-            </Link>
           </AnimatedSection>
         </div>
       </section>
@@ -1795,7 +1795,7 @@ const Home: React.FC = () => {
 
               {/* Transparency Note */}
               <div className="bg-[#E6DAD2]/20 p-4 rounded-lg mb-8 max-w-2xl mx-auto">
-                <p className="text-[#E6DAD2] font-medium mb-2">Honest pricing: $550-$650 total</p>
+                <p className="text-[#E6DAD2] font-medium mb-2">Honest pricing: $500-$600 total</p>
                 <p className="text-sm text-[#F9F7F5]/90">No hidden fees, no upselling.</p>
               </div>
               
@@ -1855,7 +1855,7 @@ const Home: React.FC = () => {
                 <div className="bg-white p-6 rounded-lg shadow-soft">
                   <h3 className="text-xl font-medium mb-4 text-[#2D2D2B]">What investment should I expect for this transformation?</h3>
                   <p className="text-[#2D2D2B]/80 leading-relaxed">
-                    Your complete transformation investment begins at $550, which includes your personalized consultation, precision artistry session, premium aftercare kit, and essential 6-week perfection appointment. We believe in transparent pricing that reflects the artistry and long-term value of your new confidence.
+                    Your complete transformation investment begins at $500, which includes your personalized consultation, precision artistry session, premium aftercare kit, and essential 6-week perfection appointment. We believe in transparent pricing that reflects the artistry and long-term value of your new confidence.
                   </p>
                 </div>
               </AnimatedSection>

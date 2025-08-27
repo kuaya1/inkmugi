@@ -50,7 +50,7 @@ The humid summers and variable weather in Northern Virginia make PMU particularl
 
 ### 1. Ombre Powder Brows
 **Price Range in DMV:** $500-$900  
-**At Ink Mugi:** $650
+**At Ink Mugi:** $600
 
 Ombre powder brows create a soft, gradient effect that mimics the look of makeup powder. This technique starts lighter at the front of the brow and gradually darkens toward the tail, creating a natural, polished appearance.
 
@@ -69,7 +69,7 @@ Ombre powder brows create a soft, gradient effect that mimics the look of makeup
 
 ### 2. Microshading
 **Price Range in DMV:** $450-$750  
-**At Ink Mugi:** $550
+**At Ink Mugi:** $500
 
 Microshading uses a stippling technique to create soft, powdered brows with a more subtle appearance than ombre brows. This method is perfect for those seeking the most natural-looking enhancement.
 
@@ -104,7 +104,7 @@ Corrective PMU addresses previous work that may have healed poorly, changed colo
 
 | Location | Ombre Brows | Microshading | Combination | Correction |
 |----------|-------------|--------------|-------------|------------|
-| **Annandale (Ink Mugi)** | $650 | $550 | Consultation | $700+ |
+| **Annandale (Ink Mugi)** | $600 | $500 | Consultation | $700+ |
 | Arlington Average | $700-$850 | $600-$750 | $800-$1000 | $800+ |
 | Alexandria Average | $650-$800 | $550-$700 | $750-$950 | $750+ |
 | Falls Church Average | $600-$750 | $500-$650 | $700-$900 | $700+ |
