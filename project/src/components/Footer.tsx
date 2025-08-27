@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Facebook, Mail, Phone, MapPin, Star } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -33,6 +33,15 @@ const Footer: React.FC = () => {
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
+              </a>
+              <a
+                href="https://maps.app.goo.gl/3GSCY6K3AyzSHmXL8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-primary transition-colors duration-300"
+                aria-label="Google Business Profile"
+              >
+                <Star size={20} />
               </a>
             </div>
           </div>
@@ -139,6 +148,12 @@ const Footer: React.FC = () => {
                 <Mail size={18} className="mr-2 text-primary" />
                 <a href="mailto:inkmugi@gmail.com" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
                   inkmugi@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center">
+                <Star size={18} className="mr-2 text-primary" />
+                <a href="https://maps.app.goo.gl/3GSCY6K3AyzSHmXL8" target="_blank" rel="noopener noreferrer" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
+                  Google Business Profile
                 </a>
               </li>
             </ul>

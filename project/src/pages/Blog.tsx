@@ -3,183 +3,12 @@ import { Link } from 'react-router-dom';
 import { Search, ArrowRight, Calendar, Clock, User, Tag } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 import { Helmet } from 'react-helmet';
+import { blogPosts } from '../data/blogData';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('');
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Nano Brows vs Microblading: A Comprehensive Comparison Guide",
-      slug: "nano-brows-vs-microblading-comparison", 
-      excerpt: "Discover the key differences between nano brows and microblading techniques to help you make an informed decision for your perfect brow transformation.",
-      metaDescription: "Compare nano brows and microblading techniques side by side. Learn about healing time, pain levels, longevity, and which technique is best for your skin type.",
-      image: "https://live.staticflickr.com/65535/54364179271_ab1319693c_o_d.jpg",
-      alt: "Side by side comparison of nano brows and microblading results",
-      category: "Techniques",
-      tags: ["nano brows", "microblading", "PMU comparison", "permanent makeup"],
-      author: "Jessica Anderson",
-      authorTitle: "Master PMU Artist",
-      date: "March 1, 2025",
-      readTime: "8 min read",
-      featured: true,
-      content: `## Introduction
-Eyebrows frame the face, define expressions, and enhance natural beauty. With semi-permanent makeup trends on the rise, microblading and nano brows have emerged as leading techniques for achieving flawless, low-maintenance brows. But how do these methods differ, and which is right for you? This guide breaks down their tools, processes, results, and more to help you choose confidently.
-
-## What is Microblading?
-### Procedure:
-Microblading uses a handheld tool with ultra-fine needles to manually etch hair-like strokes into the epidermis (upper skin layer). Pigment is deposited to mimic natural brow hairs.
-
-### Ideal Candidates:
-- Those with normal to dry skin.
-- Individuals seeking a soft, natural look.
-- People wanting semi-permanent results (1–2 years).
-
-### Pros:
-- Natural, feathery appearance.
-- Less invasive than traditional tattooing.
-- Customizable shape and pigment.
-
-### Cons:
-- May blur or fade faster on oily skin.
-- Requires touch-ups every 12–18 months.
-- Slight discomfort during the procedure.
-
-## What are Nano Brows?
-### Procedure:
-Nano brows utilize a digital machine with a single needle to implant pigment into the dermis (deeper skin layer). The technique allows for hyper-precise, hair-like strokes or shading.
-
-### Ideal Candidates:
-- All skin types, including oily or mature skin.
-- Those seeking longer-lasting results (2–3 years).
-- Individuals desiring detailed, defined brows.
-
-### Pros:
-- Superior precision and consistency.
-- Longer-lasting than microblading.
-- Suitable for sensitive or problematic skin.
-
-### Cons:
-- Typically more expensive.
-- Requires a highly skilled technician.
-- Slightly longer procedure time.
-
-## Nano Brows vs Microblading: Side-by-Side Comparison
-
-| Factor | Microblading | Nano Brows |
-|--------|-------------|------------|
-| Tool | Manual handheld blade | Digital machine with a single needle |
-| Technique | Hand-drawn strokes | Machine-assisted precision |
-| Pain Level | Moderate (topical numbing used) | Mild to moderate (numbing applied) |
-| Healing Time | 7–14 days (scabbing common) | 7–10 days (less scabbing) |
-| Longevity | 1–2 years | 2–3 years |
-| Skin Suitability | Best for normal/dry skin | Works for all skin types, including oily |
-| Cost | $300–$800 | $500–$1,200+ |
-
-## Which Should You Choose? Key Considerations
-
-- **Skin Type**: Oily or acne-prone skin? Nano brows' deeper pigment retention makes them a better choice.
-- **Desired Look**: Prefer soft, natural brows? Microblading excels here. For defined, intricate strokes, opt for nano.
-- **Budget**: Microblading is more affordable upfront, but nano's longevity may offer better value over time.
-- **Pain Tolerance**: Both use numbing agents, but nano's machine may cause less tugging sensation.
-- **Maintenance**: Nano brows require fewer touch-ups, ideal for low-maintenance lifestyles.
-
-## Aftercare Tips for Both Techniques
-
-1. Avoid water, sweating, and makeup on brows for 7–10 days.
-2. Apply recommended ointments to aid healing.
-3. Skip sun exposure and retinoids until fully healed.
-4. Schedule a touch-up 4–6 weeks post-procedure.
-
-## Final Thoughts
-
-Both nano brows and microblading deliver stunning, natural-looking results, but their differences in technique, cost, and longevity matter. If you prioritize precision and durability, nano brows are worth the investment. For a budget-friendly, natural option (and non-oily skin), microblading remains a classic choice.
-
-Always consult a certified, experienced artist and review their portfolio before committing. Your perfect brows are just a session away!`
-    },
-    {
-      id: 2,
-      title: "Ombre Powder Brows: Complete Pre and Post-Procedure Guide",
-      slug: "ombre-powder-brows-complete-guide",
-      excerpt: "Everything you need to know about ombre powder brows - from preparation to aftercare. Make your appointment a success with our expert advice.",
-      metaDescription: "Learn what to expect before, during and after your ombre powder brows procedure. Expert tips on preparation, healing process, and maintenance for lasting results.",
-      image: "https://live.staticflickr.com/65535/54364396583_48d38e3d93_o_d.jpg",
-      alt: "Beautiful ombre powder brows result on client",
-      category: "Guides",
-      tags: ["ombre brows", "powder brows", "PMU aftercare", "brow transformation"],
-      author: "Jessica Anderson",
-      authorTitle: "Master PMU Artist",
-      date: "February 15, 2025",
-      readTime: "10 min read",
-      featured: true
-    },
-    {
-      id: 3,
-      title: "The Science of PMU Pigments: Why Quality Makes All the Difference",
-      slug: "pmu-pigment-science-quality-importance",
-      excerpt: "Learn about the composition of permanent makeup pigments and why investing in premium, medical-grade products is essential for safe, long-lasting results.",
-      metaDescription: "Discover the science behind PMU pigments and how they affect your results. Learn about ingredients, safety standards, and why premium pigments are worth the investment.",
-      image: "https://live.staticflickr.com/65535/54364392854_9d155b0510_o_d.png",
-      alt: "Professional PMU pigments used in permanent makeup procedures",
-      category: "Education",
-      tags: ["PMU pigments", "permanent makeup", "pigment quality", "medical-grade pigments"],
-      author: "Jessica Anderson",
-      authorTitle: "Master PMU Artist",
-      date: "January 28, 2025",
-      readTime: "6 min read",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "PMU Healing Timeline: Week-by-Week Recovery Process Explained",
-      slug: "pmu-healing-timeline-week-by-week",
-      excerpt: "A comprehensive guide to the permanent makeup healing journey - what to expect each week, how to care for your PMU, and when to schedule touch-ups.",
-      metaDescription: "Follow our detailed PMU healing timeline to understand what happens during each phase of recovery. Expert tips for managing the healing process and achieving optimal results.",
-      image: "https://live.staticflickr.com/65535/54364170391_5f7424c0b6_o_d.jpg",
-      alt: "Healing stages of permanent makeup procedure",
-      category: "Aftercare",
-      tags: ["PMU healing", "aftercare", "healing timeline", "permanent makeup recovery"],
-      author: "Jessica Anderson",
-      authorTitle: "Master PMU Artist",
-      date: "January 10, 2025",
-      readTime: "7 min read",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Finding Your Perfect Brow Shape: Face Mapping Techniques for Flattering Results",
-      slug: "perfect-brow-shape-face-mapping-guide",
-      excerpt: "Master the art of face mapping to determine your ideal brow shape. Learn how facial proportions influence brow design for harmonious, flattering results.",
-      metaDescription: "Learn professional face mapping techniques to find your perfect brow shape. Discover how your unique facial structure should guide your brow design for the most flattering look.",
-      image: "https://live.staticflickr.com/65535/54363151472_699bd8a642_o_d.jpg",
-      alt: "Face mapping demonstration for perfect brow shape",
-      category: "Design",
-      tags: ["brow mapping", "face shape", "brow design", "golden ratio"],
-      author: "Jessica Anderson",
-      authorTitle: "Master PMU Artist",
-      date: "December 20, 2024",
-      readTime: "5 min read",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "PMU Myths vs. Facts: What Every Client Needs to Know",
-      slug: "pmu-myths-versus-facts-expert-guide",
-      excerpt: "A professional PMU artist debunks common misconceptions about permanent makeup, helping you make informed decisions about your beauty treatments.",
-      metaDescription: "Separate PMU facts from fiction with our expert guide. Learn the truth about pain, longevity, touch-ups, and other common permanent makeup misconceptions.",
-      image: "https://live.staticflickr.com/65535/54363190627_a16b921317_o_d.jpg",
-      alt: "Before and after permanent makeup showing natural-looking results",
-      category: "Education",
-      tags: ["PMU myths", "permanent makeup facts", "microblading truth", "PMU misconceptions"],
-      author: "Jessica Anderson",
-      authorTitle: "Master PMU Artist",
-      date: "November 30, 2024",
-      readTime: "8 min read",
-      featured: false
-    }
-  ];
-  
   // Enhanced categories with count information
   const categories = [
     { name: "Techniques", count: blogPosts.filter(post => post.category === "Techniques").length },
@@ -518,19 +347,19 @@ Always consult a certified, experienced artist and review their portfolio before
                   <div className="flex items-center mb-4">
                     <img 
                       src="https://live.staticflickr.com/65535/54363190627_a16b921317_o_d.jpg" 
-                      alt="Jessica Anderson - PMU Artist" 
+                      alt="Mugi - PMU Artist" 
                       className="w-16 h-16 rounded-full object-cover mr-4"
                     />
                     <div>
-                      <h3 className="text-lg font-medium text-[#2D2D2B] font-cormorant">Jessica Anderson</h3>
+                      <h3 className="text-lg font-medium text-[#2D2D2B] font-cormorant">Mugi</h3>
                       <p className="text-sm text-[#2D2D2B]/70">Master PMU Artist & Educator</p>
                     </div>
                   </div>
                   <p className="text-[#2D2D2B]/80 text-sm mb-4">
-                    With over 8 years of experience in permanent makeup, Jessica shares her expertise, industry insights, and professional tips on this blog.
+                    With over 8 years of experience in permanent makeup, Mugi shares her expertise, industry insights, and professional tips on this blog.
                   </p>
                   <Link to="/about" className="text-[#2D2D2B] font-medium flex items-center text-sm group">
-                    <span>Read more about Jessica</span>
+                    <span>Read more about Mugi</span>
                     <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
