@@ -85,7 +85,7 @@ const BlogPost: React.FC = () => {
                 </div>
 
                 {/* Updated Body Content */}
-                <div className="prose prose-xl max-w-none">
+                <div className="prose prose-xl prose-neutral max-w-none">
                   <ReactMarkdown>{post.content}</ReactMarkdown>
                 </div>
 
