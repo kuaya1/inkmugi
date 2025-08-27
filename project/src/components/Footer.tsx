@@ -86,21 +86,6 @@ const Footer: React.FC = () => {
                   PMU Safety Guide
                 </Link>
               </li>
-              <li>
-                <Link to="/pmu-safety-statistics" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
-                  View Our PMU Safety & Procedure Data
-                </Link>
-              </li>
-              <li>
-                <Link to="/why-we-use-vegan-pmu-pigments" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
-                  Vegan PMU Pigments
-                </Link>
-              </li>
-              <li>
-                <Link to="/licensed-pmu-artist-annandale" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
-                  Licensed PMU Artist Annandale
-                </Link>
-              </li>
             </ul>
           </div>
 
