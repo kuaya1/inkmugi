@@ -13,6 +13,8 @@ import Blog from './pages/Blog';
 import BlogPost from './components/blogpost';
 import Authority from './pages/Authority';
 import PermanentMakeupSafetyDMV from './pages/PermanentMakeupSafetyDMV';
+import PMUDataGuide from './pages/PMUDataGuide';
+import PMUMythsVsFacts from './pages/PMUMythsVsFacts';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/authority" element={<Authority />} />
           <Route path="/permanent-makeup-safety-dmv" element={<PermanentMakeupSafetyDMV />} />
+          <Route path="/pmu-data-guide" element={<PMUDataGuide />} />
+          <Route path="/pmu-myths-vs-facts" element={<PMUMythsVsFacts />} />
         </Routes>
       </main>
       <Footer />

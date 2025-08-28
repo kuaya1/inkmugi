@@ -225,9 +225,9 @@ const AuthorityPage: React.FC = () => {
   return (
     <>
       <SEO
-        title="DMV's #1 PMU Authority | Expert Microshading & Ombre Brows | INK MUGI"
-        description="Washington DC Metro's leading permanent makeup authority. Expert microshading, ombre powder brows, & PMU artistry. 4.9★ rated, 500+ transformations, industry-leading techniques."
-        keywords="PMU authority, best permanent makeup artist DMV, microshading expert, ombre powder brows specialist, Washington DC PMU, Arlington VA permanent makeup, Alexandria eyebrow tattoo"
+        title="DMV's #1 Licensed PMU Artist | Expert Microshading & Ombre Brows | INK MUGI Authority"
+        description="Virginia-licensed PMU expert with 523+ procedures, 0.19% complication rate (industry avg: 2.5%). Hospital-grade studio serving Annandale, Arlington, Alexandria. Data-driven permanent makeup authority."
+        keywords="licensed PMU artist Northern Virginia, ombre powder brows Annandale VA, microshading correction specialist 22003, permanent makeup safety data DMV, hospital-grade PMU studio Arlington, Virginia licensed permanent cosmetic tattooer, PMU healing time statistics Fairfax County, powder brow touch-up Annandale, permanent makeup for alopecia Northern VA, Korean PMU techniques Annandale"
         canonicalUrl="https://www.inkmugi.com/authority"
         structuredData={authoritySchemas}
       />

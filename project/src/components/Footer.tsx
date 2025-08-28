@@ -85,14 +85,31 @@ const Footer: React.FC = () => {
                   FAQ
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Educational Resources */}
+          <div>
+            <h3 className="text-lg font-medium mb-4">PMU Education</h3>
+            <ul className="space-y-2">
               <li>
-                <Link to="/contact" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
-                  Contact
+                <Link to="/pmu-data-guide" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
+                  Safety Data & Statistics
+                </Link>
+              </li>
+              <li>
+                <Link to="/pmu-myths-vs-facts" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
+                  PMU Myths vs Facts
                 </Link>
               </li>
               <li>
                 <Link to="/permanent-makeup-safety-dmv" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
-                  PMU Safety Guide
+                  PMU Safety in DMV
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
+                  PMU Guides & Tips
                 </Link>
               </li>
             </ul>
