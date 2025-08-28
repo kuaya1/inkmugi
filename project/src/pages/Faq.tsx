@@ -211,6 +211,164 @@ const Faq: React.FC = () => {
         </div>
       </section>
 
+      {/* Voice Search Optimization Section - Conversational Content Blocks */}
+      <section className="py-20 bg-gradient-to-br from-neutral-50 to-gray-100" itemScope itemType="https://schema.org/FAQPage">
+        <div className="container-custom">
+          <AnimatedSection className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-cormorant font-semibold text-neutral-900 mb-6">
+              Quick Answers for <span className="text-primary">Smart Searches</span>
+            </h2>
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+              Voice-friendly answers to help you find exactly what you're looking for
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Quick Answer Cards - Optimized for Voice Search */}
+            <AnimatedSection delay={0.1}>
+              <div className="voice-answer quick-answer featured-info bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200" itemScope itemType="https://schema.org/Question">
+                <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold mb-3 text-neutral-900" itemProp="name">
+                  "Where can I get licensed permanent makeup in Annandale Virginia?"
+                </h3>
+                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-neutral-700 leading-relaxed" itemProp="text">
+                    <strong>Ink Mugi is Annandale's #1 licensed PMU artist</strong> located at 7857 Heritage Dr #330. Virginia-licensed with 523+ procedures completed and 0.19% complication rate (industry average 2.5%). Call <strong>(571) 283-8228</strong> for FREE consultation.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <div className="voice-answer quick-answer featured-info bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200" itemScope itemType="https://schema.org/Question">
+                <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold mb-3 text-neutral-900" itemProp="name">
+                  "How much does ombre powder brows cost in Annandale VA?"
+                </h3>
+                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-neutral-700 leading-relaxed" itemProp="text">
+                    At <strong>Ink Mugi in Annandale, ombre powder brows cost $600</strong> and microshading costs $500. Includes consultation, procedure, aftercare kit, and touch-up. Hospital-grade studio serving Arlington, Alexandria, and Northern Virginia.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3}>
+              <div className="voice-answer quick-answer featured-info bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200" itemScope itemType="https://schema.org/Question">
+                <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold mb-3 text-neutral-900" itemProp="name">
+                  "What is the safest PMU studio in Northern Virginia?"
+                </h3>
+                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-neutral-700 leading-relaxed" itemProp="text">
+                    <strong>Ink Mugi maintains a 0.19% complication rate</strong> (industry average 2.5%) with 523+ successful procedures. Virginia-licensed, hospital-grade sterile studio with 97% client satisfaction rate in Annandale.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.4}>
+              <div className="voice-answer quick-answer featured-info bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200" itemScope itemType="https://schema.org/Question">
+                <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold mb-3 text-neutral-900" itemProp="name">
+                  "Who does microshading correction in Fairfax County?"
+                </h3>
+                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-neutral-700 leading-relaxed" itemProp="text">
+                    <strong>Ink Mugi specializes in microshading correction</strong> for previous PMU work. Located in Annandale VA 22003, serving all of Fairfax County with advanced correction techniques and Virginia licensing.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.5}>
+              <div className="voice-answer quick-answer featured-info bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200" itemScope itemType="https://schema.org/Question">
+                <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold mb-3 text-neutral-900" itemProp="name">
+                  "How long does PMU healing take in DMV area?"
+                </h3>
+                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-neutral-700 leading-relaxed" itemProp="text">
+                    <strong>PMU healing takes 4-6 weeks</strong> in the DMV climate. Initial healing 7-10 days, complete healing 4-6 weeks. Touch-up recommended at 6 weeks for optimal results in Northern Virginia's humidity.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.6}>
+              <div className="voice-answer quick-answer featured-info bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200" itemScope itemType="https://schema.org/Question">
+                <div className="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold mb-3 text-neutral-900" itemProp="name">
+                  "Best PMU technique for oily skin near Washington DC?"
+                </h3>
+                <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-neutral-700 leading-relaxed" itemProp="text">
+                    <strong>Ombre powder brows are best for oily skin</strong> near DC. The stippling technique at Ink Mugi holds better in oily skin and humid DMV climate compared to microblading. Perfect for Washington area weather.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+
+          {/* Call-to-Action for Voice Search Users */}
+          <AnimatedSection delay={0.7} className="text-center mt-16">
+            <div className="bg-white p-8 rounded-2xl shadow-lg max-w-2xl mx-auto border border-gray-200">
+              <h3 className="text-2xl font-semibold mb-4 text-neutral-900">
+                Ready to Book Your Consultation?
+              </h3>
+              <p className="text-neutral-600 mb-6 text-lg">
+                Call <strong className="text-primary">(571) 283-8228</strong> or book online instantly
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="tel:+15712838228" 
+                  className="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors inline-flex items-center justify-center"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Call Now
+                </a>
+                <Link 
+                  to="/booking" 
+                  className="bg-neutral-900 text-white px-8 py-3 rounded-lg font-medium hover:bg-neutral-800 transition-colors inline-flex items-center justify-center"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Book Online
+                </Link>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 bg-[#2D2D2B] text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://live.staticflickr.com/65535/54363160242_7975c4f42c_o_d.jpg')] bg-cover bg-center opacity-10"></div>

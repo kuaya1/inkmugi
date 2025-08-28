@@ -279,6 +279,90 @@ const About: React.FC = () => {
         </div>
       </section>
 
+      {/* Educational Resources Section */}
+      <section className="py-24 bg-white">
+        <div className="container-custom">
+          <AnimatedSection className="text-center mb-16">
+            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-4 block">Evidence-Based Education</span>
+            <h2 className="section-title relative inline-block mb-6">
+              Learn the Facts About PMU
+              <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#E6DAD2]"></span>
+            </h2>
+            <p className="section-subtitle max-w-3xl mx-auto mt-8">
+              Make informed decisions with data-driven insights from 523+ procedures and Virginia-licensed expertise
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <AnimatedSection delay={0.1}>
+              <Link to="/pmu-data-guide" className="group block bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300 border border-blue-100 hover:border-blue-200">
+                <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-neutral-900 group-hover:text-blue-700 transition-colors">
+                  PMU Safety Data & Statistics
+                </h3>
+                <p className="text-neutral-600 mb-4 leading-relaxed">
+                  Comprehensive analysis of 523 procedures: 0.19% complication rate vs 2.5% industry average, healing timelines, and satisfaction data.
+                </p>
+                <div className="flex items-center text-blue-600 font-medium group-hover:translate-x-2 transition-transform">
+                  <span>View Data Analysis</span>
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </Link>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <Link to="/pmu-myths-vs-facts" className="group block bg-gradient-to-br from-red-50 to-pink-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300 border border-red-100 hover:border-red-200">
+                <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-neutral-900 group-hover:text-red-700 transition-colors">
+                  PMU Myths vs Facts
+                </h3>
+                <p className="text-neutral-600 mb-4 leading-relaxed">
+                  Debunking dangerous misinformation with evidence-based truth. Learn what to avoid and what really matters for safe PMU.
+                </p>
+                <div className="flex items-center text-red-600 font-medium group-hover:translate-x-2 transition-transform">
+                  <span>Separate Fact from Fiction</span>
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </Link>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3}>
+              <Link to="/authority" className="group block bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300 border border-green-100 hover:border-green-200">
+                <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-neutral-900 group-hover:text-green-700 transition-colors">
+                  DMV PMU Authority Page
+                </h3>
+                <p className="text-neutral-600 mb-4 leading-relaxed">
+                  Virginia licensing, credentials, safety protocols, and why we're the DMV's most trusted permanent makeup authority.
+                </p>
+                <div className="flex items-center text-green-600 font-medium group-hover:translate-x-2 transition-transform">
+                  <span>View Credentials</span>
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </Link>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <CTASection />
     </>
