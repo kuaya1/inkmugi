@@ -54,13 +54,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://live.staticflickr.com" crossorigin>
     
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://live.staticflickr.com/65535/54408135519_738741e705_c_d.jpg" as="image" type="image/jpeg">
-    <link rel="preload" href="/src/index.css" as="style">
+    <!-- Critical CSS inline for faster rendering -->
+    <style>
+      /* Critical above-the-fold styles */
+      body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+      .hero-section { min-height: 100vh; background: linear-gradient(135deg, #2D2D2B 0%, #1A1A18 100%); }
+    </style>
     
-    <!-- Preload fonts for better performance -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap" as="style">
-    <link rel="preload" href="https://fonts.gstatic.com/s/cormorant/v11/H4c-BXWPl9DZ0Xe_nHUaus7Ma6hbUis.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Preload critical resources with priority -->
+    <link rel="preload" href="https://live.staticflickr.com/65535/54408135519_738741e705_c_d.jpg" as="image" type="image/jpeg" fetchpriority="high">
+    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Async load fonts to prevent render blocking -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap"></noscript>
+    
+    <!-- Preload hero background image -->
+    <link rel="preload" href="https://live.staticflickr.com/65535/54363160242_7975c4f42c_c_d.jpg" as="image" type="image/jpeg" fetchpriority="high">
     
     <!-- Prefetch next likely pages -->
     <link rel="prefetch" href="/services">

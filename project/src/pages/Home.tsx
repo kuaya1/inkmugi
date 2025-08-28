@@ -1219,7 +1219,7 @@ const Home: React.FC = () => {
   <div 
     className="absolute inset-0 bg-cover bg-center filter brightness-95 contrast-110"
     style={{ 
-      backgroundImage: "url('https://live.staticflickr.com/65535/54363160242_7975c4f42c_o_d.jpg')" 
+      backgroundImage: "url('https://live.staticflickr.com/65535/54363160242_7975c4f42c_c_d.jpg')" 
     }}
   ></div>
   
