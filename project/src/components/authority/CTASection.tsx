@@ -43,7 +43,7 @@ const CTASection: React.FC = () => {
     <AnimatedSection className="py-24 bg-gradient-to-br from-primary-600 to-accent-500 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_theme(colors.white)_1px,_transparent_0)] bg-[size:30px_30px]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_white_1px,_transparent_0)] bg-[size:30px_30px]"></div>
       </div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

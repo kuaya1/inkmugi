@@ -5,7 +5,7 @@ const ServicesSection: React.FC = () => {
   const services = [
     {
       name: "Microshading Eyebrows",
-      price: "$450",
+      price: "$500",
       duration: "2-3 hours",
       image: "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
       description: "Advanced microshading technique creating natural, hair-like strokes for fuller, more defined eyebrows that last 1-3 years.",
@@ -20,7 +20,7 @@ const ServicesSection: React.FC = () => {
     },
     {
       name: "Ombre Powder Brows",
-      price: "$400",
+      price: "$600",
       duration: "2-3 hours", 
       image: "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
       description: "Gradient shading technique creating a soft, powdered makeup look that's perfect for oily skin types and bold brow preferences.",

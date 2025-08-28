@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
     <AnimatedSection className="relative bg-gradient-to-br from-primary-50 to-primary-100 py-24 lg:py-32 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_theme(colors.primary.400)_1px,_transparent_0)] bg-[size:20px_20px]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_#c7a790_1px,_transparent_0)] bg-[size:20px_20px]"></div>
       </div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
