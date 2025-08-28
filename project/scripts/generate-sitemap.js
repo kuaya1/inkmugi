@@ -31,6 +31,8 @@ const staticRoutes = [
   
   // Critical pages for SEO/indexing
   { path: '/permanent-makeup-safety-dmv', priority: 0.8, changefreq: 'monthly' },
+  { path: '/pmu-data-guide', priority: 0.8, changefreq: 'monthly' },
+  { path: '/pmu-myths-vs-facts', priority: 0.8, changefreq: 'monthly' },
   { path: '/pmu-safety-statistics', priority: 0.8, changefreq: 'monthly' },
   { path: '/licensed-pmu-artist-annandale', priority: 0.7, changefreq: 'monthly' },
   { path: '/why-we-use-vegan-pmu-pigments', priority: 0.7, changefreq: 'monthly' }
