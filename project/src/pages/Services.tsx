@@ -60,7 +60,17 @@ const Services = () => {
     {
       id: 1,
       title: 'Ombre Powder Brows',
-      description: 'Our signature service! Soft, powdered effect that mimics the look of brow makeup with a more natural finish than traditional microblading.',
+      description: (
+        <>
+          Our signature service! Soft, powdered effect that mimics the look of brow makeup with a more natural finish than traditional microblading. {' '}
+          <Link 
+            to="/pmu-data-guide" 
+            className="text-blue-600 hover:text-blue-800 underline font-medium"
+          >
+            Proven safe in 523+ procedures
+          </Link> with superior longevity in DMV's climate.
+        </>
+      ),
       icon: <CheckCircle size={24} className="text-[#2D2D2B]" />
     },
     {
@@ -258,7 +268,12 @@ const Services = () => {
               The Science Behind <span className="text-blue-600">Perfect Brows</span>
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed" itemProp="description">
-              Based on our analysis of 523+ procedures performed in Northern Virginia's unique climate conditions
+              <Link 
+                to="/pmu-data-guide" 
+                className="text-blue-600 hover:text-blue-800 underline font-medium"
+              >
+                Based on our analysis of 523+ procedures
+              </Link> performed in Northern Virginia's unique climate conditions
             </p>
           </AnimatedSection>
 
@@ -278,7 +293,14 @@ const Services = () => {
                     <h3 className="text-2xl font-bold text-neutral-900 mb-2" itemProp="headline">
                       What are Ombre Powder Brows and how long do they last in Annandale's climate?
                     </h3>
-                    <div className="text-sm text-blue-600 font-medium">Direct Answer • Data from 523 procedures</div>
+                    <div className="text-sm text-blue-600 font-medium">
+                      Direct Answer • <Link 
+                        to="/pmu-data-guide" 
+                        className="hover:text-blue-800 underline"
+                      >
+                        Data from 523 procedures
+                      </Link>
+                    </div>
                   </div>
                 </div>
 
@@ -351,7 +373,13 @@ const Services = () => {
                   <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100">
                     <h4 className="font-semibold text-neutral-900 mb-3">Direct Answer:</h4>
                     <p className="text-lg leading-relaxed text-neutral-800">
-                      <strong>Microshading uses gentler dot-stippling technique</strong> with 73% less skin trauma than traditional microblading, making it ideal for sensitive skin types common in the DMV area.
+                      <strong>Microshading uses gentler dot-stippling technique</strong> with 73% less skin trauma than traditional microblading, making it ideal for sensitive skin types common in the DMV area. {' '}
+                      <Link 
+                        to="/pmu-myths-vs-facts" 
+                        className="text-green-600 hover:text-green-800 underline font-medium"
+                      >
+                        Learn the truth about PMU techniques
+                      </Link> and why microshading is often the better choice.
                     </p>
                   </div>
 
@@ -423,7 +451,14 @@ const Services = () => {
                   <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-lg font-bold text-white">0.19%</span>
                   </div>
-                  <h4 className="font-semibold text-neutral-900 mb-2">Complication Rate</h4>
+                  <h4 className="font-semibold text-neutral-900 mb-2">
+                    <Link 
+                      to="/permanent-makeup-safety-dmv" 
+                      className="text-green-600 hover:text-green-800 underline"
+                    >
+                      Complication Rate
+                    </Link>
+                  </h4>
                   <p className="text-neutral-600 text-sm">vs 2.5% industry average</p>
                 </div>
               </div>

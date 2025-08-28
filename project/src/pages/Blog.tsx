@@ -81,6 +81,40 @@ const Blog = () => {
         <meta property="og:url" content="https://yourdomain.com/blog" />
         <meta property="og:image" content="https://yourdomain.com/images/blog-social-share.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "Ink Mugi Permanent Makeup Blog",
+            "description": "Expert insights on permanent makeup techniques, aftercare, and beauty trends from professional PMU artists",
+            "url": "https://inkmugi.com/blog",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Ink Mugi Permanent Makeup",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://inkmugi.com/logo.png"
+              }
+            },
+            "inLanguage": "en-US",
+            "blogPost": blogPosts.map(post => ({
+              "@type": "BlogPosting",
+              "headline": post.title,
+              "description": post.metaDescription,
+              "url": `https://inkmugi.com/blog/${post.slug}`,
+              "datePublished": new Date(post.date).toISOString(),
+              "dateModified": new Date().toISOString(),
+              "author": {
+                "@type": "Person",
+                "name": post.author,
+                "jobTitle": post.authorTitle
+              },
+              "image": post.image,
+              "articleSection": post.category,
+              "keywords": post.tags.join(", ")
+            }))
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

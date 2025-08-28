@@ -133,7 +133,13 @@ const About: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-medium mb-4 text-[#2D2D2B] font-cormorant">Safety & Hygiene</h3>
                 <p className="text-[#2D2D2B]/80 leading-relaxed">
-                  Your safety is our priority. We maintain the highest standards of hygiene and use only premium, medical-grade pigments and equipment in a sterile environment.
+                  Your safety is our priority. We maintain the highest standards of hygiene and use only premium, medical-grade pigments and equipment in a sterile environment. {' '}
+                  <Link 
+                    to="/permanent-makeup-safety-dmv" 
+                    className="text-blue-600 hover:text-blue-800 underline font-medium"
+                  >
+                    View our comprehensive safety protocols
+                  </Link> and industry-leading complication rates.
                 </p>
               </div>
             </AnimatedSection>

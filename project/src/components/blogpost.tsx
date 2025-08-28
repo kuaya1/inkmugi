@@ -32,6 +32,66 @@ const BlogPost: React.FC = () => {
         <meta property="og:image" content={post.image} />
         <meta property="og:url" content={`https://yourdomain.com/blog/${post.slug}`} />
         <link rel="canonical" href={`https://yourdomain.com/blog/${post.slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": post.title,
+            "description": post.metaDescription,
+            "image": post.image,
+            "author": {
+              "@type": "Person",
+              "name": post.author,
+              "jobTitle": post.authorTitle,
+              "url": "https://inkmugi.com/about"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Ink Mugi Permanent Makeup",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://inkmugi.com/logo.png"
+              }
+            },
+            "datePublished": new Date(post.date).toISOString(),
+            "dateModified": new Date().toISOString(),
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://inkmugi.com/blog/${post.slug}`
+            },
+            "articleSection": post.category,
+            "keywords": post.tags.join(", "),
+            "wordCount": post.content.replace(/[^\w\s]/g, '').split(/\s+/).length,
+            "timeRequired": post.readTime,
+            "inLanguage": "en-US"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://inkmugi.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://inkmugi.com/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": post.title,
+                "item": `https://inkmugi.com/blog/${post.slug}`
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
