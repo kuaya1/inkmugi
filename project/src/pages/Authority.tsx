@@ -232,16 +232,14 @@ const AuthorityPage: React.FC = () => {
         structuredData={authoritySchemas}
       />
       
-      <div className="min-h-screen bg-white">
-        <HeroSection />
-        <StatsSection />
-        <CredentialsGrid />
-        <ServicesSection />
-        <FAQSection />
-        <TestimonialSection />
-        <LocationInfo />
-        <CTASection />
-      </div>
+      <HeroSection />
+      <StatsSection />
+      <CredentialsGrid />
+      <ServicesSection />
+      <FAQSection />
+      <TestimonialSection />
+      <LocationInfo />
+      <CTASection />
     </>
   );
 };
