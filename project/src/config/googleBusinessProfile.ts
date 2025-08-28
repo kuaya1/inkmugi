@@ -92,7 +92,7 @@ export const googleBusinessProfileSetup = {
   },
 
   contact: {
-    phone: "(571) 766-8857",
+    phone: "(571) 283-8228",
     email: "inkmugi@gmail.com",
     website: "https://inkmugi.com"
   },

@@ -28,7 +28,7 @@ See you soon for your touch-up! ✨`
   fourStar: {
     grateful: `Thank you so much for your thoughtful review, [Name]! 🌟 We're delighted that you had such a positive experience with your [service] at our Annandale studio. 
 
-Your feedback is incredibly valuable to us, and if there's anything we can do to make your experience even better next time, please don't hesitate to reach out at inkmugi@gmail.com or (571) 766-8857.
+Your feedback is incredibly valuable to us, and if there's anything we can do to make your experience even better next time, please don't hesitate to reach out at inkmugi@gmail.com or (571) 283-8228.
 
 Thank you for choosing Ink Mugi! ✨`,
 
@@ -43,13 +43,13 @@ Thank you for choosing our Annandale studio! 💕`
   threeStar: {
     understanding: `Thank you for your honest feedback, [Name]. We appreciate you taking the time to share your experience with your [service].
 
-I'd really like to understand your concerns better and see how we can make things right. Could you please call or text me directly at (571) 766-8857? Your satisfaction is my top priority, and I want to ensure you're completely happy with your results.
+I'd really like to understand your concerns better and see how we can make things right. Could you please call or text me directly at (571) 283-8228? Your satisfaction is my top priority, and I want to ensure you're completely happy with your results.
 
 Thank you for giving us the opportunity to improve.`,
 
     proactive: `Hi [Name], thank you for your review. I can see that your experience wasn't quite what we hoped for, and I'd like to make it right.
 
-Please reach out to me personally at inkmugi@gmail.com or (571) 766-8857 so we can discuss your concerns and find a solution together. Your satisfaction means everything to our Annandale studio.
+Please reach out to me personally at inkmugi@gmail.com or (571) 283-8228 so we can discuss your concerns and find a solution together. Your satisfaction means everything to our Annandale studio.
 
 I look forward to hearing from you soon.`
   },
@@ -60,7 +60,7 @@ I look forward to hearing from you soon.`
 
 Your satisfaction is my absolute priority, and I'd like to speak with you personally to understand what happened and how we can make this right immediately.
 
-Please call or text me directly at (571) 766-8857, or email inkmugi@gmail.com. I'm committed to resolving this situation to your complete satisfaction.`,
+Please call or text me directly at (571) 283-8228, or email inkmugi@gmail.com. I'm committed to resolving this situation to your complete satisfaction.`,
 
     followUp: `Hi [Name], I wanted to follow up on your recent review and thank you again for giving me the opportunity to address your concerns.
 
@@ -68,7 +68,7 @@ Please call or text me directly at (571) 766-8857, or email inkmugi@gmail.com. I
 
 Your feedback has helped us improve our processes, and I'm grateful for your patience as we worked together to find a solution.
 
-If you have any other questions or concerns, please don't hesitate to reach out directly at (571) 766-8857.`
+If you have any other questions or concerns, please don't hesitate to reach out directly at (571) 283-8228.`
   },
 
   // Platform-Specific Variations

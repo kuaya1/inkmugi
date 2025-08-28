@@ -291,7 +291,7 @@ export const citationTracking = {
   consistency: {
     businessName: "Ink Mugi Permanent Makeup Studio",
     address: "7857 Heritage Dr #330, Annandale, VA 22003", 
-    phone: "(571) 766-8857",
+    phone: "(571) 283-8228",
     website: "https://inkmugi.com",
     categories: ["Permanent Makeup", "Beauty Salon", "Eyebrow Services"]
   },

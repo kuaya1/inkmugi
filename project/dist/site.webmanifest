@@ -54,8 +54,8 @@
     {
       "name": "Call Now",
       "short_name": "Call",
-      "description": "Call (571) 766-8857",
-      "url": "tel:+15717668857",
+      "description": "Call (571) 283-8228",
+      "url": "tel:+15712838228",
       "icons": [
         {
           "src": "/phone-icon-192.png",

@@ -137,7 +137,7 @@ Answer: [First sentence addresses core concern directly]
 - "Read client experiences"
 
 ### Support CTAs (Connection)
-- "Text questions to: 571-766-8857"
+- "Text questions to: 571-283-8228"
 - "Email: ink@inkmugi.com"
 - "Follow our work: @inkmugi"
 

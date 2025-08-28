@@ -32,7 +32,7 @@ This comprehensive guide examines the leading PMU artists in Northern Virginia, 
 **Experience:** 7+ years exclusively in permanent makeup  
 **Service Area:** Annandale, Arlington, Alexandria, Falls Church, Fairfax  
 **Price Range:** $500-$700  
-**Contact:** (571) 766-8857
+**Contact:** (571) 283-8228
 
 ### Why Ink Mugi Stands Out in Northern Virginia
 
@@ -450,7 +450,7 @@ Northern Virginia offers some of the nation's best permanent makeup artists, wit
 5. **Book:** Schedule your transformation
 
 **Contact Ink Mugi for Your Consultation:**
-- **Phone:** (571) 766-8857
+- **Phone:** (571) 283-8228
 - **Email:** inkmugi@gmail.com
 - **Address:** 7857 Heritage Dr #330, Annandale, VA 22003
 - **Online:** [Schedule Your Consultation](https://www.vagaro.com/bortemicroblading/book-now)

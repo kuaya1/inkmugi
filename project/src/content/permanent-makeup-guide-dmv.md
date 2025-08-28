@@ -398,7 +398,7 @@ Most clients need a color refresh every 18-24 months. This maintains the vibranc
 Your perfect brows are waiting. Schedule your complimentary consultation with Ink Mugi and discover how permanent makeup can transform not just your appearance, but your entire daily routine.
 
 **Contact Information:**
-- **Phone:** (571) 766-8857
+- **Phone:** (571) 283-8228
 - **Email:** inkmugi@gmail.com
 - **Address:** 7857 Heritage Dr #330, Annandale, VA 22003
 - **Online Booking:** [Schedule Your Consultation](https://www.vagaro.com/bortemicroblading/book-now)

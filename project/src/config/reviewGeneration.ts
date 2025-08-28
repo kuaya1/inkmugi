@@ -14,7 +14,7 @@ export const reviewEmailTemplates = {
 
 Thank you for trusting me with your permanent makeup journey today. Your comfort and satisfaction are my top priorities, and I hope you're already loving your new look!
 
-I wanted to personally reach out to ensure you have everything you need during your healing process. Please don't hesitate to text me at (571) 766-8857 if you have any questions about your aftercare.
+I wanted to personally reach out to ensure you have everything you need during your healing process. Please don't hesitate to text me at (571) 283-8228 if you have any questions about your aftercare.
 
 If you have a moment and felt your experience was positive, I'd be incredibly grateful if you could share your thoughts with other women considering permanent makeup:
 
@@ -26,7 +26,7 @@ Your feedback helps other women in the DMV area make informed decisions about th
 With sincere gratitude,
 Ink Mugi
 7857 Heritage Dr #330, Annandale, VA 22003
-(571) 766-8857`,
+(571) 283-8228`,
 
     followUpActions: [
       "Send aftercare instructions",
@@ -93,7 +93,7 @@ With appreciation,
 Ink Mugi
 
 📧 Reply anytime: inkmugi@gmail.com
-📱 Text for quick questions: (571) 766-8857`,
+📱 Text for quick questions: (571) 283-8228`,
 
     followUpActions: [
       "Add to annual reminder list",
@@ -122,7 +122,7 @@ Your long-term results help others understand the lasting value of professional 
 
 Ready for a refresh? Book your annual touch-up:
 📅 Online: https://www.vagaro.com/bortemicroblading/book-now
-📱 Text: (571) 766-8857
+📱 Text: (571) 283-8228
 
 Thank you for being such a wonderful client!
 

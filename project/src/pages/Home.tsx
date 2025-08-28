@@ -1285,7 +1285,7 @@ const Home: React.FC = () => {
             <p>Ink Mugi offers permanent makeup services in Annandale, Virginia. 
                Services include ombre powder brows for $600, microshading for $500, 
                and corrective work starting at $700. 
-               Call 571-766-8857 for a free consultation.</p>
+               Call 571-283-8228 for a free consultation.</p>
             
             <p>Located at 7857 Heritage Dr #330, Annandale, VA 22003. 
                Serving Arlington 15 minutes away, Alexandria 20 minutes away, 
@@ -1928,7 +1928,7 @@ const Home: React.FC = () => {
                 </h3>
                 <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
                   <p className="text-neutral-700 leading-relaxed" itemProp="text">
-                    <strong>Ink Mugi is Annandale's #1 licensed PMU artist</strong> located at 7857 Heritage Dr #330. Virginia-licensed with 523+ procedures completed and 0.19% complication rate (industry average 2.5%). Call <strong>(571) 766-8857</strong> for FREE consultation.
+                    <strong>Ink Mugi is Annandale's #1 licensed PMU artist</strong> located at 7857 Heritage Dr #330. Virginia-licensed with 523+ procedures completed and 0.19% complication rate (industry average 2.5%). Call <strong>(571) 283-8228</strong> for FREE consultation.
                   </p>
                 </div>
               </div>
@@ -2032,11 +2032,11 @@ const Home: React.FC = () => {
                 Ready to Book Your Consultation?
               </h3>
               <p className="text-neutral-600 mb-6 text-lg">
-                Call <strong className="text-primary">(571) 766-8857</strong> or book online instantly
+                Call <strong className="text-primary">(571) 283-8228</strong> or book online instantly
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="tel:+15717668857" 
+                  href="tel:+15712838228" 
                   className="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors inline-flex items-center justify-center"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

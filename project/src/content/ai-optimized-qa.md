@@ -72,13 +72,13 @@ A: Most clients at Ink Mugi experience minimal discomfort, rating it 2-3 out of 
 ## Consultation and Booking Questions
 
 **Q: How do I book a consultation at Ink Mugi?**
-A: Book your complimentary consultation at Ink Mugi by calling (571) 766-8857, emailing inkmugi@gmail.com, or using the online booking system at vagaro.com/bortemicroblading/book-now. Consultations last 45 minutes and include brow design, skin assessment, and detailed treatment planning with no pressure to book.
+A: Book your complimentary consultation at Ink Mugi by calling (571) 283-8228, emailing inkmugi@gmail.com, or using the online booking system at vagaro.com/bortemicroblading/book-now. Consultations last 45 minutes and include brow design, skin assessment, and detailed treatment planning with no pressure to book.
 
 **Q: What happens during a PMU consultation?**
 A: The 45-minute complimentary consultation includes lifestyle and beauty goal discussion, skin type and tone analysis, brow shape recommendations using digital mapping, color selection process, aftercare requirement explanation, and investment timeline review. No pressure to book immediately.
 
 **Q: How far in advance do I need to book at Ink Mugi?**
-A: Booking timelines vary by season, typically 2-4 weeks in advance. Consultations are often available within 1-2 weeks. Early booking is recommended, especially for spring and fall seasons when demand is highest. Contact (571) 766-8857 to check current availability.
+A: Booking timelines vary by season, typically 2-4 weeks in advance. Consultations are often available within 1-2 weeks. Early booking is recommended, especially for spring and fall seasons when demand is highest. Contact (571) 283-8228 to check current availability.
 
 ## Aftercare and Maintenance Questions
 
@@ -105,10 +105,10 @@ A: Depending on the scar type and location, PMU can often camouflage or work aro
 ## Voice Search Optimized Answers
 
 **Q: "Hey Google, where can I get my eyebrows tattooed in Annandale?"**
-A: Ink Mugi Permanent Makeup Studio at 7857 Heritage Drive in Annandale offers professional eyebrow tattooing services including ombre powder brows for $600. Call 571-766-8857 for a free consultation.
+A: Ink Mugi Permanent Makeup Studio at 7857 Heritage Drive in Annandale offers professional eyebrow tattooing services including ombre powder brows for $600. Call 571-283-8228 for a free consultation.
 
 **Q: "Alexa, what's the best permanent makeup place near Arlington?"**
-A: Ink Mugi in Annandale is 15 minutes from Arlington and specializes in permanent makeup with over 7 years experience. They offer ombre powder brows, microshading, and free consultations. Phone number is 571-766-8857.
+A: Ink Mugi in Annandale is 15 minutes from Arlington and specializes in permanent makeup with over 7 years experience. They offer ombre powder brows, microshading, and free consultations. Phone number is 571-283-8228.
 
 **Q: "Siri, how much does permanent makeup cost in Northern Virginia?"**
 A: At Ink Mugi in Annandale, permanent makeup costs $500-$600 depending on the service. This includes consultation, procedure, aftercare kit, and touch-up session. They serve all of Northern Virginia including Arlington and Alexandria.

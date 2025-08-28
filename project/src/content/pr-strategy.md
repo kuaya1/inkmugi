@@ -41,7 +41,7 @@ Did you know that 73% of women in Northern Virginia spend over 15 minutes daily 
 - Military spouse's permanent solution for active lifestyle
 
 **Contact Information:**
-- **Artist**: Ink Mugi | inkmugi@gmail.com | (571) 766-8857
+- **Artist**: Ink Mugi | inkmugi@gmail.com | (571) 283-8228
 - **Studio**: 7857 Heritage Dr #330, Annandale, VA 22003
 - **Website**: https://inkmugi.com
 - **Best Times**: Tuesday-Friday, 10 AM - 6 PM
@@ -94,7 +94,7 @@ With permanent makeup becoming mainstream, safety concerns are paramount. Virgin
 
 This story provides valuable health information while highlighting local expertise. Happy to provide medical references, safety documentation, and expert commentary.
 
-Contact: inkmugi@gmail.com | (571) 766-8857
+Contact: inkmugi@gmail.com | (571) 283-8228
 
 Best regards,
 [Your Name]
@@ -138,7 +138,7 @@ While many focus on Northern Virginia's tech and government sectors, a quieter e
 
 This story showcases entrepreneurship, economic development, and community building from a unique local perspective.
 
-Contact: inkmugi@gmail.com | (571) 766-8857
+Contact: inkmugi@gmail.com | (571) 283-8228
 
 Best regards,
 [Your Name]
@@ -234,14 +234,14 @@ Recent industry data shows a 300% increase in permanent makeup services in Virgi
 
 The studio operates under Virginia's strict permanent makeup regulations, maintaining all required licenses and safety certifications. Ink Mugi holds advanced certifications in bloodborne pathogen prevention and continues professional education to stay current with industry developments.
 
-For more information about services or to schedule a complimentary consultation, visit https://inkmugi.com or call (571) 766-8857.
+For more information about services or to schedule a complimentary consultation, visit https://inkmugi.com or call (571) 283-8228.
 
 **About Ink Mugi**
 Ink Mugi is a licensed permanent makeup studio located in Annandale, Virginia, specializing in natural-looking ombre powder brows and microshading. With over seven years of experience and 500+ successful transformations, the studio serves clients throughout Northern Virginia with expertise in diverse skin tones and professional beauty standards.
 
 **Media Contact:**
 Ink Mugi
-(571) 766-8857
+(571) 283-8228
 inkmugi@gmail.com
 https://inkmugi.com
 
@@ -271,14 +271,14 @@ The studio partners with local oncology practices and support groups to identify
 
 Ink Mugi's commitment to community service extends beyond this program, with ongoing support for local women's organizations and professional development initiatives in the beauty industry.
 
-To nominate someone for the program or learn more, visit https://inkmugi.com or call (571) 766-8857.
+To nominate someone for the program or learn more, visit https://inkmugi.com or call (571) 283-8228.
 
 **About the Brows of Courage Program**
 The Brows of Courage program provides complimentary permanent makeup services to cancer survivors in Northern Virginia. Services include consultation, permanent makeup application, aftercare support, and follow-up appointments, completely free of charge.
 
 **Media Contact:**
 Ink Mugi
-(571) 766-8857
+(571) 283-8228
 inkmugi@gmail.com
 https://inkmugi.com
 

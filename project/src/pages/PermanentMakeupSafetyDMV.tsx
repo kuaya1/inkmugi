@@ -12,7 +12,7 @@ const medicalSchema = [
       "hasCredential": {
         "@type": "EducationalOccupationalCredential",
         "credentialCategory": "license",
-        "identifier": "VA-PMU-2018-7857"
+        "identifier": "1231002471"
       }
     },
     "reviewedBy": {

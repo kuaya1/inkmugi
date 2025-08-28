@@ -29,7 +29,7 @@ const Services = () => {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "license",
       "name": "Virginia Licensed Permanent Cosmetic Tattooer",
-      "identifier": "VA-PMU-2018-7857"
+      "identifier": "1231002471"
     },
     "healthPlanNetworksAccepted": "Cash, CareCredit, Afterpay"
   };
