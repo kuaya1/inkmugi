@@ -172,7 +172,7 @@ const AuthorityPage: React.FC = () => {
               "name": "Microshading Eyebrows",
               "description": "Advanced microshading technique for natural, hair-like strokes"
             },
-            "price": "450",
+            "price": "500",
             "priceCurrency": "USD"
           },
           {
@@ -182,7 +182,17 @@ const AuthorityPage: React.FC = () => {
               "name": "Ombre Powder Brows",
               "description": "Gradient shading technique for soft, powdered eyebrow look"
             },
-            "price": "400",
+            "price": "600",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "Fine Line Tattoos",
+              "description": "Delicate minimalist tattoos with precise thin lines"
+            },
+            "price": "200",
             "priceCurrency": "USD"
           }
         ]
