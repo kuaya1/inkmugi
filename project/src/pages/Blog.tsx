@@ -86,8 +86,13 @@ const Blog = () => {
             "@context": "https://schema.org",
             "@type": "Blog",
             "name": "Ink Mugi Permanent Makeup Blog",
-            "description": "Expert insights on permanent makeup techniques, aftercare, and beauty trends from professional PMU artists",
+            "description": "Expert insights on permanent makeup techniques, aftercare, and beauty trends from professional PMU artists.",
             "url": "https://inkmugi.com/blog",
+            "author": {
+              "@type": "Organization",
+              "name": "Ink Mugi Permanent Makeup",
+              "url": "https://inkmugi.com"
+            },
             "publisher": {
               "@type": "Organization",
               "name": "Ink Mugi Permanent Makeup",
@@ -96,11 +101,10 @@ const Blog = () => {
                 "url": "https://inkmugi.com/logo.png"
               }
             },
-            "inLanguage": "en-US",
-            "blogPost": blogPosts.map(post => ({
+            "blogPost": filteredPosts.slice(0, 10).map(post => ({
               "@type": "BlogPosting",
               "headline": post.title,
-              "description": post.metaDescription,
+              "description": post.excerpt,
               "url": `https://inkmugi.com/blog/${post.slug}`,
               "datePublished": new Date(post.date).toISOString(),
               "dateModified": new Date().toISOString(),
@@ -112,7 +116,8 @@ const Blog = () => {
               "image": post.image,
               "articleSection": post.category,
               "keywords": post.tags.join(", ")
-            }))
+            })),
+            "inLanguage": "en-US"
           })}
         </script>
       </Helmet>

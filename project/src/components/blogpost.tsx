@@ -66,32 +66,6 @@ const BlogPost: React.FC = () => {
             "inLanguage": "en-US"
           })}
         </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://inkmugi.com/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Blog",
-                "item": "https://inkmugi.com/blog"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": post.title,
-                "item": `https://inkmugi.com/blog/${post.slug}`
-              }
-            ]
-          })}
-        </script>
       </Helmet>
 
       {/* Hero Section */}

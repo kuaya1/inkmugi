@@ -138,7 +138,25 @@ const Faq: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>Permanent Makeup FAQ | Expert Answers | Ink Mugi</title>
+        <meta name="description" content="Get expert answers to frequently asked questions about permanent makeup procedures, aftercare, results, and pricing. Professional PMU guidance from certified artists." />
+        <meta name="keywords" content="permanent makeup FAQ, microblading questions, PMU aftercare, powder brows, lip blush, eyebrow tattoo" />
+        <link rel="canonical" href="https://inkmugi.com/faq" />
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": filteredFaqs.map((item: FaqItem) => ({
+              "@type": "Question",
+              "name": item.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer
+              }
+            }))
+          })}
+        </script>
       </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-[#F0E4D8]">

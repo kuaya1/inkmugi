@@ -32,7 +32,60 @@ const About: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>About Our Permanent Makeup Artist | Expert Credentials | Ink Mugi</title>
+        <meta name="description" content="Meet our certified permanent makeup artist with over 8 years of experience. Licensed professional specializing in microblading, powder brows, and lip blush in Northern Virginia." />
+        <meta name="keywords" content="permanent makeup artist, microblading artist, PMU certification, Virginia beauty professional, eyebrow specialist" />
+        <link rel="canonical" href="https://inkmugi.com/about" />
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Professional PMU Artist",
+            "jobTitle": "Certified Permanent Makeup Artist",
+            "hasCredential": [
+              {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "professional certification",
+                "name": "Permanent Makeup Certification",
+                "issuedBy": "Professional Beauty Academy"
+              },
+              {
+                "@type": "EducationalOccupationalCredential", 
+                "credentialCategory": "license",
+                "name": "Virginia Permanent Cosmetic Tattoo License",
+                "issuedBy": "Virginia Board of Health"
+              }
+            ],
+            "knowsAbout": [
+              "Microblading",
+              "Powder Brows",
+              "Ombre Brows", 
+              "Lip Blush",
+              "Permanent Makeup",
+              "Eyebrow Design",
+              "Color Theory",
+              "Skin Analysis"
+            ],
+            "worksFor": {
+              "@type": "LocalBusiness",
+              "name": "Ink Mugi Permanent Makeup",
+              "url": "https://inkmugi.com"
+            },
+            "alumniOf": {
+              "@type": "EducationalOrganization",
+              "name": "Professional Beauty Academy"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Arlington",
+              "addressRegion": "VA",
+              "addressCountry": "US"
+            },
+            "yearsOfExperience": "8+",
+            "url": "https://inkmugi.com/about"
+          })}
+        </script>
       </Helmet>
       {/* Hero Section */}
       <section className="pt-36 pb-24 bg-gradient-to-b from-[#F0E4D8] to-[#F9F7F5] relative overflow-hidden">
