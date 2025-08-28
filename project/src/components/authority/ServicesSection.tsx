@@ -176,7 +176,7 @@ const ServicesSection: React.FC = () => {
 
                 {/* CTA Button */}
                 <a
-                  href="https://inkmugi.vagaro.com/Services"
+                  href="https://www.vagaro.com/bortemicroblading/book-now"
                   className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
                     service.popular
                       ? 'bg-primary-600 hover:bg-primary-700 text-white shadow-lg hover:shadow-xl'
@@ -231,7 +231,7 @@ const ServicesSection: React.FC = () => {
               Book your free consultation today.
             </p>
             <a
-              href="https://inkmugi.vagaro.com/Services"
+              href="https://www.vagaro.com/bortemicroblading/book-now"
               className="inline-flex items-center px-8 py-4 bg-white hover:bg-neutral-100 text-primary-600 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Book Free Consultation

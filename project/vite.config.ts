@@ -13,24 +13,11 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           icons: ['lucide-react'],
-          router: ['react-router-dom'],
-          swiper: ['swiper']
+          router: ['react-router-dom']
         }
       }
     },
     cssCodeSplit: true,
-    sourcemap: false,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
-    }
-  },
-  server: {
-    hmr: {
-      overlay: false
-    }
+    sourcemap: false
   }
 });

@@ -70,7 +70,7 @@ const CTASection: React.FC = () => {
           {/* Primary CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a
-              href="https://inkmugi.vagaro.com/Services"
+              href="https://www.vagaro.com/bortemicroblading/book-now"
               className="inline-flex items-center px-8 py-4 bg-white hover:bg-neutral-100 text-primary-600 font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
             >
               Book Free Consultation
@@ -153,7 +153,7 @@ const CTASection: React.FC = () => {
           </p>
           
           <a
-            href="https://inkmugi.vagaro.com/Services"
+            href="https://www.vagaro.com/bortemicroblading/book-now"
             className="inline-flex items-center px-10 py-5 bg-white hover:bg-neutral-100 text-primary-600 font-bold text-xl rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
           >
             Claim Your Spot Now

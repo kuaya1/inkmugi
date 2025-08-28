@@ -204,7 +204,7 @@ const CredentialsGrid: React.FC = () => {
             </div>
 
             <a
-              href="https://inkmugi.vagaro.com/Services"
+              href="https://www.vagaro.com/bortemicroblading/book-now"
               className="inline-flex items-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Book with Confidence

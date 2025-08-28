@@ -103,7 +103,7 @@ const Navbar: React.FC = () => {
           </div>
           
           <a
-            href="https://inkmugi.vagaro.com/Services"
+            href="https://www.vagaro.com/bortemicroblading/book-now"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary text-sm py-2 px-4"
@@ -143,7 +143,7 @@ const Navbar: React.FC = () => {
             </Link>
           ))}
           <a
-            href="https://inkmugi.vagaro.com/Services"
+            href="https://www.vagaro.com/bortemicroblading/book-now"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary text-sm py-2 w-full"
