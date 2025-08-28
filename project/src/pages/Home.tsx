@@ -1329,136 +1329,6 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Latest Expert Insights Section */}
-      <section className="expert-insights py-16 bg-[#F9F7F5]" itemScope itemType="https://schema.org/ItemList">
-        <div className="container-custom">
-          <AnimatedSection className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-cormorant font-medium mb-4 text-[#2D2D2B]">
-              Evidence-Based PMU Education
-            </h2>
-            <p className="text-lg text-[#2D2D2B]/70 max-w-2xl mx-auto">
-              Data-driven insights from 500+ procedures and clinical research
-            </p>
-          </AnimatedSection>
-
-          <div className="insight-cards grid grid-cols-1 md:grid-cols-3 gap-8">
-            <AnimatedSection delay={0.1}>
-              <article 
-                className="bg-white rounded-lg p-6 shadow-soft hover:shadow-medium transition-all duration-300 h-full"
-                itemProp="itemListElement" 
-                itemScope 
-                itemType="https://schema.org/BlogPosting"
-              >
-                <span className="data-badge inline-block bg-[#E6DAD2] text-[#2D2D2B] text-xs font-medium px-3 py-1 rounded-full mb-4">
-                  Based on 287 procedures
-                </span>
-                <h3 
-                  className="text-xl font-cormorant font-medium mb-3 text-[#2D2D2B]"
-                  itemProp="headline"
-                >
-                  PMU Healing: Day-by-Day Data
-                </h3>
-                <p 
-                  className="text-[#2D2D2B]/70 mb-4 leading-relaxed"
-                  itemProp="description"
-                >
-                  What 500+ clients taught us about healing timelines, complications (0.19% rate), and optimal aftercare protocols.
-                </p>
-                <Link 
-                  to="/blog/pmu-healing-timeline-week-by-week" 
-                  className="inline-flex items-center text-[#2D2D2B] font-medium hover:text-[#2D2D2B]/70 transition-colors"
-                  itemProp="url"
-                >
-                  Read Study <ArrowRight size={16} className="ml-2" />
-                </Link>
-              </article>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <article 
-                className="bg-white rounded-lg p-6 shadow-soft hover:shadow-medium transition-all duration-300 h-full"
-                itemProp="itemListElement" 
-                itemScope 
-                itemType="https://schema.org/BlogPosting"
-              >
-                <span className="data-badge inline-block bg-[#E6DAD2] text-[#2D2D2B] text-xs font-medium px-3 py-1 rounded-full mb-4">
-                  Clinical safety analysis
-                </span>
-                <h3 
-                  className="text-xl font-cormorant font-medium mb-3 text-[#2D2D2B]"
-                  itemProp="headline"
-                >
-                  PMU Myths vs. Clinical Facts
-                </h3>
-                <p 
-                  className="text-[#2D2D2B]/70 mb-4 leading-relaxed"
-                  itemProp="description"
-                >
-                  Evidence-based analysis debunking common PMU myths with data from licensed Virginia practice.
-                </p>
-                <Link 
-                  to="/blog/pmu-myths-versus-facts-expert-guide" 
-                  className="inline-flex items-center text-[#2D2D2B] font-medium hover:text-[#2D2D2B]/70 transition-colors"
-                  itemProp="url"
-                >
-                  Read Study <ArrowRight size={16} className="ml-2" />
-                </Link>
-              </article>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.3}>
-              <article 
-                className="bg-white rounded-lg p-6 shadow-soft hover:shadow-medium transition-all duration-300 h-full"
-                itemProp="itemListElement" 
-                itemScope 
-                itemType="https://schema.org/BlogPosting"
-              >
-                <span className="data-badge inline-block bg-[#E6DAD2] text-[#2D2D2B] text-xs font-medium px-3 py-1 rounded-full mb-4">
-                  Vegan pigment research
-                </span>
-                <h3 
-                  className="text-xl font-cormorant font-medium mb-3 text-[#2D2D2B]"
-                  itemProp="headline"
-                >
-                  Why We Use Vegan Pigments
-                </h3>
-                <p 
-                  className="text-[#2D2D2B]/70 mb-4 leading-relaxed"
-                  itemProp="description"
-                >
-                  Scientific analysis of pigment safety, longevity data, and why hypoallergenic matters for results.
-                </p>
-                <Link 
-                  to="/blog/why-we-use-vegan-pmu-pigments" 
-                  className="inline-flex items-center text-[#2D2D2B] font-medium hover:text-[#2D2D2B]/70 transition-colors"
-                  itemProp="url"
-                >
-                  Read Study <ArrowRight size={16} className="ml-2" />
-                </Link>
-              </article>
-            </AnimatedSection>
-          </div>
-
-          {/* Trust indicators */}
-          <AnimatedSection delay={0.4} className="text-center mt-10">
-            <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-[#2D2D2B]/60">
-              <span className="flex items-center">
-                <Shield size={16} className="mr-2 text-[#2D2D2B]" />
-                Licensed VA PMU Artist
-              </span>
-              <span className="flex items-center">
-                <Users size={16} className="mr-2 text-[#2D2D2B]" />
-                500+ Procedures Documented
-              </span>
-              <span className="flex items-center">
-                <Award size={16} className="mr-2 text-[#2D2D2B]" />
-                0.19% Complication Rate
-              </span>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* About Section */}
       <section className="py-24 bg-[#F7EDE6] relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#E6DAD2] rounded-full filter blur-3xl opacity-30 -translate-y-1/2 translate-x-1/2"></div>
@@ -1888,6 +1758,136 @@ const Home: React.FC = () => {
               </AnimatedSection>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Latest Expert Insights Section */}
+      <section className="expert-insights py-16 bg-[#F9F7F5]" itemScope itemType="https://schema.org/ItemList">
+        <div className="container-custom">
+          <AnimatedSection className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-cormorant font-medium mb-4 text-[#2D2D2B]">
+              Evidence-Based PMU Education
+            </h2>
+            <p className="text-lg text-[#2D2D2B]/70 max-w-2xl mx-auto">
+              Data-driven insights from 500+ procedures and clinical research
+            </p>
+          </AnimatedSection>
+
+          <div className="insight-cards grid grid-cols-1 md:grid-cols-3 gap-8">
+            <AnimatedSection delay={0.1}>
+              <article 
+                className="bg-white rounded-lg p-6 shadow-soft hover:shadow-medium transition-all duration-300 h-full"
+                itemProp="itemListElement" 
+                itemScope 
+                itemType="https://schema.org/BlogPosting"
+              >
+                <span className="data-badge inline-block bg-[#E6DAD2] text-[#2D2D2B] text-xs font-medium px-3 py-1 rounded-full mb-4">
+                  Based on 287 procedures
+                </span>
+                <h3 
+                  className="text-xl font-cormorant font-medium mb-3 text-[#2D2D2B]"
+                  itemProp="headline"
+                >
+                  PMU Healing: Day-by-Day Data
+                </h3>
+                <p 
+                  className="text-[#2D2D2B]/70 mb-4 leading-relaxed"
+                  itemProp="description"
+                >
+                  What 500+ clients taught us about healing timelines, complications (0.19% rate), and optimal aftercare protocols.
+                </p>
+                <Link 
+                  to="/blog/pmu-healing-timeline-week-by-week" 
+                  className="inline-flex items-center text-[#2D2D2B] font-medium hover:text-[#2D2D2B]/70 transition-colors"
+                  itemProp="url"
+                >
+                  Read Study <ArrowRight size={16} className="ml-2" />
+                </Link>
+              </article>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <article 
+                className="bg-white rounded-lg p-6 shadow-soft hover:shadow-medium transition-all duration-300 h-full"
+                itemProp="itemListElement" 
+                itemScope 
+                itemType="https://schema.org/BlogPosting"
+              >
+                <span className="data-badge inline-block bg-[#E6DAD2] text-[#2D2D2B] text-xs font-medium px-3 py-1 rounded-full mb-4">
+                  Clinical safety analysis
+                </span>
+                <h3 
+                  className="text-xl font-cormorant font-medium mb-3 text-[#2D2D2B]"
+                  itemProp="headline"
+                >
+                  PMU Myths vs. Clinical Facts
+                </h3>
+                <p 
+                  className="text-[#2D2D2B]/70 mb-4 leading-relaxed"
+                  itemProp="description"
+                >
+                  Evidence-based analysis debunking common PMU myths with data from licensed Virginia practice.
+                </p>
+                <Link 
+                  to="/blog/pmu-myths-versus-facts-expert-guide" 
+                  className="inline-flex items-center text-[#2D2D2B] font-medium hover:text-[#2D2D2B]/70 transition-colors"
+                  itemProp="url"
+                >
+                  Read Study <ArrowRight size={16} className="ml-2" />
+                </Link>
+              </article>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3}>
+              <article 
+                className="bg-white rounded-lg p-6 shadow-soft hover:shadow-medium transition-all duration-300 h-full"
+                itemProp="itemListElement" 
+                itemScope 
+                itemType="https://schema.org/BlogPosting"
+              >
+                <span className="data-badge inline-block bg-[#E6DAD2] text-[#2D2D2B] text-xs font-medium px-3 py-1 rounded-full mb-4">
+                  Vegan pigment research
+                </span>
+                <h3 
+                  className="text-xl font-cormorant font-medium mb-3 text-[#2D2D2B]"
+                  itemProp="headline"
+                >
+                  Why We Use Vegan Pigments
+                </h3>
+                <p 
+                  className="text-[#2D2D2B]/70 mb-4 leading-relaxed"
+                  itemProp="description"
+                >
+                  Scientific analysis of pigment safety, longevity data, and why hypoallergenic matters for results.
+                </p>
+                <Link 
+                  to="/blog/why-we-use-vegan-pmu-pigments" 
+                  className="inline-flex items-center text-[#2D2D2B] font-medium hover:text-[#2D2D2B]/70 transition-colors"
+                  itemProp="url"
+                >
+                  Read Study <ArrowRight size={16} className="ml-2" />
+                </Link>
+              </article>
+            </AnimatedSection>
+          </div>
+
+          {/* Trust indicators */}
+          <AnimatedSection delay={0.4} className="text-center mt-10">
+            <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-[#2D2D2B]/60">
+              <span className="flex items-center">
+                <Shield size={16} className="mr-2 text-[#2D2D2B]" />
+                Licensed VA PMU Artist
+              </span>
+              <span className="flex items-center">
+                <Users size={16} className="mr-2 text-[#2D2D2B]" />
+                500+ Procedures Documented
+              </span>
+              <span className="flex items-center">
+                <Award size={16} className="mr-2 text-[#2D2D2B]" />
+                0.19% Complication Rate
+              </span>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
