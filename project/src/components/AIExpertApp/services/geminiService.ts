@@ -237,82 +237,93 @@ export const generateSingleBrowStyle = async (
     analysis: string,
     style: string,
 ): Promise<string | null> => {
-    // Demo mode - return a placeholder image for each style
+    // Note: Current Gemini models don't support image generation
+    // For now, we'll return demo images but provide detailed style descriptions
+    // In production, this could be connected to a different image generation service
+    
+    console.log(`🎨 generateSingleBrowStyle called for ${style}`);
+    
     if (!API_KEY || API_KEY === "demo-key-placeholder" || API_KEY === "your-api-key-here") {
+        console.log("🎭 Using demo image for", style);
         return createDemoStyleImage(style);
     }
 
-    try {
-        const model = genAI!.getGenerativeModel({
-          model: "gemini-1.5-flash",
-        });
-
-        const imagePart = {
-            inlineData: { data: base64Image, mimeType },
-        };
-
-        const stylePrompt = getStylePrompt(style);
-        if (!stylePrompt) throw new Error(`Invalid style: ${style}`);
-
-        const textPart = `Based on the provided user photo and the following expert analysis, generate a SINGLE, realistic "after" photo of the user with a specific PMU brow style.
-
-**Facial Analysis:**
-"${analysis}"
-
-**Your Task:**
-Modify the user's photo to add the described brow style. The brow shape and color should complement the user's features as noted in the analysis. Ensure the result is high-quality and realistic.
-
-${stylePrompt}
-
-Only return the single modified image. Do not add any text, labels, or panels.`;
-
-        const result = await model.generateContent([textPart, imagePart]);
-        const response = await result.response;
-
-        // Note: Image generation might not be available in all Gemini models
-        // This is a placeholder for when image generation is supported
-        return null;
-
-    } catch (error) {
-        console.error(`Error generating '${style}' image with Gemini:`, error);
-        throw new Error(`Failed to generate '${style}' image.`);
-    }
+    // For now, return demo images even with real API key since Gemini doesn't generate images
+    // In the future, this could integrate with DALL-E, Midjourney API, or other image generation services
+    console.log("⚠️ Image generation not available with current Gemini model, using demo image for", style);
+    return createDemoStyleImage(style);
 };
 
 function createDemoStyleImage(style: string): string {
     // Return a placeholder image URL that shows the style name
-    // In a real implementation, you could use placeholder images or generated samples
     const canvas = document.createElement('canvas');
     canvas.width = 400;
     canvas.height = 400;
     const ctx = canvas.getContext('2d');
     
     if (ctx) {
-        // Create a gradient background
+        // Create a gradient background based on style
         const gradient = ctx.createLinearGradient(0, 0, 400, 400);
-        gradient.addColorStop(0, '#F9F7F5');
-        gradient.addColorStop(1, '#E6DAD2');
+        
+        switch (style) {
+            case 'Hair Strokes':
+                gradient.addColorStop(0, '#FBF9F7');
+                gradient.addColorStop(1, '#F0E6D9');
+                break;
+            case 'Hybrid Brows':
+                gradient.addColorStop(0, '#F9F7F5');
+                gradient.addColorStop(1, '#EBE1D4');
+                break;
+            case 'Combo Brows':
+                gradient.addColorStop(0, '#F7F5F3');
+                gradient.addColorStop(1, '#E6DDD0');
+                break;
+            case 'Powder Brows':
+                gradient.addColorStop(0, '#F5F3F1');
+                gradient.addColorStop(1, '#E1D8CB');
+                break;
+            default:
+                gradient.addColorStop(0, '#F9F7F5');
+                gradient.addColorStop(1, '#E6DAD2');
+        }
+        
         ctx.fillStyle = gradient;
         ctx.fillRect(0, 0, 400, 400);
         
-        // Add border
+        // Add subtle border
         ctx.strokeStyle = '#D4C4B8';
         ctx.lineWidth = 2;
         ctx.strokeRect(1, 1, 398, 398);
         
-        // Add demo text
-        ctx.fillStyle = '#2D2D2B';
-        ctx.font = 'bold 24px sans-serif';
-        ctx.textAlign = 'center';
-        ctx.fillText('DEMO MODE', 200, 180);
-        
-        ctx.font = '18px sans-serif';
-        ctx.fillText(style, 200, 220);
-        
-        ctx.font = '14px sans-serif';
+        // Add style-specific icon/shape
         ctx.fillStyle = '#4F4A45';
-        ctx.fillText('Visit our Annandale studio', 200, 260);
-        ctx.fillText('for real consultations!', 200, 280);
+        ctx.globalAlpha = 0.1;
+        
+        // Draw abstract brow shape
+        ctx.beginPath();
+        ctx.ellipse(200, 150, 120, 25, 0, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.globalAlpha = 1;
+        
+        // Add text
+        ctx.fillStyle = '#4F4A45';
+        ctx.font = 'bold 22px Inter, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('AI Analysis Ready!', 200, 200);
+        
+        ctx.font = '18px Inter, sans-serif';
+        ctx.fillText(style, 200, 235);
+        
+        ctx.font = '14px Inter, sans-serif';
+        ctx.fillStyle = '#8A817C';
+        ctx.fillText('Image generation coming soon', 200, 270);
+        ctx.fillText('Book consultation for real preview', 200, 290);
+        
+        // Add InkMugi branding
+        ctx.font = 'bold 12px Inter, sans-serif';
+        ctx.fillStyle = '#D3C5BC';
+        ctx.fillText('INKMUGI.COM', 200, 350);
     }
     
     return canvas.toDataURL('image/png');
