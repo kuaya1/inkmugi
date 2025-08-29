@@ -2,15 +2,17 @@ import { GoogleGenAI, Chat, GenerateContentResponse, Modality } from "@google/ge
 import { INKMUGI_KNOWLEDGE_BASE } from '../constants';
 import { ChatMessage, MessageRole } from '../types';
 
-// Use a fallback API key for demo purposes when env var is not available
-const API_KEY = (import.meta as any).env?.VITE_GEMINI_API_KEY || "demo-key-placeholder";
+// Access environment variable properly in Vite
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
-if (!API_KEY || API_KEY === "demo-key-placeholder") {
-  console.warn("VITE_GEMINI_API_KEY environment variable not set - using demo mode");
+console.log("API Key status:", API_KEY ? "Found" : "Not found", API_KEY?.substring(0, 10) + "...");
+
+if (!API_KEY || API_KEY === "demo-key-placeholder" || API_KEY === "your-api-key-here") {
+  console.warn("VITE_GEMINI_API_KEY environment variable not set properly - using demo mode");
 }
 
 // Initialize AI only if we have a real API key
-const ai = API_KEY && API_KEY !== "demo-key-placeholder" 
+const ai = API_KEY && API_KEY !== "demo-key-placeholder" && API_KEY !== "your-api-key-here"
   ? new GoogleGenAI({ apiKey: API_KEY })
   : null;
 
@@ -107,7 +109,7 @@ function getChatInstance(): Chat {
 
 export const getChatResponseStream = async (message: string) => {
   // Demo mode for when API key is not configured
-  if (!API_KEY || API_KEY === "demo-key-placeholder") {
+  if (!API_KEY || API_KEY === "demo-key-placeholder" || API_KEY === "your-api-key-here") {
     return createDemoResponse(message);
   }
 
@@ -140,7 +142,7 @@ async function* createDemoResponse(message: string): AsyncGenerator<{ text: stri
 
 export const analyzeUserImage = async (base64Image: string, mimeType: string, userPrompt: string): Promise<string> => {
     // Demo mode for when API key is not configured
-    if (!API_KEY || API_KEY === "demo-key-placeholder") {
+    if (!API_KEY || API_KEY === "demo-key-placeholder" || API_KEY === "your-api-key-here") {
         return createDemoAnalysis(userPrompt);
     }
 
@@ -236,7 +238,7 @@ export const generateSingleBrowStyle = async (
     style: string,
 ): Promise<string | null> => {
     // Demo mode - return a placeholder image for each style
-    if (!API_KEY || API_KEY === "demo-key-placeholder") {
+    if (!API_KEY || API_KEY === "demo-key-placeholder" || API_KEY === "your-api-key-here") {
         return createDemoStyleImage(style);
     }
 
