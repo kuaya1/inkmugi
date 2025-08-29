@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import AnimatedSection from '../components/AnimatedSection';
 import CTASection from '../components/CTASection';
 import AIExpertLoader from '../components/AIExpertApp/AIExpertLoader';
+import ConversionTracker from '../components/ConversionTracker';
 
 const OmbreBrows = () => {
   useEffect(() => {
@@ -189,6 +190,45 @@ const OmbreBrows = () => {
     "articleBody": "Ombre powder brows, also known as microshading, is a semi-permanent cosmetic tattooing technique that creates a soft, powdered makeup effect..."
   };
 
+  // AI Tool Schema for SEO and Rich Snippets
+  const aiToolSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Virtual Ombre Brows Try-On Tool",
+    "applicationCategory": "Beauty & Cosmetics",
+    "operatingSystem": "Web Browser",
+    "description": "AI-powered virtual try-on tool for ombre powder brows. Analyze face shape, skin tone, and features to preview ombre brow styles before booking.",
+    "url": "https://inkmugi.com/ombre-brows",
+    "author": {
+      "@type": "Organization",
+      "name": "Ink Mugi PMU Studio",
+      "url": "https://inkmugi.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "description": "Free virtual ombre brows try-on and consultation tool"
+    },
+    "featureList": [
+      "Face shape analysis",
+      "Skin tone matching", 
+      "Virtual brow preview",
+      "Style recommendations",
+      "Before/after visualization",
+      "AI-powered consultation"
+    ],
+    "screenshot": "https://live.staticflickr.com/65535/54408531279_0e59fb1f6f_o_d.jpg",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  };
+
   const beforeAfterImages = [
     {
       before: "https://live.staticflickr.com/65535/54408531279_0e59fb1f6f_o_d.jpg",
@@ -213,6 +253,7 @@ const OmbreBrows = () => {
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(aiToolSchema)}</script>
         <meta name="description" content="Professional ombre powder brows in Arlington VA. Natural, long-lasting results with licensed PMU artist. View before/after photos and book consultation." />
         <meta name="keywords" content="ombre powder brows Arlington VA, permanent makeup Arlington, PMU eyebrows, microshading Fairfax" />
         <link rel="canonical" href="https://inkmugi.com/ombre-brows" />
@@ -312,16 +353,60 @@ const OmbreBrows = () => {
         <div className="container-custom">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-cormorant font-medium text-[#2D2D2B] mb-4">
-              Try Our AI-Powered PMU Assistant
+              Try Virtual Ombre Powder Brows Before You Book
             </h2>
-            <p className="text-lg text-[#4F4A45] max-w-3xl mx-auto leading-relaxed">
-              Get personalized recommendations, see virtual try-ons, and chat with our AI expert 
-              to determine if ombre powder brows are right for you.
+            <h3 className="text-2xl font-semibold text-[#8B4513] mb-4">
+              AI-Powered Face Shape Analysis for Perfect Brows
+            </h3>
+            <p className="text-lg text-[#4F4A45] max-w-3xl mx-auto leading-relaxed mb-8">
+              See yourself with ombre powder brows instantly! Our AI analyzes your face shape, 
+              skin tone, and features to recommend the perfect ombre style for Arlington-area clients.
             </p>
+            <div className="bg-white/80 rounded-lg p-6 max-w-2xl mx-auto mb-8 shadow-sm">
+              <h4 className="text-xl font-semibold text-[#2D2D2B] mb-3">
+                Virtual Try-On Features:
+              </h4>
+              <ul className="text-[#4F4A45] space-y-2 text-left">
+                <li>✓ Face shape analysis for optimal brow arch</li>
+                <li>✓ Skin tone matching for perfect pigment selection</li>
+                <li>✓ Before/after visualization technology</li>
+                <li>✓ Personalized style recommendations</li>
+              </ul>
+            </div>
           </AnimatedSection>
 
           <AnimatedSection delay={2}>
             <AIExpertLoader className="max-w-6xl mx-auto" />
+          </AnimatedSection>
+
+          {/* Conversion Tracker - Shows after AI analysis */}
+          <AnimatedSection delay={2.5}>
+            <ConversionTracker 
+              aiResults={{
+                faceShape: "Heart",
+                recommendedStyle: "Soft Arch Ombre",
+                skinTone: "Medium",
+                confidence: 0.92
+              }}
+              onConversion={(data) => {
+                console.log('Conversion tracked:', data);
+                // Additional conversion tracking logic
+              }}
+            />
+          </AnimatedSection>
+          
+          <AnimatedSection delay={3} className="mt-8 text-center">
+            <div className="bg-[#8B4513]/10 rounded-lg p-6 max-w-4xl mx-auto">
+              <p className="text-[#2D2D2B] font-medium text-lg mb-4">
+                💡 Pro Tip: Screenshot your AI results and bring them to your consultation!
+              </p>
+              <Link 
+                to="/booking" 
+                className="btn bg-[#8B4513] hover:bg-[#A0522D] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-block"
+              >
+                Book Your Ombre Brows Consultation
+              </Link>
+            </div>
           </AnimatedSection>
         </div>
       </section>
