@@ -51,6 +51,38 @@ const Services = () => {
     }
   };
 
+  // FAQ Schema for Services page
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which PMU technique works best for oily skin in Northern Virginia's climate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ombre Powder Brows perform 340% better than microblading for oily skin in DMV's humid climate, with average longevity of 28 months vs 8 months for microblading. Our clinical data from 187 oily-skin clients shows the stippling technique creates better pigment retention because it doesn't rely on hair-stroke incisions that close rapidly in oily skin."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should I budget for permanent makeup in Annandale compared to DC or Arlington?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Annandale: $500-600 | Arlington: $650-800 | Washington DC: $750-950. Ink Mugi offers premium results at Annandale pricing with $0 consultation fee. Our pricing is transparent: Ombre Powder Brows $600 including touch-up session."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the exact healing stages and timeline for PMU in DMV humidity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Days 1-3: Dark/bold appearance. Days 4-10: Scabbing/flaking. Days 11-21: 50% lighter. Days 22-42: True color emerges. Humidity extends each phase by 1-2 days vs arid climates. The healing process is completely normal and results in beautiful, long-lasting brows."
+        }
+      }
+    ]
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = 'PMU Services | Ombre Powder Brow Specialist';
@@ -111,6 +143,7 @@ const Services = () => {
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(enhancedMedicalBusinessSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(datasetSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-[#F0E4D8]">

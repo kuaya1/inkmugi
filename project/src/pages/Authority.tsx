@@ -78,10 +78,75 @@ const AuthorityPage: React.FC = () => {
     }
   };
 
+  // FAQ Schema for Authority page
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does permanent makeup last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Permanent makeup typically lasts 1-3 years, depending on your skin type, lifestyle, and aftercare. Oily skin tends to fade faster, while dry skin retains pigment longer. We recommend touch-ups every 12-18 months to maintain optimal color and shape."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the procedure painful?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most clients experience minimal discomfort thanks to our professional-grade topical numbing agents. The sensation is often described as similar to eyebrow tweezing. We prioritize your comfort throughout the entire process and can adjust numbing as needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between microshading and ombre powder brows?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Microshading creates individual hair-like strokes for a natural appearance, perfect for those wanting to enhance sparse brows. Ombre powder brows use a shading technique creating a soft, makeup-like finish that's ideal for oily skin and those preferring a bolder look."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is the healing process?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Initial healing takes 7-14 days, with complete healing occurring over 4-6 weeks. During the first week, you may experience slight swelling and scabbing. We provide detailed aftercare instructions to ensure optimal healing and results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I still get permanent makeup if I have sensitive skin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We conduct patch tests for clients with sensitive skin and use hypoallergenic, premium pigments. Our extensive consultation process includes reviewing your medical history and skin sensitivity to ensure the best possible outcome."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I expect during the consultation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your free consultation includes face analysis, skin assessment, brow mapping, color selection, and technique recommendation. We'll discuss your goals, lifestyle, and preferences to create a customized plan that's perfect for you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why choose INK MUGI over other PMU artists?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our combination of advanced training, 4+ years experience, 500+ successful procedures, 4.9-star rating, and comprehensive insurance sets us apart. We're state-licensed, health department approved, and committed to staying current with the latest techniques."
+        }
+      }
+    ]
+  };
+
   const authoritySchemas = [
     enhancedMedicalBusinessSchema,
     clinicalMedicalBusinessSchema,
     datasetSchema,
+    faqSchema,
     {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",

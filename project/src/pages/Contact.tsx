@@ -18,10 +18,51 @@ const Contact: React.FC = () => {
     }]
   };
 
+  // FAQ Schema for Contact page
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need to book an appointment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all services require an appointment. We recommend booking at least 2-3 weeks in advance to secure your preferred date and time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is your cancellation policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We require 48 hours notice for cancellations. Cancellations with less than 48 hours notice will forfeit the deposit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer gift certificates?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer gift certificates for all our services. They can be purchased in-studio or by phone and are valid for one year from the date of purchase."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What forms of payment do you accept?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We accept all major credit cards, cash, and digital payment methods including Apple Pay, Google Pay, and Venmo."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-[#F0E4D8]">

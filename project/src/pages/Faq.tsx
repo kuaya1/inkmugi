@@ -24,6 +24,94 @@ const Faq: React.FC = () => {
     }]
   };
 
+  // FAQ Schema for comprehensive FAQ coverage
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between microblading and ombre powder brows?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Microblading creates hair-like strokes using a manual tool, while ombre powder brows use a machine to create a soft, shaded effect similar to brow powder makeup. Powder brows typically last longer and work better for oily skin types. They also provide a more defined, makeup-like appearance compared to the more natural look of microblading."
+        }
+      },
+      {
+        "@type": "Question", 
+        "name": "Is the procedure painful?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We use a topical anesthetic to minimize discomfort. Most clients describe the sensation as mild to moderate, similar to threading or plucking. Your comfort is our priority throughout the procedure, and we can apply additional numbing if needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the procedure take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The initial ombre powder brows procedure typically takes 2-3 hours. This includes the consultation, brow mapping, color selection, and the actual procedure. Touch-up appointments usually take 1-2 hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the healing process like?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The healing process takes about 4-6 weeks in total. Initially, your brows will appear 30-40% darker and more defined than the final result. Around days 3-7, you'll experience flaking and the color will appear to fade significantly. By days 10-14, the color will begin to return, and by day 30, you'll see the true color and definition."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long do ombre powder brows last?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "Results typically last 1-3 years, depending on skin type, lifestyle, sun exposure, and skincare routine. Oily skin types may experience faster fading. Touch-ups are recommended every 12-18 months to maintain optimal appearance. Using sunscreen on the area can help extend the life of your brows."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ombre powder brows start at $400 for the initial procedure. Microshading starts at $500. We offer free brow consultations. Touch-up pricing varies by time elapsed: 1-3 months ($100), 3-6 months ($150), 6-12 months ($200), and 1-2 years ($250). All initial procedures include one follow-up session within the first 8 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What aftercare is required?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For the first 7-10 days, keep the area clean and dry. Avoid makeup on the area, swimming, saunas, and excessive sweating. Apply the provided aftercare balm as directed. Avoid picking or scratching at the flaking skin. After the initial healing period, protect your brows from sun exposure with SPF to maintain the color longevity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get ombre powder brows if I have existing microblading?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, powder brows can be done over faded microblading. We'll assess your current brows during consultation and create a plan to achieve your desired results, which may include color correction. In some cases, we may recommend waiting until the previous work has faded more before proceeding."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there anyone who shouldn't get ombre powder brows?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Permanent makeup may not be suitable for everyone. Contraindications include pregnancy, nursing, uncontrolled diabetes, autoimmune disorders, blood-thinning medications, recent chemotherapy, keloid scarring, and certain skin conditions in the brow area. During your consultation, we'll review your medical history to ensure the procedure is safe for you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What pigments do you use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We use premium, hypoallergenic pigments that are specifically formulated for permanent makeup. Our pigments are iron-oxide based, vegan, and cruelty-free. We select colors that complement your skin tone, hair color, and personal preference to achieve the most natural-looking results."
+        }
+      }
+    ]
+  };
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [openItems, setOpenItems] = useState<number[]>([]);
 
@@ -143,20 +231,7 @@ const Faq: React.FC = () => {
         <meta name="keywords" content="permanent makeup FAQ, microblading questions, PMU aftercare, powder brows, lip blush, eyebrow tattoo" />
         <link rel="canonical" href="https://inkmugi.com/faq" />
         <script type="application/ld+json">{JSON.stringify(medicalBusinessSchema)}</script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": filteredFaqs.map((item: FaqItem) => ({
-              "@type": "Question",
-              "name": item.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": item.answer
-              }
-            }))
-          })}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-[#F0E4D8]">
