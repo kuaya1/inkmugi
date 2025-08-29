@@ -45,13 +45,36 @@ const AuthorityPage: React.FC = () => {
     "name": "PMU Procedure Outcomes & Safety Data by Ink Mugi",
     "description": "Anonymized analysis of 523 permanent makeup procedures conducted in Northern Virginia, detailing client satisfaction, healing times, and safety metrics. Updated quarterly.",
     "url": "https://inkmugi.com/pmu-safety-statistics",
+    "license": "https://creativecommons.org/licenses/by-nc/4.0/",
     "creator": {
-      "@type": "MedicalBusiness",
-      "name": "Ink Mugi PMU Studio"
+      "@type": "Organization",
+      "name": "Ink Mugi PMU Studio",
+      "url": "https://inkmugi.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Annandale Professional Beauty Center",
+        "addressLocality": "Annandale",
+        "addressRegion": "VA",
+        "postalCode": "22003",
+        "addressCountry": "US"
+      }
     },
     "distribution": {
       "@type": "DataDownload",
-      "contentUrl": "https://inkmugi.com/data/pmu-safety-statistics.json"
+      "contentUrl": "https://inkmugi.com/data/pmu-safety-statistics.json",
+      "encodingFormat": "application/json"
+    },
+    "keywords": ["permanent makeup", "PMU safety", "cosmetic tattooing", "Northern Virginia", "medical statistics"],
+    "datePublished": "2024-01-15",
+    "dateModified": "2024-12-01",
+    "temporalCoverage": "2020-01-01/2024-12-31",
+    "spatialCoverage": {
+      "@type": "Place",
+      "name": "Northern Virginia",
+      "geo": {
+        "@type": "GeoShape",
+        "box": "38.7 -77.5 39.0 -77.0"
+      }
     }
   };
 
