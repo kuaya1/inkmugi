@@ -120,7 +120,7 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-medium mb-4">Artistry Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
+                <Link to="/ombre-brows" className="text-neutral-300 hover:text-primary transition-colors duration-300 text-sm">
                   Signature Ombre Powder Brows
                 </Link>
               </li>
