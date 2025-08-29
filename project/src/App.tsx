@@ -12,6 +12,7 @@ import BookingRedirect from './pages/BookingRedirect';
 import Blog from './pages/Blog';
 import BlogPost from './components/blogpost';
 import Authority from './pages/Authority';
+import OmbreBrows from './pages/OmbreBrows';
 import PermanentMakeupSafetyDMV from './pages/PermanentMakeupSafetyDMV';
 import PMUDataGuide from './pages/PMUDataGuide';
 import PMUMythsVsFacts from './pages/PMUMythsVsFacts';
@@ -32,6 +33,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/authority" element={<Authority />} />
+          <Route path="/ombre-brows" element={<OmbreBrows />} />
           <Route path="/permanent-makeup-safety-dmv" element={<PermanentMakeupSafetyDMV />} />
           <Route path="/pmu-data-guide" element={<PMUDataGuide />} />
           <Route path="/pmu-myths-vs-facts" element={<PMUMythsVsFacts />} />
