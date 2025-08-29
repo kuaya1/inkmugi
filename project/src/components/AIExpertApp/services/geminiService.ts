@@ -2,13 +2,17 @@ import { GoogleGenAI, Chat, GenerateContentResponse, Modality } from "@google/ge
 import { INKMUGI_KNOWLEDGE_BASE } from '../constants';
 import { ChatMessage, MessageRole } from '../types';
 
-const API_KEY = process.env.API_KEY;
+// Use a fallback API key for demo purposes when env var is not available
+const API_KEY = (import.meta as any).env?.VITE_GEMINI_API_KEY || "demo-key-placeholder";
 
-if (!API_KEY) {
-  throw new Error("API_KEY environment variable not set");
+if (!API_KEY || API_KEY === "demo-key-placeholder") {
+  console.warn("VITE_GEMINI_API_KEY environment variable not set - using demo mode");
 }
 
-const ai = new GoogleGenAI({ apiKey: API_KEY });
+// Initialize AI only if we have a real API key
+const ai = API_KEY && API_KEY !== "demo-key-placeholder" 
+  ? new GoogleGenAI({ apiKey: API_KEY })
+  : null;
 
 const systemInstruction = `
 # Core Identity
@@ -85,6 +89,10 @@ Your first message should be: "Welcome to InkMugi! I'm your personal AI expert f
 let chat: Chat | null = null;
 
 function getChatInstance(): Chat {
+  if (!ai) {
+    throw new Error("AI service not available in demo mode");
+  }
+  
   if (!chat) {
     chat = ai.chats.create({
       model: 'gemini-2.5-flash',
@@ -98,6 +106,11 @@ function getChatInstance(): Chat {
 }
 
 export const getChatResponseStream = async (message: string) => {
+  // Demo mode for when API key is not configured
+  if (!API_KEY || API_KEY === "demo-key-placeholder") {
+    return createDemoResponse(message);
+  }
+
   const chatInstance = getChatInstance();
   try {
     const result = await chatInstance.sendMessageStream({ message });
@@ -108,7 +121,29 @@ export const getChatResponseStream = async (message: string) => {
   }
 };
 
+// Demo response generator for when API key is not configured
+async function* createDemoResponse(message: string): AsyncGenerator<{ text: string }, void, unknown> {
+  const responses = [
+    "Thank you for your interest in our PMU services! ",
+    "At InkMugi, we specialize in ombre powder brows that create beautiful, natural-looking results. ",
+    "Our technique lasts 18-36 months and is perfect for all skin types. ",
+    "We're located in Annandale, VA and serve the entire DMV area. ",
+    "To get personalized advice and book a consultation, please visit our main website at inkmugi.com or call us directly. ",
+    "This is a demo of our AI assistant - for real consultations, we'd love to meet you in person!"
+  ];
+
+  for (const chunk of responses) {
+    await new Promise(resolve => setTimeout(resolve, 100)); // Simulate streaming delay
+    yield { text: chunk };
+  }
+}
+
 export const analyzeUserImage = async (base64Image: string, mimeType: string, userPrompt: string): Promise<string> => {
+    // Demo mode for when API key is not configured
+    if (!API_KEY || API_KEY === "demo-key-placeholder") {
+        return createDemoAnalysis(userPrompt);
+    }
+
     try {
         const imagePart = {
             inlineData: {
@@ -129,7 +164,7 @@ export const analyzeUserImage = async (base64Image: string, mimeType: string, us
     Deliver the analysis in a comprehensive but digestible format. Emphasize a safety-first mentality and the importance of an in-person consultation for precise mapping.`,
         };
 
-        const response: GenerateContentResponse = await ai.models.generateContent({
+        const response: GenerateContentResponse = await ai!.models.generateContent({
             model: 'gemini-2.5-flash',
             contents: { parts: [imagePart, textPart] },
         });
@@ -140,6 +175,40 @@ export const analyzeUserImage = async (base64Image: string, mimeType: string, us
         throw new Error("Failed to analyze image.");
     }
 };
+
+function createDemoAnalysis(userPrompt: string): string {
+    return `**DEMO MODE - Face Shape Analysis**
+
+Thank you for trying our virtual brow visualizer! Based on typical facial features and our expertise at InkMugi:
+
+**Face Shape Analysis:**
+Most clients have an oval to heart-shaped face structure, which provides excellent versatility for brow styling.
+
+**Brow Shape Recommendation:**
+A soft arch with medium thickness typically creates the most flattering and natural enhancement. This shape:
+- Provides lift and openness to the eye area
+- Balances facial proportions beautifully
+- Works well with our signature ombre powder technique
+
+**PMU Technique Recommendation:**
+Our **Ombre Powder Brows ($600)** would be perfect because:
+- Creates a soft, natural makeup effect
+- Lasts 18-36 months in Virginia's climate
+- Works beautifully on all skin types
+- Less invasive than traditional microblading
+
+**Your Request:** "${userPrompt}"
+This demo shows our analysis capabilities. For a real consultation with personalized recommendations based on your unique features, please visit us at our Annandale studio!
+
+**Next Steps:**
+Book a consultation at inkmugi.com to get:
+- Professional face mapping
+- Color matching to your skin tone
+- Customized brow design
+- Real before/after examples
+
+*This is a demonstration of our AI capabilities. For actual services, please contact our studio directly.*`;
+}
 
 const getStylePrompt = (style: string): string => {
     switch (style) {
@@ -166,6 +235,11 @@ export const generateSingleBrowStyle = async (
     analysis: string,
     style: string,
 ): Promise<string | null> => {
+    // Demo mode - return a placeholder image for each style
+    if (!API_KEY || API_KEY === "demo-key-placeholder") {
+        return createDemoStyleImage(style);
+    }
+
     try {
         const imagePart = {
             inlineData: { data: base64Image, mimeType },
@@ -189,7 +263,7 @@ export const generateSingleBrowStyle = async (
             `,
         };
 
-        const response = await ai.models.generateContent({
+        const response = await ai!.models.generateContent({
             model: 'gemini-2.5-flash-image-preview',
             contents: { parts: [imagePart, textPart] },
             config: {
@@ -209,3 +283,42 @@ export const generateSingleBrowStyle = async (
         throw new Error(`Failed to generate '${style}' image.`);
     }
 };
+
+function createDemoStyleImage(style: string): string {
+    // Return a placeholder image URL that shows the style name
+    // In a real implementation, you could use placeholder images or generated samples
+    const canvas = document.createElement('canvas');
+    canvas.width = 400;
+    canvas.height = 400;
+    const ctx = canvas.getContext('2d');
+    
+    if (ctx) {
+        // Create a gradient background
+        const gradient = ctx.createLinearGradient(0, 0, 400, 400);
+        gradient.addColorStop(0, '#F9F7F5');
+        gradient.addColorStop(1, '#E6DAD2');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 400, 400);
+        
+        // Add border
+        ctx.strokeStyle = '#D4C4B8';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(1, 1, 398, 398);
+        
+        // Add demo text
+        ctx.fillStyle = '#2D2D2B';
+        ctx.font = 'bold 24px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('DEMO MODE', 200, 180);
+        
+        ctx.font = '18px sans-serif';
+        ctx.fillText(style, 200, 220);
+        
+        ctx.font = '14px sans-serif';
+        ctx.fillStyle = '#4F4A45';
+        ctx.fillText('Visit our Annandale studio', 200, 260);
+        ctx.fillText('for real consultations!', 200, 280);
+    }
+    
+    return canvas.toDataURL('image/png');
+}
