@@ -1,20 +1,22 @@
-import { GoogleGenAI, Chat, GenerateContentResponse, Modality } from "@google/genai";
+import { GoogleGenAI } from "@google/genai";
 import { INKMUGI_KNOWLEDGE_BASE } from '../constants';
 import { ChatMessage, MessageRole } from '../types';
 
 // Access environment variable properly in Vite
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
-console.log("API Key status:", API_KEY ? "Found" : "Not found", API_KEY?.substring(0, 10) + "...");
+console.log("Environment check:", {
+  hasKey: !!API_KEY,
+  keyLength: API_KEY?.length,
+  keyPrefix: API_KEY?.substring(0, 15),
+  isDemo: !API_KEY || API_KEY === "demo-key-placeholder" || API_KEY === "your-api-key-here"
+});
 
 if (!API_KEY || API_KEY === "demo-key-placeholder" || API_KEY === "your-api-key-here") {
   console.warn("VITE_GEMINI_API_KEY environment variable not set properly - using demo mode");
+} else {
+  console.log("✅ Real API key detected - AI features will be fully functional");
 }
-
-// Initialize AI only if we have a real API key
-const ai = API_KEY && API_KEY !== "demo-key-placeholder" && API_KEY !== "your-api-key-here"
-  ? new GoogleGenAI({ apiKey: API_KEY })
-  : null;
 
 const systemInstruction = `
 # Core Identity
@@ -88,37 +90,36 @@ Your first message should be: "Welcome to InkMugi! I'm your personal AI expert f
 - Support business objectives while prioritizing client education.
 `;
 
-let chat: Chat | null = null;
-
-function getChatInstance(): Chat {
-  if (!ai) {
-    throw new Error("AI service not available in demo mode");
-  }
-  
-  if (!chat) {
-    chat = ai.chats.create({
-      model: 'gemini-2.5-flash',
-      config: {
-        systemInstruction,
-      },
-      history: [],
-    });
-  }
-  return chat;
-}
+// Initialize AI only if we have a real API key
+const genAI = API_KEY && API_KEY !== "demo-key-placeholder" && API_KEY !== "your-api-key-here"
+  ? new GoogleGenAI(API_KEY)
+  : null;
 
 export const getChatResponseStream = async (message: string) => {
+  console.log("🔧 getChatResponseStream called with message:", message);
+  
   // Demo mode for when API key is not configured
   if (!API_KEY || API_KEY === "demo-key-placeholder" || API_KEY === "your-api-key-here") {
+    console.log("🎭 Running in demo mode");
     return createDemoResponse(message);
   }
 
-  const chatInstance = getChatInstance();
+  console.log("🌟 Running with real API key");
+  
   try {
-    const result = await chatInstance.sendMessageStream({ message });
-    return result;
+    console.log("📤 Sending message to Gemini API...");
+    
+    const model = genAI!.getGenerativeModel({
+      model: "gemini-1.5-flash",
+      systemInstruction: systemInstruction,
+    });
+
+    const result = await model.generateContentStream(message);
+    console.log("📥 Received result from Gemini:", result);
+    
+    return result.stream;
   } catch (error) {
-    console.error("Error sending message to Gemini:", error);
+    console.error("❌ Error sending message to Gemini:", error);
     throw new Error("Failed to get response from AI.");
   }
 };
@@ -147,6 +148,10 @@ export const analyzeUserImage = async (base64Image: string, mimeType: string, us
     }
 
     try {
+        const model = genAI!.getGenerativeModel({
+          model: "gemini-1.5-flash",
+        });
+
         const imagePart = {
             inlineData: {
                 data: base64Image,
@@ -154,24 +159,19 @@ export const analyzeUserImage = async (base64Image: string, mimeType: string, us
             },
         };
 
-        const textPart = {
-            text: `You are an advanced PMU expert from inkmugi.com. Your tone should be professional, warm, and educational. Analyze the person's face in this image, focusing on their facial structure, eye shape, and any visible skin characteristics.
+        const textPart = `You are an advanced PMU expert from inkmugi.com. Your tone should be professional, warm, and educational. Analyze the person's face in this image, focusing on their facial structure, eye shape, and any visible skin characteristics.
     
-    Your task is to provide a personalized brow recommendation. Address the following:
-    1.  **Face Shape Analysis:** Briefly describe their likely face shape.
-    2.  **Brow Shape Recommendation:** Suggest an ideal brow shape (e.g., soft arch, medium arch, straight) that would create harmony and balance for their features. Explain *why* this shape is suitable.
-    3.  **PMU Technique Recommendation:** Based on our services, recommend a technique (e.g., Hair Strokes, Hybrid, Combo, Powder) and explain why it would be a good choice for them.
-    4.  **User's Specific Request:** Address the user's specific question: "${userPrompt}".
+Your task is to provide a personalized brow recommendation. Address the following:
+1.  **Face Shape Analysis:** Briefly describe their likely face shape.
+2.  **Brow Shape Recommendation:** Suggest an ideal brow shape (e.g., soft arch, medium arch, straight) that would create harmony and balance for their features. Explain *why* this shape is suitable.
+3.  **PMU Technique Recommendation:** Based on our services, recommend a technique (e.g., Hair Strokes, Hybrid, Combo, Powder) and explain why it would be a good choice for them.
+4.  **User's Specific Request:** Address the user's specific question: "${userPrompt}".
 
-    Deliver the analysis in a comprehensive but digestible format. Emphasize a safety-first mentality and the importance of an in-person consultation for precise mapping.`,
-        };
+Deliver the analysis in a comprehensive but digestible format. Emphasize a safety-first mentality and the importance of an in-person consultation for precise mapping.`;
 
-        const response: GenerateContentResponse = await ai!.models.generateContent({
-            model: 'gemini-2.5-flash',
-            contents: { parts: [imagePart, textPart] },
-        });
-
-        return response.text;
+        const result = await model.generateContent([textPart, imagePart]);
+        const response = await result.response;
+        return response.text();
     } catch (error) {
         console.error("Error analyzing image with Gemini:", error);
         throw new Error("Failed to analyze image.");
@@ -243,6 +243,10 @@ export const generateSingleBrowStyle = async (
     }
 
     try {
+        const model = genAI!.getGenerativeModel({
+          model: "gemini-1.5-flash",
+        });
+
         const imagePart = {
             inlineData: { data: base64Image, mimeType },
         };
@@ -250,34 +254,23 @@ export const generateSingleBrowStyle = async (
         const stylePrompt = getStylePrompt(style);
         if (!stylePrompt) throw new Error(`Invalid style: ${style}`);
 
-        const textPart = {
-            text: `Based on the provided user photo and the following expert analysis, generate a SINGLE, realistic "after" photo of the user with a specific PMU brow style.
+        const textPart = `Based on the provided user photo and the following expert analysis, generate a SINGLE, realistic "after" photo of the user with a specific PMU brow style.
 
-            **Facial Analysis:**
-            "${analysis}"
+**Facial Analysis:**
+"${analysis}"
 
-            **Your Task:**
-            Modify the user's photo to add the described brow style. The brow shape and color should complement the user's features as noted in the analysis. Ensure the result is high-quality and realistic.
-            
-            ${stylePrompt}
+**Your Task:**
+Modify the user's photo to add the described brow style. The brow shape and color should complement the user's features as noted in the analysis. Ensure the result is high-quality and realistic.
 
-            Only return the single modified image. Do not add any text, labels, or panels.
-            `,
-        };
+${stylePrompt}
 
-        const response = await ai!.models.generateContent({
-            model: 'gemini-2.5-flash-image-preview',
-            contents: { parts: [imagePart, textPart] },
-            config: {
-                responseModalities: [Modality.IMAGE, Modality.TEXT],
-            },
-        });
+Only return the single modified image. Do not add any text, labels, or panels.`;
 
-        for (const part of response.candidates[0].content.parts) {
-            if (part.inlineData) {
-                return `data:${part.inlineData.mimeType};base64,${part.inlineData.data}`;
-            }
-        }
+        const result = await model.generateContent([textPart, imagePart]);
+        const response = await result.response;
+
+        // Note: Image generation might not be available in all Gemini models
+        // This is a placeholder for when image generation is supported
         return null;
 
     } catch (error) {

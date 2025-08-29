@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import AnimatedSection from '../components/AnimatedSection';
 import CTASection from '../components/CTASection';
 import AIExpertLoader from '../components/AIExpertApp/AIExpertLoader';
+import EnvTest from '../components/EnvTest';
 
 const OmbreBrows = () => {
   useEffect(() => {
@@ -61,6 +62,7 @@ const OmbreBrows = () => {
 
   return (
     <>
+      <EnvTest />
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <meta name="description" content="Professional ombre powder brows in Arlington VA. Natural, long-lasting results with licensed PMU artist. View before/after photos and book consultation." />

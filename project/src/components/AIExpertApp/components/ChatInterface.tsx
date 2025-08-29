@@ -54,10 +54,16 @@ const ChatInterface: React.FC = () => {
         setMessages(prev => [...prev, { role: MessageRole.MODEL, text: "" }]);
 
         try {
+            console.log("🚀 Sending message to AI:", messageText);
             const stream = await getChatResponseStream(messageText);
+            console.log("📡 Got stream response:", stream);
             
+            let responseText = "";
             for await (const chunk of stream) {
-                const chunkText = chunk.text;
+                console.log("📦 Received chunk:", chunk);
+                const chunkText = chunk.text() || "";
+                responseText += chunkText;
+                
                 setMessages(prev => {
                     const lastMessage = prev[prev.length - 1];
                     if (lastMessage.role === MessageRole.MODEL) {
@@ -68,8 +74,9 @@ const ChatInterface: React.FC = () => {
                     return prev;
                 });
             }
+            console.log("✅ Complete response received:", responseText);
         } catch (error) {
-            console.error(error);
+            console.error("❌ Chat error:", error);
             setMessages(prev => {
                 const updatedMessages = [...prev];
                 updatedMessages[prev.length-1] = { role: MessageRole.MODEL, text: "I'm sorry, I encountered an issue. Please try again." };
