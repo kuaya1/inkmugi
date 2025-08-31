@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Clock, Shield, Heart } from 'lucide-react';
 import { Helmet } from 'react-helmet';
@@ -6,8 +6,12 @@ import AnimatedSection from '../components/AnimatedSection';
 import CTASection from '../components/CTASection';
 import AIExpertLoader from '../components/AIExpertApp/AIExpertLoader';
 import ConversionTracker from '../components/ConversionTracker';
+import AIAnalyticsDashboard from '../components/AIAnalyticsDashboard';
+import FaviconSEO from '../components/FaviconSEO';
 
 const OmbreBrows = () => {
+  const [showAnalytics, setShowAnalytics] = useState(false);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = 'Ombre Powder Brows Arlington VA | Natural PMU Results';
@@ -249,6 +253,13 @@ const OmbreBrows = () => {
 
   return (
     <>
+      <FaviconSEO 
+        pageTitle="Ombre Powder Brows Arlington VA | Natural PMU Results | Ink Mugi"
+        pageDescription="Professional ombre powder brows in Arlington VA. Natural, long-lasting results with licensed PMU artist. View before/after photos and book consultation."
+        pageUrl="https://inkmugi.com/ombre-brows"
+        pageImage="https://live.staticflickr.com/65535/54408531279_0e59fb1f6f_o_d.jpg"
+        pageType="service"
+      />
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
@@ -400,14 +411,29 @@ const OmbreBrows = () => {
               <p className="text-[#2D2D2B] font-medium text-lg mb-4">
                 💡 Pro Tip: Screenshot your AI results and bring them to your consultation!
               </p>
-              <Link 
-                to="/booking" 
-                className="btn bg-[#8B4513] hover:bg-[#A0522D] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-block"
-              >
-                Book Your Ombre Brows Consultation
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/booking" 
+                  className="btn bg-[#8B4513] hover:bg-[#A0522D] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-block"
+                >
+                  Book Your Ombre Brows Consultation
+                </Link>
+                <button
+                  onClick={() => setShowAnalytics(!showAnalytics)}
+                  className="btn border-2 border-[#8B4513] text-[#8B4513] hover:bg-[#8B4513] hover:text-white px-6 py-4 rounded-lg transition-all duration-300"
+                >
+                  {showAnalytics ? 'Hide' : 'View'} Analytics Dashboard
+                </button>
+              </div>
             </div>
           </AnimatedSection>
+
+          {/* Analytics Dashboard - Toggle */}
+          {showAnalytics && (
+            <AnimatedSection delay={4}>
+              <AIAnalyticsDashboard />
+            </AnimatedSection>
+          )}
         </div>
       </section>
 

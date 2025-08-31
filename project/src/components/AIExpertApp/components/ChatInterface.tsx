@@ -61,7 +61,24 @@ const ChatInterface: React.FC = () => {
             let responseText = "";
             for await (const chunk of stream) {
                 console.log("📦 Received chunk:", chunk);
-                const chunkText = chunk.text() || "";
+                let chunkText = "";
+                
+                // Handle different chunk formats safely
+                if (typeof chunk === 'string') {
+                    chunkText = chunk;
+                } else if (chunk && typeof chunk.text === 'function') {
+                    try {
+                        chunkText = chunk.text();
+                    } catch (textError) {
+                        console.warn("Error calling chunk.text():", textError);
+                        chunkText = chunk.toString();
+                    }
+                } else if (chunk && chunk.text) {
+                    chunkText = chunk.text;
+                } else if (chunk) {
+                    chunkText = chunk.toString();
+                }
+                
                 responseText += chunkText;
                 
                 setMessages(prev => {

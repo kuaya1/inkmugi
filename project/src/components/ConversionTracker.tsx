@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { analyticsService } from '../services/analyticsService';
 
 interface ConversionTrackerProps {
   aiResults?: {
@@ -17,12 +18,23 @@ const ConversionTracker: React.FC<ConversionTrackerProps> = ({
 }) => {
   useEffect(() => {
     // Track AI tool engagement
-    if (aiResults && window.gtag) {
-      window.gtag('event', 'ai_analysis_complete', {
-        event_category: 'AI Tool',
-        event_label: `${aiResults.faceShape}-${aiResults.recommendedStyle}`,
-        value: Math.round((aiResults.confidence || 0) * 100)
+    if (aiResults) {
+      // Track the AI analysis completion
+      analyticsService.trackAnalyticsEvent({
+        source: 'ai_tool_ombre_page',
+        aiResults: aiResults,
+        converted: false,
+        page: '/ombre-brows'
       });
+
+      // Track with Google Analytics if available
+      if (window.gtag) {
+        window.gtag('event', 'ai_analysis_complete', {
+          event_category: 'AI Tool',
+          event_label: `${aiResults.faceShape}-${aiResults.recommendedStyle}`,
+          value: Math.round((aiResults.confidence || 0) * 100)
+        });
+      }
     }
   }, [aiResults]);
 
@@ -33,15 +45,20 @@ const ConversionTracker: React.FC<ConversionTrackerProps> = ({
       source: 'ai_tool_ombre_page',
       aiResults: aiResults,
       page: '/ombre-brows',
-      userAgent: navigator.userAgent
+      userAgent: navigator.userAgent,
+      converted: true,
+      conversionValue: 600
     };
 
-    // Track conversion
+    // Track conversion in analytics service
+    analyticsService.trackAnalyticsEvent(conversionData);
+
+    // Track conversion with Google Analytics
     if (window.gtag) {
       window.gtag('event', 'ai_to_booking_conversion', {
         event_category: 'Conversion',
         event_label: 'Ombre Brows AI Tool',
-        value: 1
+        value: 600
       });
     }
 
