@@ -4,14 +4,28 @@ import AnimatedSection from '../AnimatedSection';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative h-screen flex items-center bg-gradient-to-b from-[#F9F7F5] to-[#F0E4D8] overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-[#2D2D2B]"></div>
-        <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-[#2D2D2B]"></div>
+    <section className="relative h-screen flex items-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg"
+          alt="Professional PMU studio background"
+          className="w-full h-full object-cover transform scale-110 hover:scale-105 transition-transform duration-[3000ms] ease-out"
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F9F7F5]/95 via-[#F9F7F5]/90 to-[#F0E4D8]/95"></div>
       </div>
       
-      <div className="container-custom relative z-10">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 z-10 opacity-5">
+        <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-[#2D2D2B] animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-[#2D2D2B] animate-pulse" style={{animationDelay: '1s'}}></div>
+        {/* Floating elements */}
+        <div className="absolute top-1/4 right-1/4 w-4 h-4 rounded-full bg-[#E6DAD2] animate-bounce" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-1/4 left-1/4 w-6 h-6 rounded-full bg-[#E6DAD2] animate-bounce" style={{animationDelay: '3s'}}></div>
+      </div>
+      
+      <div className="container-custom relative z-20">
         <div className="text-center">
           <AnimatedSection className="max-w-5xl mx-auto">
             {/* Authority Badge */}
