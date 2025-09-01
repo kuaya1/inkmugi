@@ -1,9 +1,9 @@
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import { INKMUGI_KNOWLEDGE_BASE } from '../constants';
 import { ChatMessage, MessageRole } from '../types';
 
 // Access environment variable properly in Vite
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const API_KEY = import.meta.env.VITE_GOOGLE_AI_API_KEY;
 
 console.log("Environment check:", {
   hasKey: !!API_KEY,
@@ -13,7 +13,7 @@ console.log("Environment check:", {
 });
 
 if (!API_KEY || API_KEY === "demo-key-placeholder" || API_KEY === "your-api-key-here") {
-  console.warn("VITE_GEMINI_API_KEY environment variable not set properly - using demo mode");
+  console.warn("VITE_GOOGLE_AI_API_KEY environment variable not set properly - using demo mode");
 } else {
   console.log("✅ Real API key detected - AI features will be fully functional");
 }
@@ -92,7 +92,7 @@ Your first message should be: "Welcome to InkMugi! I'm your personal AI expert f
 
 // Initialize AI only if we have a real API key
 const genAI = API_KEY && API_KEY !== "demo-key-placeholder" && API_KEY !== "your-api-key-here"
-  ? new GoogleGenAI(API_KEY)
+  ? new GoogleGenerativeAI(API_KEY)
   : null;
 
 export const getChatResponseStream = async (message: string) => {

@@ -5,14 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate-sitemap && vite build",
+    "build": "echo 'Building with env:' && env | grep VITE && npm run generate-sitemap && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "generate-sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
-    "@google/genai": "^1.16.0",
+    "@google/generative-ai": "^0.21.0",
     "@types/react-helmet": "^6.1.11",
     "@types/react-lazy-load-image-component": "^1.6.4",
     "framer-motion": "^11.0.3",
