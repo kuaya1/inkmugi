@@ -393,6 +393,36 @@ const Gallery: React.FC = () => {
         author: "Emily W."
       }
     },
+    {
+      beforeImage: 'https://www.flickr.com/photo_download.gne?id=54779078555&secret=e8efb006b8&size=c&source=photoPageEngagement',
+      afterImage: 'https://www.flickr.com/photo_download.gne?id=54778979753&secret=db93565bce&size=c&source=photoPageEngagement',
+      category: 'ombre-brows',
+      label: 'Ombre Powder Brows',
+      testimonial: {
+        text: "The transformation exceeded my expectations! My brows look absolutely perfect.",
+        author: "Anna K."
+      }
+    },
+    {
+      beforeImage: 'https://www.flickr.com/photo_download.gne?id=54778983718&secret=e43d4a197d&size=c&source=photoPageEngagement',
+      afterImage: 'https://www.flickr.com/photo_download.gne?id=54778742886&secret=f5a0ea4bea&size=c&source=photoPageEngagement',
+      category: 'ombre-brows',
+      label: 'Ombre Powder Brows',
+      testimonial: {
+        text: "I love how natural yet defined they look. Best decision I've ever made!",
+        author: "Lisa M."
+      }
+    },
+    {
+      beforeImage: 'https://www.flickr.com/photo_download.gne?id=54778979778&secret=acc2ac2668&size=c&source=photoPageEngagement',
+      afterImage: 'https://www.flickr.com/photo_download.gne?id=54778742926&secret=1cafa1b873&size=c&source=photoPageEngagement',
+      category: 'ombre-brows',
+      label: 'Ombre Powder Brows',
+      testimonial: {
+        text: "The artistry and skill are incredible. I get compliments on my brows every day!",
+        author: "Jennifer S."
+      }
+    },
   ];
 
   const filteredItems = activeFilter === 'all' 
