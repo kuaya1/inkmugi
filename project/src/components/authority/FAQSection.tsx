@@ -136,7 +136,7 @@ const FAQSection: React.FC = () => {
                 </svg>
               </a>
               <a
-                href="mailto:info@inkmugi.com"
+                href="mailto:inkmugi@gmail.com"
                 className="inline-flex items-center px-8 py-4 bg-white hover:bg-neutral-50 text-primary-600 font-semibold rounded-lg border-2 border-primary-600 transition-all duration-300 hover:shadow-lg"
               >
                 Email Your Questions

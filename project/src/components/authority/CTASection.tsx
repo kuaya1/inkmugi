@@ -82,10 +82,10 @@ const CTASection: React.FC = () => {
               <Calendar className="w-6 h-6 ml-2 transition-all duration-300 group-hover:translate-x-1" />
             </a>
             <a
-              href="tel:+1-703-555-0123"
+              href="tel:+15712838228"
               className="btn bg-transparent hover:bg-white hover:bg-opacity-10 text-white border-2 border-white transition-all duration-300 px-10 py-4 rounded-lg inline-flex items-center text-lg font-medium"
             >
-              Call Now: (703) 555-0123
+              Call Now: (571) 283-8228
               <Phone className="w-6 h-6 ml-2" />
             </a>
           </div>
@@ -171,12 +171,13 @@ const CTASection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm opacity-80">
             <div>
               <strong>Location:</strong><br />
-              Annandale Professional Beauty Center<br />
+              Heritage Center<br />
+              7857 Heritage Dr #330<br />
               Annandale, VA 22003
             </div>
             <div>
               <strong>Phone:</strong><br />
-              (703) 555-0123<br />
+              (571) 283-8228<br />
               Text or call anytime
             </div>
             <div>

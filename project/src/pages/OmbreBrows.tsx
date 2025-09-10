@@ -33,14 +33,14 @@ const OmbreBrows = () => {
       "url": "https://inkmugi.com",
       "image": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
       "logo": "https://live.staticflickr.com/65535/54408135519_738741e705_k_d.jpg",
-      "telephone": "+1-703-555-0123",
-      "email": "info@inkmugi.com",
+      "telephone": "+1-571-283-8228",
+      "email": "inkmugi@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "4040 University Dr",
-        "addressLocality": "Fairfax",
+        "streetAddress": "7857 Heritage Dr #330",
+        "addressLocality": "Annandale",
         "addressRegion": "VA",
-        "postalCode": "22030",
+        "postalCode": "22003",
         "addressCountry": "US"
       },
       "geo": {

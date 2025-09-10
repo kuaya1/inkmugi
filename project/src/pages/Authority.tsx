@@ -166,8 +166,8 @@ const AuthorityPage: React.FC = () => {
         "latitude": 38.8303,
         "longitude": -77.1963
       },
-      "telephone": "+1-703-555-0123",
-      "email": "info@inkmugi.com",
+      "telephone": "+1-571-283-8228",
+      "email": "inkmugi@gmail.com",
       "priceRange": "$$-$$$",
       "paymentAccepted": ["Cash", "Credit Card", "Check"],
       "currenciesAccepted": "USD",
