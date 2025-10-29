@@ -1,0 +1,7 @@
+[build]
+  base = "project"
+  command = "npm run build"
+  publish = "project/dist"
+
+[build.environment]
+  VITE_GOOGLE_AI_API_KEY = ""
