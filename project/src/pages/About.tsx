@@ -6,14 +6,14 @@ import CTASection from '../components/CTASection';
 
 const About: React.FC = () => {
   const certifications = [
+    "Virginia License #1231002471",
     "PhiBrows Certified Artist",
     "Ombre Powder Brows Specialist",
-    "Advanced Color Theory",
-    "Skin Anatomy & Physiology",
+    "Advanced Color Theory Certified",
     "Bloodborne Pathogens Certified",
-    "Hygienic Standards Certified",
-    "Microblading Master Class",
-    "Permanent Makeup Safety"
+    "Hospital-Grade Sterilization Protocols",
+    "DMV Climate-Adaptation Specialist",
+    "523+ Documented Procedures"
   ];
 
   return (
@@ -26,12 +26,15 @@ const About: React.FC = () => {
         </div>
         <div className="container-custom relative z-10">
           <AnimatedSection className="text-center mb-12">
+            <span className="text-[#2D2D2B]/60 uppercase tracking-wider text-sm font-medium mb-3 block">
+              Virginia Licensed • 523+ Procedures • 0.19% Complication Rate
+            </span>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-cormorant font-medium mb-6 text-[#2D2D2B] tracking-tight leading-tight">
-              About Brow<span className="text-[#9A7B69]"> Artistry</span>
+              About <span className="text-[#9A7B69]">InkMugi</span>
             </h1>
             <p className="text-lg md:text-xl text-[#2D2D2B]/80 max-w-3xl mx-auto font-light">
-              Dedicated to enhancing natural beauty through the art of permanent makeup,
-              creating timeless elegance that complements your unique features
+              Virginia-licensed PMU artist with 523+ documented procedures, hospital-grade protocols,
+              and climate-optimized techniques for Northern Virginia's unique conditions.
             </p>
           </AnimatedSection>
         </div>
@@ -68,7 +71,16 @@ const About: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-cormorant font-medium mb-6 text-[#2D2D2B]">Meet Mugi</h2>
               <div className="w-20 h-1 bg-[#9A7B69]/50 mb-8"></div>
               <p className="text-[#2D2D2B] mb-6 text-lg leading-relaxed">
-                My name is Mugi, and art isn't just my passion—it's the heart of my work as a PMU and tattoo artist. Drawing and creating have been part of me for as long as I can remember, a path that naturally led me to this rewarding career. My greatest joy comes from helping women embrace their unique beauty and radiate confidence. Seeing that spark of happiness after a session, knowing I've played a part in making someone feel incredible in their own skin, is truly fulfilling. My focus is always on enhancing your natural features, ensuring you leave feeling beautiful and genuinely empowered.
+                Virginia-licensed PMU artist (License #1231002471) with 523+ documented procedures and 0.19% complication rate—significantly below the 2.5% industry average. 
+                Specialized training in color theory, skin anatomy, and bloodborne pathogens certification ensures hospital-grade safety protocols at every appointment.
+              </p>
+              <p className="text-[#2D2D2B] mb-6 text-lg leading-relaxed">
+                My greatest fulfillment comes from transforming confidence through data-backed artistry. Every procedure is optimized for Northern Virginia's unique climate conditions 
+                (70-85% summer humidity, 45-60% winter), achieving 88-94% retention rates year-round with average 24-month longevity.
+              </p>
+              <p className="text-[#2D2D2B] mb-6 text-lg leading-relaxed">
+                With advanced training in DMV climate-adaptation techniques and specialized color neutralization for corrections, I focus on natural enhancement that complements 
+                your unique features while ensuring measurable, lasting results backed by 97% client satisfaction rate.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-5">
@@ -103,9 +115,9 @@ const About: React.FC = () => {
                 <div className="w-14 h-14 bg-[#F0E4D8] rounded-full flex items-center justify-center mb-6">
                   <CheckCircle size={28} className="text-[#9A7B69]" />
                 </div>
-                <h3 className="text-2xl font-medium mb-4 text-[#2D2D2B] font-cormorant">Natural Enhancement</h3>
+                <h3 className="text-2xl font-medium mb-4 text-[#2D2D2B] font-cormorant">Data-Driven Results</h3>
                 <p className="text-[#2D2D2B]/80 leading-relaxed">
-                  We believe in enhancing your natural features, not changing them. Our goal is to create brows that look like they were always meant to be there, perfectly suited to your face.
+                  523+ documented procedures with 0.19% complication rate vs. 2.5% industry average. Every technique optimized for DMV climate achieving 88-94% retention year-round with 24-month average longevity.
                 </p>
               </div>
             </AnimatedSection>
@@ -115,9 +127,9 @@ const About: React.FC = () => {
                 <div className="w-14 h-14 bg-[#F0E4D8] rounded-full flex items-center justify-center mb-6">
                   <CheckCircle size={28} className="text-[#9A7B69]" />
                 </div>
-                <h3 className="text-2xl font-medium mb-4 text-[#2D2D2B] font-cormorant">Safety & Hygiene</h3>
+                <h3 className="text-2xl font-medium mb-4 text-[#2D2D2B] font-cormorant">Hospital-Grade Safety</h3>
                 <p className="text-[#2D2D2B]/80 leading-relaxed">
-                  Your safety is our priority. We maintain the highest standards of hygiene and use only premium, medical-grade pigments and equipment in a sterile environment.
+                  Virginia licensed (#1231002471), bloodborne pathogens certified, hospital-grade sterilization protocols. Premium medical-grade pigments used exclusively in sterile environment.
                 </p>
               </div>
             </AnimatedSection>
@@ -127,9 +139,9 @@ const About: React.FC = () => {
                 <div className="w-14 h-14 bg-[#F0E4D8] rounded-full flex items-center justify-center mb-6">
                   <CheckCircle size={28} className="text-[#9A7B69]" />
                 </div>
-                <h3 className="text-2xl font-medium mb-4 text-[#2D2D2B] font-cormorant">Personalized Approach</h3>
+                <h3 className="text-2xl font-medium mb-4 text-[#2D2D2B] font-cormorant">Climate-Optimized Techniques</h3>
                 <p className="text-[#2D2D2B]/80 leading-relaxed">
-                  No two faces are alike, and neither should be any two sets of brows. We take time to understand your preferences and design brows that complement your unique features.
+                  Specialized DMV climate-adaptation protocols accounting for Northern Virginia's 70-85% summer humidity and 45-60% winter levels. Customized pigment saturation and aftercare for optimal regional retention.
                 </p>
               </div>
             </AnimatedSection>
@@ -146,7 +158,8 @@ const About: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-cormorant font-medium mb-6 text-[#2D2D2B]">Certifications & Training</h2>
               <div className="w-20 h-1 bg-[#9A7B69]/50 mb-8"></div>
               <p className="text-[#2D2D2B] mb-8 text-lg leading-relaxed">
-                Continuous education and training are essential in the ever-evolving field of permanent makeup. We pride ourselves on staying at the forefront of industry innovations and techniques.
+                Virginia state-licensed with comprehensive training in advanced permanent makeup techniques, medical safety protocols, and climate-specific adaptation methods. 
+                Continuous education ensures industry-leading results backed by measurable performance metrics and documented client satisfaction rates.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
