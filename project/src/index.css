@@ -69,6 +69,18 @@
   background: linear-gradient(135deg, #f9f5f6 0%, #f0e6e8 100%);
 }
 
+/* Radial gradient for decorative elements */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Smooth scroll behavior enhancement */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 /* Custom animations */
 @keyframes fadeIn {
   from { opacity: 0; }
